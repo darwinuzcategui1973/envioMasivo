@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.activities.forms.Activities" table="Activity">
+		<id name="number" type="long" column="Act_Number">
+			<generator class="assigned"/>
+		</id>
+		<property name="name">
+			<column name="Act_Name"/>
+		</property>
+		<property name="description">
+			<column name="Act_Description"/>
+		</property>
+		<property name="active">
+			<column name="Act_Active"/>
+		</property>
+		<property name="idTypeDoc">
+			<column name="Act_TypeDocument"/>
+		</property>
+        <set name="subActivitys" table="SubActivities" lazy="true" cascade="all" order-by="sAct_Order">
+            <key column="Act_Number"/>
+            <one-to-many class="com.desige.webDocuments.activities.forms.SubActivities"/>
+        </set>
+<!--        <map name="subActivitys" cascade="all">-->
+<!--            <key column="number" not-null="true"/>-->
+<!--            <one-to-many column="number" class="com.desige.webDocuments.activities.forms.SubActivities"/>-->
+<!--        </map>-->
+<!--        <set name="subActivitys" table="SubActivities" lazy="true">-->
+<!--            <key column="number"/>-->
+<!--            <one-to-many column="activityID" class="com.desige.webDocuments.activities.forms.SubActivities"/>-->
+<!--        </set>-->
+
+<!--        <set name="userForAct" table="StructActUser">-->
+<!--            <key column="Act_Number"/>-->
+<!--            <many-to-many column="idPerson" class="com.desige.webDocuments.perfil.forms.PerfilActionForm"/>-->
+<!--        </set>-->
+
+<!--        <set name="subActivitys" table="SubActivities" lazy="true">-->
+<!--            <key column="Act_Number"/>-->
+<!--            <many-to-one name="subActivitys" column="sAct_Number" class="com.desige.webDocuments.activities.forms.SubActivities"-->
+<!--                         update="true"/>-->
+<!--        </set>-->
+	</class>
+	<query name="act.alls"><![CDATA[ FROM Activities WHERE Act_Active = '1' ORDER BY Act_Number]]></query>
+    <query name="act.by.typeDoc"><![CDATA[ FROM Activities WHERE Act_Active = '1' AND idTypeDoc=? ORDER BY Act_Number]]></query>
+	<sql-query name="AllActivitys">
+		<return alias="a" class="com.desige.webDocuments.activities.forms.Activities"/>
+            SELECT a.* FROM Activity a ORDER BY lower(a.Act_Name)
+    </sql-query>
+    <query name="ftp.byName"><![CDATA[ FROM Activities WHERE name = ? AND active = '1']]></query>
+    <query name="ftp.byNameAndID"><![CDATA[ FROM Activities WHERE name = ? AND id <> ?]]></query>
+</hibernate-mapping>

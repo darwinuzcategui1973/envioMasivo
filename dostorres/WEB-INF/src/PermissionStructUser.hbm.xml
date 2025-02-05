@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.seguridad.forms.PermissionUserForm" table="PermissionStructUser">
+		<composite-id name="id" class="com.desige.webDocuments.seguridad.forms.Id">
+			<key-property name="idStruct" type="java.lang.String"/>
+			<key-property name="idGroup" type="long" column="idPerson"/>
+		</composite-id>
+		<property name="toView"/>
+		<property name="toRead"/>
+		<property name="toAddFolder"/>
+		<property name="toAddProcess"/>
+		<property name="toDelete"/>
+		<property name="toMove"/>
+		<property name="toEdit"/>
+		<property name="toAddDocument"/>
+		<property name="toAdmon"/>
+		<property name="toViewDocs"/>
+		<property name="toEditDocs"/>
+		<property name="toAdmonDocs"/>
+		<property name="toDelDocs"/>
+		<property name="toReview"/>
+		<property name="toAprove">
+			<column name="toApproved"/>
+		</property>
+		<property name="toMoveDocs"/>
+		<property name="checkOut">
+			<column name="toCheckOut"/>
+		</property>
+		<property name="toEditRegister"/>
+		<property name="toImpresion"/>
+		<property name="toCheckTodos"/>
+		<property name="toDoFlows"/>
+		<property name="toDocinLine">
+			<column name="docinLine"/>
+		</property>
+        <property name="toFlexFlow"/>
+        <property name="toChangeUsr"/>
+        <property name="toCompleteFlow"/>
+        <property name="toPublicEraser"/>
+        <property name="toDownload"/>
+    </class>
+	<query name="permUser.alls"><![CDATA[ FROM PermissionUser WHERE active = '1']]></query>
+</hibernate-mapping>

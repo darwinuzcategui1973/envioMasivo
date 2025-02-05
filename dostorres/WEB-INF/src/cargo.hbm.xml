@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.cargo.forms.Cargo" table="tbl_cargo">
+		<id name="idcargo" type="java.lang.Long" column="idcargo">
+			<generator class="assigned"/>
+		</id>
+               
+		<property name="cargo">
+			<column name="cargo"/>
+		</property>
+                <property name="active">
+			<column name="activec"/>
+		</property>
+
+                <many-to-one name="area" column="idarea"/>
+
+
+	</class>
+	<query name="cargo.alls"><![CDATA[ FROM Cargo Order by lower(cargo)]]></query>
+</hibernate-mapping>

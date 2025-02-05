@@ -1,0 +1,2715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- BEGIN forms User -->
+		<form-bean name="login"
+			type="com.desige.webDocuments.users.forms.LoginUser" />
+		<form-bean name="newUser"
+			type="com.desige.webDocuments.users.forms.LoginUser" />
+		<form-bean name="clave"
+			type="com.desige.webDocuments.users.forms.LoginUser" />
+		<!-- END forms User -->
+
+		<!-- BEGIN forms Grupo -->
+		<form-bean name="grupo"
+			type="com.desige.webDocuments.grupo.forms.grupoForm" />
+		<form-bean name="editGrupoForm"
+			type="com.desige.webDocuments.grupo.forms.grupoForm" />
+		<form-bean name="insertGrupo"
+			type="com.desige.webDocuments.grupo.forms.grupoForm" />
+		<!-- END forms Grupo -->
+
+		<!-- BEGIN forms Pefil -->
+		<form-bean name="perfil"
+			type="com.desige.webDocuments.perfil.forms.PerfilActionForm" />
+		<!-- END forms User -->
+
+		<!-- BEGIN forms Files -->
+		<form-bean name="filesNewSave"
+			type="com.desige.webDocuments.files.forms.FilesForm" />
+		<form-bean name="filesRegisterSave"
+			type="com.desige.webDocuments.files.forms.ExpedienteForm" />
+		<!-- END forms Files -->
+
+		<!-- BEGIN forms document -->
+		<form-bean name="documentNewSave"
+			type="com.desige.webDocuments.files.forms.DocumentForm" />
+		<!-- END forms document -->
+
+
+		<!-- BEGIN forms Urls -->
+		<form-bean name="urls"
+			type="com.desige.webDocuments.enlaces.forms.UrlsActionForm" />
+		<form-bean name="editarUrls"
+			type="com.desige.webDocuments.enlaces.forms.UrlsLoadActionForm" />
+		<form-bean name="newUrls"
+			type="com.desige.webDocuments.enlaces.forms.UrlsInsertActionForm" />
+		<!-- END forms User -->
+
+		<!-- BEGIN forms Paises -->
+		<form-bean name="country"
+			type="com.desige.webDocuments.pais.forms.BaseCountryForm" />
+		<form-bean name="editCountry"
+			type="com.desige.webDocuments.pais.forms.LoadEditCountryForm" />
+		<form-bean name="insertCountry"
+			type="com.desige.webDocuments.pais.forms.InsertCountryForm" />
+		<!-- END forms User -->
+
+		<!-- BEGIN forms City -->
+		<form-bean name="city"
+			type="com.desige.webDocuments.city.forms.BaseCityForm" />
+		<form-bean name="editCityForm"
+			type="com.desige.webDocuments.city.forms.BaseCityForm" />
+		<form-bean name="insertCity"
+			type="com.desige.webDocuments.city.forms.BaseCityForm" />
+		<!-- END forms City -->
+
+		<!-- BEGIN forms Norms -->
+		<form-bean name="norms"
+			type="com.desige.webDocuments.norms.forms.BaseNormsForm" />
+		<form-bean name="editNorms"
+			type="com.desige.webDocuments.norms.forms.BaseNormsForm" />
+ 		<form-bean name="newNorms"
+			type="com.desige.webDocuments.norms.forms.BaseNormsForm" />
+		<form-bean name="docsNorms"
+			type="com.desige.webDocuments.norms.forms.BaseNormsForm" />
+		<!-- END forms Norms -->
+
+		<!-- BEGIN forms TypeDocuments -->
+		<form-bean name="typeDoc"
+			type="com.desige.webDocuments.typeDocuments.forms.TypeDocumentsForm" />
+		<form-bean name="editTypeDoc"
+			type="com.desige.webDocuments.typeDocuments.forms.TypeDocumentsForm" />
+		<form-bean name="newTypeDoc"
+			type="com.desige.webDocuments.typeDocuments.forms.TypeDocumentsForm" />
+		<!-- END forms Norms -->
+		<form-bean name="sacoplantilla"
+			type="com.desige.webDocuments.sacop.forms.plantilla1" />
+		<form-bean name="sacoplantillabd"
+			type="com.desige.webDocuments.sacop.forms.Plantilla1BD" />
+		<!-- BEGIN forms ProcesosSacop -->
+		<form-bean name="PSacop"
+			type="com.desige.webDocuments.sacop.forms.ProcesosSacop" />
+		<form-bean name="editPSacop"
+			type="com.desige.webDocuments.sacop.forms.ProcesosSacop" />
+		<!--END forms procesos sacop -->
+
+		<!-- BEGIN forms ProcesosSacop -->
+		<form-bean name="activefactory"
+			type="com.focus.wonderware.forms.ActiveFactory_frm" />
+		<form-bean name="activefactory1"
+			type="com.focus.wonderware.forms.ActiveFactory_frm" />
+
+		<form-bean name="sacop_Intouch_Conftagname"
+			type="com.focus.wonderware.intocuh_sacop.forms.Sacop_Intouch_Conftagname" />
+		<form-bean name="sacop_Intouch_Conftagname1"
+			type="com.focus.wonderware.intocuh_sacop.forms.Sacop_Intouch_Conftagname" />
+		<form-bean name="tagname"
+			type="com.focus.wonderware.intocuh_sacop.forms.Tagname" />
+		<form-bean name="tagname1"
+			type="com.focus.wonderware.intocuh_sacop.forms.Tagname" />
+
+
+		<form-bean name="newsacop_intouch1"
+			type="com.focus.wonderware.intocuh_sacop.forms.Sacop_Intouchh_frm" />
+		<!--END forms procesos sacop -->
+
+
+		<form-bean name="reporteSacop"
+			type="com.desige.webDocuments.sacop.forms.ReporteSacop" />
+		<form-bean name="frmArea" type="com.desige.webDocuments.area.forms.Area" />
+		<form-bean name="frmArea1" type="com.desige.webDocuments.area.forms.Area" />
+		<form-bean name="frmPossibleCause" type="com.desige.webDocuments.causa.forms.PossibleCause" />
+		<form-bean name="frmPossibleCause1" type="com.desige.webDocuments.causa.forms.PossibleCause" />
+		<form-bean name="frmActionRecommended" type="com.desige.webDocuments.accion.forms.ActionRecommended" />
+		<form-bean name="frmActionRecommended1" type="com.desige.webDocuments.accion.forms.ActionRecommended" />
+		<form-bean name="frmProgramAudit" type="com.desige.webDocuments.accion.forms.ProgramAudit" />
+		<form-bean name="frmProgramAudit1" type="com.desige.webDocuments.accion.forms.ProgramAudit" />
+		<form-bean name="frmPlanAudit" type="com.desige.webDocuments.accion.forms.PlanAudit" />
+		<form-bean name="frmPlanAudit1" type="com.desige.webDocuments.accion.forms.PlanAudit" />
+		<form-bean name="frmCargo" type="com.desige.webDocuments.cargo.forms.Cargo" />
+		<form-bean name="frmCargo1" type="com.desige.webDocuments.cargo.forms.Cargo" />
+		<form-bean name="frmCargoChange" type="com.desige.webDocuments.cargo.forms.Cargo" />
+		<!-- BEGIN forms titulosplanillassacop -->
+		<form-bean name="PtitulosplanillaSacop"
+			type="com.desige.webDocuments.sacop.forms.TitulosPlanillasSacop" />
+		<form-bean name="PClasificacionPlanillaSacop"
+            type="com.desige.webDocuments.sacop.forms.ClasificacionPlanillasSacop" />
+		<form-bean name="editPtitleSacop"
+			type="com.desige.webDocuments.sacop.forms.TitulosPlanillasSacop" />
+		<form-bean name="editPClasificacionSacop"
+            type="com.desige.webDocuments.sacop.forms.ClasificacionPlanillasSacop" />
+		<form-bean name="accionTomarSacop"
+			type="com.desige.webDocuments.sacop.forms.PlantillaAccion" />
+		<form-bean name="paccionTomarSacop"
+			type="com.desige.webDocuments.sacop.forms.PlantillaAccion" />
+
+		<!--<form-bean name="editPSacop" type="com.desige.webDocuments.sacop.forms.ProcesosSacop"/> -->
+		<!--END forms titulosplanillassacop -->
+		<!-- BEGIN forms State -->
+		<form-bean name="state"
+			type="com.desige.webDocuments.state.forms.BaseStateForm" />
+		<form-bean name="editStateForm"
+			type="com.desige.webDocuments.state.forms.LoadEditStateForm" />
+		<form-bean name="insertState"
+			type="com.desige.webDocuments.state.forms.InsertStateForm" />
+		<!-- END forms State -->
+
+		<!-- BEGIN forms Struct -->
+		<form-bean name="loadStruct"
+			type="com.desige.webDocuments.structured.forms.BaseStructForm" />
+		<form-bean name="insertStruct"
+			type="com.desige.webDocuments.structured.forms.InsertStructForm" />
+		<form-bean name="editarStruct"
+			type="com.desige.webDocuments.structured.forms.LoadEditStructForm" />
+		<form-bean name="dataHistoryStruct"
+			type="com.desige.webDocuments.structured.forms.DataHistoryStructForm" />
+		<form-bean name="moveStructForm"
+			type="com.desige.webDocuments.document.forms.MoveDocForm" />
+		<!-- END forms Struct -->
+
+		<!-- BEGIN forms Documents -->
+		<form-bean name="newDocument"
+			type="com.desige.webDocuments.document.forms.BaseDocumentForm" />
+		<form-bean name="showDocument"
+			type="com.desige.webDocuments.document.forms.BaseDocumentForm" />
+		<form-bean name="checkInDoc"
+			type="com.desige.webDocuments.document.forms.CheckOutDocForm" />
+		<form-bean name="moveDocForm"
+			type="com.desige.webDocuments.document.forms.MoveDocForm" />
+		<!-- END forms Documents -->
+
+		<!-- BEGIN forms WorkFlows -->
+		<form-bean name="newWF"
+			type="com.desige.webDocuments.workFlows.forms.BaseWorkFlow" />
+		<form-bean name="showDataWF"
+			type="com.desige.webDocuments.workFlows.forms.DataWorkFlowForm" />
+		<form-bean name="responseWF"
+			type="com.desige.webDocuments.workFlows.forms.ParticipationForm" />
+
+		<!-- END forms WorkFlows -->
+
+		<!-- BEGIN forms Parameters -->
+		<form-bean name="loadParameters"
+			type="com.desige.webDocuments.parameters.forms.BaseParametersForm" />
+		<!-- END forms Parameters -->
+
+		<!-- BEGIN forms Parameters -->
+		<form-bean name="register"
+			type="com.desige.webDocuments.registers.forms.Register" />
+		<!-- END forms Parameters -->
+
+		<!-- BEGIN forms Mail -->
+		<form-bean name="sendMail"
+			type="com.desige.webDocuments.mail.forms.MailForm" />
+		<form-bean name="addressMail"
+			type="com.desige.webDocuments.mail.forms.AddressForm" />
+		<!-- END forms Mail -->
+
+		<!-- BEGIN forms Seguridad -->
+		<form-bean name="SeguridadForm"
+			type="com.desige.webDocuments.seguridad.forms.SeguridadUserForm" />
+		<form-bean name="securityUser"
+			type="com.desige.webDocuments.seguridad.forms.PermissionUserForm" />
+		<!-- END forms Seguridad -->
+
+		<!-- BEGIN forms Activities -->
+		<form-bean name="activitiesForm"
+			type="com.desige.webDocuments.activities.forms.Activities" />
+		<form-bean name="subActivity"
+			type="com.desige.webDocuments.activities.forms.SubActivities" />
+		<!-- END forms Activities -->
+
+		<!-- BEGIN forms Migracion -->
+		<form-bean name="migracionForm" type="com.focus.migracion.forms.MigracionForm" />
+		<!-- END forms Migracion -->
+
+		<!-- BEGIN forms Record de Usuarios -->
+		<form-bean name="recordForm"
+			type="com.desige.webDocuments.record.forms.RecordFiltersForm" />
+		<!-- END forms Record de Usuarios -->
+
+	</form-beans>
+
+	<global-forwards>
+		<forward name="loginPage" path="/errorSession.jsp?target=_parent" />
+		<forward name="forcedLoginPage" path="/index.jsp" redirect="false" />
+	</global-forwards>
+
+	<action-mappings>
+
+		<!-- BEGIN actions User -->
+		<action path="/inicioSession"
+			type="com.desige.webDocuments.users.actions.LoginUserAction" name="login"
+			scope="session" input="/index.jsp" validate="true">
+			<forward name="success" path="/loadAllWF.do" />
+			<forward name="changePass" path="/loadPerfil.do" />
+			<forward name="error" path="/main.jsp" />
+		</action>
+
+		<action path="/logout"
+			type="com.desige.webDocuments.users.actions.LogoutUserAction">
+			<forward name="success" path="/logout.jsp" />
+			<forward name="successClose" path="/index.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/newUser"
+			type="com.desige.webDocuments.users.actions.EditUserAction" name="newUser"
+			scope="session" validate="false">
+			<!-- <forward name="success" path="/loadUsersToEdit.do"/> -->
+			<forward name="loadToEdit" path="/loadUsersToEdit.do?loadUser=true" />
+			<forward name="showAllAcounts" path="/newUserGrupo.do?cmd=load" />
+			<forward name="success" path="/usuario.jsp" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+
+		<action path="/newUserGrupo"
+			type="com.desige.webDocuments.users.actions.EditUserAction" name="newUser"
+			scope="session" validate="false">
+			<forward name="success" path="/listaUsers.jsp" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+
+		<action path="/segUserGrupo"
+			type="com.desige.webDocuments.users.actions.EditUserAction" name="newUser"
+			scope="session" validate="false">
+			<forward name="success" path="/seguridadLista.jsp" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+
+		<action path="/loadUserEdit"
+			type="com.desige.webDocuments.users.actions.EditUserAction" name="newUser"
+			scope="session" validate="false">
+			<forward name="success" path="/usuario.jsp" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+		<!-- END actions User -->
+
+		<!-- BEGIN actions Clave -->
+		<action path="/clave"
+			type="com.desige.webDocuments.users.actions.LoadClaveAction" name="perfil"
+			scope="session" validate="false">
+			<forward name="success" path="/clave.jsp" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+
+		<action path="/loadClaveEdit"
+			type="com.desige.webDocuments.grupo.actions.LoadEditClaveAction"
+			name="perfil" scope="session" validate="false">
+			<forward name="success" path="/clave.do" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+
+		<action path="/newClave"
+			type="com.desige.webDocuments.users.actions.EditClaveAction" name="perfil"
+			scope="session" validate="false">
+			<forward name="success" path="/clave.do" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+
+		<action path="/editClave"
+			type="com.desige.webDocuments.users.actions.EditClaveAction" name="perfil"
+			scope="session" validate="false">
+			<forward name="success" path="/clave.jsp" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+		<!-- END actions Clave -->
+
+		<!-- BEGIN actions Grupo -->
+		<action path="/loadGrupo"
+			type="com.desige.webDocuments.grupo.actions.LoadGrupoAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/grupo.jsp" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+
+		<action path="/loadGrupoEdit"
+			type="com.desige.webDocuments.grupo.actions.EditGrupoAction" name="grupo"
+			scope="session" validate="false">
+			<forward name="success" path="/grupo.jsp" />
+			<forward name="error" path="/administracionMain.do" />
+		</action>
+
+		<action path="/newGrupo"
+			type="com.desige.webDocuments.grupo.actions.EditGrupoAction" name="grupo"
+			scope="session" validate="false">
+			<forward name="success" path="/grupo.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="successMain" path="/loadUsersToEdit.do?goTo=loadGroups" />
+			<!--<forward name="error" path="/administracionMain.do"/> -->
+		</action>
+
+		<action path="/editGrupo"
+			type="com.desige.webDocuments.grupo.actions.EditGrupoAction" name="editGrupoForm"
+			scope="session" validate="false">
+			<forward name="success" path="/loadGrupo.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<!-- END actions Grupo -->
+
+		<!-- BEGIN actions Paises -->
+		<action path="/loadCountries"
+			type="com.desige.webDocuments.pais.actions.LoadCountryAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/editField.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/loadPaisEdit"
+			type="com.desige.webDocuments.pais.actions.LoadEditCountry" name="country"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadCountries.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/newCountry"
+			type="com.desige.webDocuments.pais.actions.EditCountryAction" name="insertCountry"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadCountries.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/editCountry"
+			type="com.desige.webDocuments.pais.actions.EditCountryAction" name="editCountry"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadCountries.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<!-- END actions Paises -->
+
+		<!-- BEGIN actions Norms -->
+		<action path="/loadNorms"
+			type="com.desige.webDocuments.norms.actions.LoadNormsAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/editFieldNorm.jsp" />
+			<forward name="error" path="/editFieldNorm.jsp" />
+		</action>
+
+		<!-- BEGIN actions Norms -->
+		<action path="/loadNormsFromDocument"
+			type="com.desige.webDocuments.norms.actions.LoadNormsAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/editFieldNormFromDocument.jsp" />
+			<forward name="error" path="/editFieldNormFromDocument.jsp" />
+		</action>
+
+		<!-- BEGIN actions Norms -->
+		<action path="/loadNormsFromMasterList"
+			type="com.desige.webDocuments.norms.actions.LoadNormsAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/editFieldNormFromMasterList.jsp" />
+			<forward name="error" path="/editFieldNormFromMasterList.jsp" />
+		</action>
+
+        <action path="/showNormIsoPopUp"
+	type="com.desige.webDocuments.norms.actions.LoadNormsToPopUp" name=""
+	scope="request" validate="false">
+            <forward name="success" path="/showNormIsoPopUp.jsp" />
+            <forward name="error" path="/showNormIsoPopUp.jsp" />
+        </action>
+        
+		<action path="/loadNormsEdit"
+			type="com.desige.webDocuments.norms.actions.LoadEditNormsAction"
+			name="editNorms" scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadNorms.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+ 
+ 		<action path="/newNorm"
+			type="com.desige.webDocuments.norms.actions.UpdateNormsAction" name="newNorms"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadNorms.do?cmd=load" />
+			<forward name="newNorm" path="/editField.jsp" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/editNorm"
+			type="com.desige.webDocuments.norms.actions.UpdateNormsAction" name="editNorms"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadNorms.do?cmd=load" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<!-- END actions Norms -->
+
+		<!-- BEGIN actions Registers -->
+		<!-- END actions Registers -->
+		<action path="/newRegister"
+			type="com.desige.webDocuments.registers.actions.NewRegister" name=""
+			scope="session" validate="false">
+			<!-- Crear Registro -->
+			<forward name="success0" path="/newRegister.jsp" />
+			<!-- Crear Documento -->
+			<forward name="success1" path="/createDocument.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/saveRegister"
+			type="com.desige.webDocuments.registers.actions.CreateRegister" name="register"
+			scope="session" validate="false" input="newRegister.jsp">
+			<forward name="success" path="/newRegister.jsp" />
+			<forward name="errorCHK" path="/createDocument.jsp" />
+			<forward name="errorReg" path="/newRegister.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/editRegister"
+			type="com.desige.webDocuments.registers.actions.EditRegister" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/openRegister.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/updateRegister"
+			type="com.desige.webDocuments.registers.actions.UpdateRegister" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/info.jsp" />
+			<forward name="close" path="/cerrar.jsp" />
+			<forward name="closeAndReject" path="/closeAndReject.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/updateRegisterRejectOnDemand"
+			type="com.desige.webDocuments.registers.actions.UpdateRegisterRejectOnDemand"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/info.jsp" />
+			<forward name="close" path="/cerrar.jsp" />
+			<forward name="closeAndReject" path="/closeAndReject.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/changeLocationDocument"
+			type="com.desige.webDocuments.document.actions.ChangeLocationDocument"
+			scope="session" validate="false" input="">
+			<forward name="success" path="/searchDocument.do" />
+			<forward name="error" path="/searchDocument.do" />
+		</action>
+
+		<action path="/publicEraserDocument"
+			type="com.desige.webDocuments.document.actions.PublicEraserDocument"
+			scope="session" validate="false" input="">
+			<forward name="success" path="/searchDocument.do" />
+			<forward name="error" path="/searchDocument.do" />
+		</action>
+
+		<!--Crear recibos darwinuzcategui -->
+		<action path="/EnviarRecibo" type="com.gestionEnvio.custon.dostorres.actions.EnviarReciboAction"
+			scope="session" validate="false" input="/showRecibos.do">
+			<forward name="success" path="/recibos.jsp" />
+			<forward name="error" path="/showRecibos.do" />
+		</action>
+		<!--Crear recibos darwinuzcategui -->
+		<action path="/EnviarReciboPendiente" type="com.gestionEnvio.custon.dostorres.actions.EnviarReciboPendienteAction"
+			scope="session" validate="false" input="/showRecibosPendiente.do">
+			<forward name="success" path="/recibosPendientes.jsp" />
+			<forward name="error" path="/showRecibosPendiente.do" />
+		</action>
+		<!--Crear reporte -->
+		<action path="/CrearReporte" type="com.desige.webDocuments.excel.CrearReporte"
+			scope="session" validate="false" input="/showPublished.do">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/showPublished.do" />
+		</action>
+		
+		<action path="/CrearReporteSacop" type="com.desige.webDocuments.excel.CrearReporteSacop"
+			scope="session" validate="false" input="/loadSACOPMain.do?goTo=reload">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/loadSACOPMain.do?goTo=reload" />
+		</action>
+		<!-- Reporte de Documentos listados en buscar -->
+		<action path="/CrearReporteSearch" type="com.desige.webDocuments.excel.CrearReporteSearch"
+			scope="session" validate="false" input="/searchDocument.do">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/searchDocument.do" />
+		</action>
+		<action path="/CrearReportePrincipalAction" type="com.desige.webDocuments.excel.CrearReportePrincipalAction"
+			scope="session" validate="false" input="/searchDocument.do">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/searchDocument.do" />
+		</action>		
+		<!-- Reporte de Documentos Vinculados -->
+		<action path="/genXLSRelations" type="com.desige.webDocuments.excel.RelacionadosReport"
+			scope="session" validate="false" input="/showPublished.do">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!-- Reporte de Documentos Vinculados DARWINUZCATEGUI -->
+		<action path="/genXLSRelations" type="com.desige.webDocuments.excel.RelacionadosReport"
+			scope="session" validate="false" input="/showRecibos.do">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		
+		
+		<!--fin Crear Reporte -->
+		<!--Comenzamos con la carga de los procesos de sacop PSacop -->
+		<!-- CARGA LAS PLANILLAS DEL SACOP BEGIN -->
+		<action path="/loadSACOP" type="com.desige.webDocuments.sacop.actions.LoadSacop"
+			name="sacoplantilla" scope="session" validate="false">
+			<forward name="errorNotAuthorized" path="/logout.do" />
+			<forward name="reload" path="/principalSacop1.jsp" />
+		</action>
+
+		<action path="/loadSACOPMain" type="com.desige.webDocuments.sacop.actions.LoadSacop"
+			name="sacoplantilla" scope="session" validate="false">
+			<forward name="success" path="/marcoSacop.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+			<forward name="reload" path="/principalSacop1Main.jsp"  />
+
+			<forward name="borrador" path="/principalSacop1Borrador.jsp" />
+			<forward name="pendiente" path="/principalSacop1Pendiente.jsp" />
+			<forward name="emitido" path="/principalSacop1Emitido.jsp" />
+			<forward name="cerrado" path="/principalSacop1Cerrado.jsp" />
+			<forward name="registro" path="/principalSacop1Registro.jsp" />
+			<forward name="rechazado" path="/principalSacop1Rechazado.jsp" />
+			<forward name="buscar" path="/principalSacop1Buscar.jsp" />
+
+			<forward name="planillauno" path="/planillasacop1.jsp" />
+			<forward name="planillados" path="/planillasacop2.jsp" />
+			<forward name="planilla30" path="/planillasacop3_0.jsp" />
+			<forward name="planilla3_1" path="/planillasacop3_1.jsp" />
+			<forward name="planilla4" path="/planillasacop4.jsp" />
+			<forward name="planilla5" path="/planillasacop5.jsp" />
+			<forward name="planilla6" path="/planillasacop6.jsp" />
+			<forward name="planilla7" path="/planillasacop7.jsp" />
+			<forward name="planilla10" path="/planillasacop10.jsp" />
+		</action>
+
+		<action path="/VisualizarTodos"
+			type="com.desige.webDocuments.sacop.actions.VisualizarTodos" name="sacoplantilla"
+			scope="session" validate="false" input="/loadSACOPMain.do?goTo=reload">
+			<forward name="success" path="/loadSACOPMain.do?goTo=reload" />
+			<forward name="borrador" path="/loadSACOPMain.do?goTo=borrador" />
+			<forward name="emitido" path="/loadSACOPMain.do?goTo=emitido" />
+			<forward name="pendiente" path="/loadSACOPMain.do?goTo=pendiente" />
+			<forward name="cerrado" path="/loadSACOPMain.do?goTo=cerrado" />
+			<forward name="error" path="/loadSACOPMain.do?goTo=reload" />
+		</action>
+		<action path="/Sacop_Relacinadas"
+			type="com.desige.webDocuments.sacop.actions.Sacop_Relacionadas" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/sacop_relacionadas.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/Sacop_RelacinadasFrame"
+			type="com.desige.webDocuments.sacop.actions.Sacop_Relacionadas" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/sacop_relacionadas_frame.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/loadNoconformidadesRef"
+			type="com.desige.webDocuments.sacop.actions.loadNoconformidadesRef"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/noconformidadesRefFrame.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/loadNoconformidadesRef_Puente"
+			type="com.desige.webDocuments.sacop.actions.loadNoconformidadesRef_Puente"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/noconformidadesRef.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/saveSacop_loadNoconformidadesRef"
+			type="com.desige.webDocuments.sacop.actions.saveSacop_loadNoconformidadesRef"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/noconformidadesRef.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/saveSacop_loadNoconformidadesRefFrame"
+			type="com.desige.webDocuments.sacop.actions.saveSacop_loadNoconformidadesRef"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/loadNoconformidadesRef.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/saveSacop_Relacionadas"
+			type="com.desige.webDocuments.sacop.actions.SaveSacop_Relacionadas"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/sacop_relacionadas.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/saveSacop_RelacionadasFrame"
+			type="com.desige.webDocuments.sacop.actions.SaveSacop_Relacionadas"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/Sacop_RelacinadasFrame.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/Sacop_Relacionadas_Puente"
+			type="com.desige.webDocuments.sacop.actions.Sacop_Relacionadas_Puente"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/sacop_relacionadas.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/DeleteSacopAction"
+			type="com.desige.webDocuments.sacop.actions.DeleteSacopAction" name="sacoplantilla"
+			scope="session" validate="false" input="/loadSACOPMain.do?goTo=cerrado">
+			<forward name="success" path="/loadSACOPMain.do?goTo=cerrado" />
+			<forward name="error" path="/loadSACOPMain.do?goTo=cerrado" />
+		</action>
+		<action path="/PrincipalSacop"
+			type="com.desige.webDocuments.sacop.actions.PrincipalSacop" name="sacoplantilla"
+			scope="session" validate="false" input="/loadSACOPMain.do?goTo=success">
+			<forward name="success" path="/principalSacop1.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/CrearSacop" type="com.desige.webDocuments.sacop.actions.CrearSacop"
+			name="sacoplantilla" scope="session" validate="false"
+			input="/loadSACOPMain.do?goTo=reload">
+			<forward name="success" path="/loadSACOPMain.do?goTo=reload" />
+			<!-- <forward name="success" path="/planillasacop1.jsp" /> -->
+			<forward name="error" path="/loadSACOPMain.do?goTo=reload" />
+		</action>
+		<action path="/RefreshCrearPlanillaSacop"
+			type="com.desige.webDocuments.sacop.actions.RefreshCrearPlanillaSacop"
+			name="sacoplantilla" scope="session" validate="false" input="/planillasacop1.jsp">
+			<forward name="success" path="/planillasacop1.jsp" />
+			<forward name="error" path="/planillasacop1.jsp" />
+		</action>
+		<action path="/planillasacop1"
+			type="com.desige.webDocuments.sacop.actions.CrearPlanillaSacop" name="sacoplantilla"
+			scope="session" validate="false" input="/planillasacop1.jsp">
+			<forward name="success" path="/loadSACOPMain.do?goTo=reload" />
+			<forward name="error" path="/planillasacop1.jsp" />
+		</action>
+		<action path="/planillasacop1Reload"
+			type="com.desige.webDocuments.sacop.actions.CrearPlanillaSacop" name="sacoplantilla"
+			scope="session" validate="false" input="/planillasacop1.jsp">
+			<forward name="success" path="/loadSACOP.do?goTo=reload" />
+			<forward name="error" path="/planillasacop1.jsp" />
+		</action>
+
+		<action path="/planillasacop2"
+			type="com.desige.webDocuments.sacop.actions.ActualizarPlanillaSacop"
+			name="sacoplantilla" scope="session" validate="false" input="/planillasacop2.jsp">
+			<forward name="success" path="/loadSACOPMain.do" />
+			<forward name="error" path="/planillasacop2.jsp" />
+		</action>
+		<action path="/planillasacop3"
+			type="com.desige.webDocuments.sacop.actions.ActualizarPlanilla3Sacop"
+			name="sacoplantilla" scope="session" validate="false" input="/planillasacop3_0.jsp">
+			<forward name="success" path="/loadSACOPMain.do?goTo=reload" />
+			<forward name="error" path="/loadSACOPMain.do?goTo=planilla30" />
+		</action>
+		<action path="/planillasacop4"
+			type="com.desige.webDocuments.sacop.actions.ActualizarPlanilla4Sacop"
+			name="sacoplantilla" scope="session" validate="false" input="/planillasacop4.jsp">
+			<forward name="success" path="/loadSACOPMain.do?goTo=reload" />
+			<forward name="error" path="/loadSACOPMain.do?goTo=planilla4" />
+		</action>
+		<action path="/planillasacop5"
+			type="com.desige.webDocuments.sacop.actions.ActualizarPlanilla5Sacop"
+			name="sacoplantilla" scope="session" validate="false" input="/planillasacop5.jsp">
+			<forward name="success" path="/loadSACOPMain.do?goTo=reload" />
+			<forward name="error" path="/planillasacop5.jsp" />
+		</action>
+		<action path="/planillasacop6"
+			type="com.desige.webDocuments.sacop.actions.ActualizarPlanilla6Sacop"
+			name="sacoplantilla" scope="session" validate="false" input="/planillasacop6.jsp">
+			<forward name="success" path="/loadSACOPMain.do?goTo=reload" />
+			<forward name="error" path="/planillasacop6.jsp" />
+		</action>
+		<action path="/planillasacop10"
+            type="com.desige.webDocuments.sacop.actions.ActualizarPlanilla10Sacop"
+            name="sacoplantilla" scope="session" validate="false" input="/planillasacop10.jsp">
+            <forward name="success" path="/loadSACOPMain.do?goTo=reload" />
+            <forward name="error" path="/planillasacop10.jsp" />
+        </action>
+        <action path="/SacopMiniText"
+			type="com.desige.webDocuments.sacop.actions.SacopMiniText" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/showSacopMiniText.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+		<action path="/SacopMiniTextFrame"
+			type="com.desige.webDocuments.sacop.actions.SacopMiniText" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/showSacopMiniTextFrame.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+		<!-- CARGA LAS PLANILLAS DEL SACOP END -->
+		<!--ACCIONES A TOMAR SACOP -->
+		<!--<action path="/LoadTitulosPlanillasSacop" type="com.desige.webDocuments.sacop.actions.LoadTitulosPlanillasSacopAction" 
+			name="" scope="session" validate="false"> -->
+		<action path="/LoadAccionesTomarSacop"
+			type="com.desige.webDocuments.sacop.actions.LoadAccionesTomarSacopAction"
+			name="accionTomarSacop" scope="session" validate="false">     <!--PtitulosplanillaSacop -->
+			<forward name="success" path="/accionestomarsacop.jsp" />
+			<forward name="error" path="/accionestomarsacop.jsp" />
+		</action>
+		<action path="/newAccionesTomarSacop"
+			type="com.desige.webDocuments.sacop.actions.UpdateAccionesTomarSacopAction"
+			name="paccionTomarSacop" scope="session" validate="false"
+			input="/accionestomarsacop.jsp">
+			<forward name="success" path="/LoadAccionesTomarSacop.do" />
+			<forward name="error" path="/accionestomarsacop.jsp" />
+		</action>
+
+		<action path="/loadAccionesTomarSacopEdit"
+			type="com.desige.webDocuments.sacop.actions.LoadEditAccionesTomarSacopAction"
+			name="accionTomarSacop" scope="session" validate="false"
+			input="/accionestomarsacop.jsp">
+			<forward name="success" path="/LoadAccionesTomarSacop.do" />
+			<forward name="error" path="/accionestomarsacop.jsp" />
+		</action>
+
+		<action path="/editAccionesTomarSacop"
+			type="com.desige.webDocuments.sacop.actions.UpdateAccionesTomarSacopAction"
+			name="accionTomarSacop" scope="session" validate="false"
+			input="/accionestomarsacop.jsp">
+			<forward name="success" path="/LoadAccionesTomarSacop.do" />
+			<forward name="error" path="/accionestomarsacop.jsp" />
+		</action>
+		<action path="/editAccionesporpersona"
+			type="com.desige.webDocuments.sacop.actions.UpdateAccionesporpersona"
+			name="accionTomarSacop" scope="session" validate="false"
+			input="/accionestomarsacop.jsp">
+			<forward name="success" path="/LoadAccionesTomarSacop.do" />
+			<forward name="error" path="/accionestomarsacop.jsp" />
+		</action>
+
+		<action path="/editGnrlAccionesTomarSacop"
+			type="com.desige.webDocuments.sacop.actions.UpdateGnrlAccionesTomarSacopAction"
+			name="sacoplantilla" scope="session" validate="false"
+			input="/accionestomarsacop.jsp">
+			<forward name="success" path="/LoadAccionesTomarSacop.do" />
+			<forward name="error" path="/accionestomarsacop.jsp" />
+		</action>
+		<!--END ACCIONES A TOMAR SACOP -->
+		<!-- CARGA LO0S PRCESOS DEL SACOP BEGIN -->
+		<action path="/loadProcesosSacop"
+			type="com.desige.webDocuments.sacop.actions.LoadProcesosSacopAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/procesossacop.jsp" />
+			<forward name="error" path="/procesossacop.jsp" />
+		</action>
+
+		<action path="/newProcesosSacop"
+			type="com.desige.webDocuments.sacop.actions.UpdateProcesosSacopAction"
+			name="PSacop" scope="session" validate="false" input="/procesossacop.jsp">
+			<forward name="success" path="/loadProcesosSacop.do" />
+			<forward name="error" path="/procesossacop.jsp" />
+		</action>
+
+		<action path="/loadProcesosSacopEdit"
+			type="com.desige.webDocuments.sacop.actions.LoadEditProcesosSacopAction"
+			name="editPSacop" scope="session" validate="false" input="/procesossacop.jsp">
+			<forward name="success" path="/loadProcesosSacop.do" />
+			<forward name="error" path="/procesossacop.jsp" />
+		</action>
+
+		<action path="/editPSacop"
+			type="com.desige.webDocuments.sacop.actions.UpdateProcesosSacopAction"
+			name="editPSacop" scope="session" validate="false" input="/procesossacop.jsp">
+			<forward name="success" path="/loadProcesosSacop.do" />
+			<forward name="error" path="/procesossacop.jsp" />
+		</action>
+
+		<action path="/loadAreaCargo"
+			type="com.desige.webDocuments.area.actions.LoadAreaCargoAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/area.jsp" />
+			<forward name="error" path="/area.jsp" />
+		</action>
+		<action path="/loadCargo"
+			type="com.desige.webDocuments.cargo.actions.LoadCargoAction" name="frmCargoChange"
+			scope="session" validate="false">
+			<forward name="success" path="/cargo.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/newCargo"
+			type="com.desige.webDocuments.cargo.actions.UpdateCargoAction" name="frmCargo"
+			scope="session" validate="false" input="/cargo.jsp">
+			<forward name="success" path="/loadCargo.do" />
+			<forward name="error" path="/cargo.jsp" />
+		</action>
+
+		<action path="/loadCargoEdit"
+			type="com.desige.webDocuments.cargo.actions.LoadEditCargoAction"
+			name="frmCargo1" scope="session" validate="false" input="/cargo.jsp">
+			<forward name="success" path="/loadCargo.do" />
+			<forward name="error" path="/cargo.jsp" />
+		</action>
+		<action path="/editPCargo"
+			type="com.desige.webDocuments.cargo.actions.UpdateCargoAction" name="frmCargo1"
+			scope="session" validate="false" input="/cargo.jsp">
+			<forward name="success" path="/loadCargo.do" />
+			<forward name="error" path="/cargo.jsp" />
+		</action>
+		<!-- 2007-02-15 WonderWare inicio -->
+
+		<action path="/logoutActiveFactory"
+			type="com.desige.webDocuments.users.actions.LogoutUserAction">
+			<forward name="success" path="/infoActiveFactory.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+		<!--Muestra documento active factory con URL inicio -->
+		<action path="/activefactory" type="com.desige.webDocuments.users.actions.Inicio">
+			<forward name="home" path="/activefactory.jsp" />
+		</action>
+
+		<action path="/inicioActiveFactory" type="com.focus.wonderware.actions.ActiveFactory"
+			name="login" scope="session" input="/activefactory.jsp" validate="true">
+			<forward name="success" path="/MuestarDocumentoActiveFactory.do" />
+			<forward name="changePass" path="/activefactory.jsp" />
+			<forward name="error" path="/activefactory.jsp" />
+		</action>
+		<!-- Inicio de Sacop_Intouch -->
+		<action path="/loadsacop_intouch"
+			type="com.focus.wonderware.intocuh_sacop.actions.loadsacop_intouch"
+			name="newsacop_intouch1" scope="session" validate="false">
+			<forward name="success" path="/sacop_intouchMostrarLista.jsp" />
+			<forward name="error" path="/sacop_intouchMostrarLista.jsp" />
+		</action>
+
+		<action path="/newsacop_intouch"
+			type="com.focus.wonderware.intocuh_sacop.actions.NewSacop_Intouch"
+			name="newsacop_intouch1" scope="session" validate="false">
+			<forward name="success" path="/sacop_intouch_primera.jsp" />
+			<forward name="error" path="/loadsacop_intouch.do" />
+		</action>
+
+		<action path="/ProcesarSacopIntouch"
+			type="com.focus.wonderware.intocuh_sacop.actions.ProcesarSacopIntouch"
+			name="sacoplantilla" scope="session" validate="false">
+			<!--<forward name="success" path="/planillasacop1.jsp"/> -->
+			<forward name="error" path="/loadsacop_intouch.do" />
+		</action>
+		<!-- Configuracion Tagnames en el archivo plano -->
+		<!-- inicio Tags name configuracion -->
+		<action path="/loadTagnameConf"
+			type="com.focus.wonderware.intocuh_sacop.actions.loadTagnameConf"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/tagnameconf.jsp" />
+			<forward name="error" path="/tagnameconf.jsp" />
+		</action>
+
+		<action path="/newTagnameConf"
+			type="com.focus.wonderware.intocuh_sacop.actions.newTagnameConf"
+			name="sacop_Intouch_Conftagname" scope="session" validate="false"
+			input="/tagnameconf.jsp">
+			<forward name="success" path="/loadTagnameConf.do" />
+			<forward name="error" path="/tagnameconf.jsp" />
+		</action>
+
+		<action path="/loadTagnameConfEdit"
+			type="com.focus.wonderware.intocuh_sacop.actions.loadTagnameConfEdit"
+			name="sacop_Intouch_Conftagname1" scope="session" validate="false"
+			input="/tagnameconf.jsp">
+			<forward name="success" path="/loadTagnameConf.do" />
+			<forward name="error" path="/tagnameconf.jsp" />
+		</action>
+		<action path="/editPTagnameConf"
+			type="com.focus.wonderware.intocuh_sacop.actions.newTagnameConf"
+			name="sacop_Intouch_Conftagname1" scope="session" validate="false"
+			input="/tagnameconf.jsp">
+			<forward name="success" path="/loadTagnameConf.do" />
+			<forward name="error" path="/tagnameconf.jsp" />
+		</action>
+		<!-- Fin Tags name configuracion -->
+		<!-- inicio Tags name -->
+		<action path="/LoadArchivoPlanoTagname"
+			type="com.focus.wonderware.intocuh_sacop.actions.LoadArchivoPlanoTagname"
+			name="sacoplantilla" scope="session" validate="false" input="/tagname.jsp">
+			<forward name="success" path="/loadArchivoPlanoTagname.jsp" />
+			<forward name="error" path="/loadArchivoPlanoTagname.jsp" />
+		</action>
+
+		<action path="/LoadArchivoPlanoTagnameII"
+			type="com.focus.wonderware.intocuh_sacop.actions.LoadArchivoPlanoTagnameII"
+			name="sacoplantilla" scope="session" validate="false"
+			input="/loadArchivoPlanoTagname.jsp">
+			<forward name="success" path="/LoadArchivoPlanoTagname.do" />
+			<forward name="error" path="/LoadArchivoPlanoTagname.do" />
+		</action>
+		<action path="/loadTagname"
+			type="com.focus.wonderware.intocuh_sacop.actions.LoadTagnameAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/tagname.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/newTagname"
+			type="com.focus.wonderware.intocuh_sacop.actions.UpdateTagnameAction"
+			name="tagname" scope="session" validate="false" input="/tagname.jsp">
+			<forward name="success" path="/loadTagname.do" />
+			<forward name="error" path="/tagname.jsp" />
+		</action>
+
+		<action path="/loadTagnameEdit"
+			type="com.focus.wonderware.intocuh_sacop.actions.LoadEditTagnameAction"
+			name="tagname1" scope="session" validate="false" input="/tagname.jsp">
+			<forward name="success" path="/loadTagname.do" />
+			<forward name="error" path="/tagname.jsp" />
+		</action>
+		<action path="/editPTagname"
+			type="com.focus.wonderware.intocuh_sacop.actions.UpdateTagnameAction"
+			name="tagname1" scope="session" validate="false" input="/tagname.jsp">
+			<forward name="success" path="/loadTagname.do" />
+			<forward name="error" path="/tagname.jsp" />
+		</action>
+
+		<!-- fin Tags name -->
+
+		<!-- Fin Configuracion Tagnames en el archivo plano -->
+		<!-- Fin de Sacop_Intouch -->
+		<!--Muestra documento active factory con URL fin -->
+
+		<action path="/loadActiveFactory"
+			type="com.focus.wonderware.actions.LoadActiveFactoryAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/activeFactoryMostrarLista.jsp" />
+			<forward name="error" path="/activeFactoryMostrarLista.jsp" />
+		</action>
+
+		<action path="/newActiveFactory"
+			type="com.focus.wonderware.actions.UpdateActiveFactoryAction" name="activefactory"
+			scope="session" validate="false" input="/activeFactoryMostrarLista.jsp">
+			<forward name="success" path="/loadActiveFactory.do" />
+			<forward name="error" path="/activeFactoryMostrarLista.jsp" />
+		</action>
+
+		<action path="/loadActiveFactoryEdit"
+			type="com.focus.wonderware.actions.LoadEditActiveFactoryAction" name="activefactory1"
+			scope="session" validate="false" input="/activeFactoryMostrarLista.jsp">
+			<forward name="success" path="/loadActiveFactory.do" />
+			<forward name="error" path="/activeFactoryMostrarLista.jsp" />
+		</action>
+		<action path="/editPActiveFactory"
+			type="com.focus.wonderware.actions.UpdateActiveFactoryAction" name="activefactory1"
+			scope="session" validate="false" input="/activeFactoryMostrarLista.jsp">
+			<forward name="success" path="/loadActiveFactory.do" />
+			<forward name="error" path="/activeFactoryMostrarLista.jsp" />
+		</action>
+
+
+
+		<action path="/documentActivefactoryRelacionar"
+			type="com.desige.webDocuments.document.actions.ShowDocsPublishedAction"
+			name="" scope="session" validate="false" input="">
+			<forward name="success" path="/activefactoryRelacionarPublicar.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!-- 2007-02-15 WonderWare fin -->
+
+		<!-- 2006-03-20 inicio -->
+		<action path="/loadArea"
+			type="com.desige.webDocuments.area.actions.LoadAreaAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/area.jsp" />
+			<forward name="error" path="/area.jsp" />
+		</action>
+
+		<action path="/newArea"
+			type="com.desige.webDocuments.area.actions.UpdateAreaAction" name="frmArea"
+			scope="session" validate="false" input="/area.jsp">
+			<forward name="success" path="/loadArea.do" />
+			<forward name="successCargo" path="/loadCargo.do" />
+			<forward name="error" path="/area.jsp" />
+		</action>
+
+		<action path="/loadAreaEdit"
+			type="com.desige.webDocuments.area.actions.LoadEditAreaAction" name="frmArea1"
+			scope="session" validate="false" input="/area.jsp">
+			<forward name="success" path="/loadArea.do" />
+			<forward name="error" path="/area.jsp" />
+		</action>
+
+		<action path="/editPArea"
+			type="com.desige.webDocuments.area.actions.UpdateAreaAction" name="frmArea1"
+			scope="session" validate="false" input="/area.jsp">
+			<forward name="success" path="/loadArea.do" />
+			<forward name="error" path="/area.jsp" />
+		</action>
+		
+		<!-- POSSIBLE CAUSE -->
+		<action path="/loadPossibleCause"
+			type="com.desige.webDocuments.causa.actions.LoadPossibleCauseAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/posiblesCausas.jsp" />
+			<forward name="error" path="/posiblesCausas.jsp" />
+		</action>
+
+		<action path="/newPossibleCause"
+			type="com.desige.webDocuments.causa.actions.UpdatePossibleCauseAction" name="frmPossibleCause"
+			scope="session" validate="false" input="/posiblesCausas.jsp">
+			<forward name="success" path="/loadPossibleCause.do" />
+			<forward name="error" path="/posiblesCausas.jsp" />
+		</action>
+
+		<action path="/loadPossibleCauseEdit"
+			type="com.desige.webDocuments.causa.actions.LoadEditPossibleCauseAction" name="frmPossibleCause1"
+			scope="session" validate="false" input="/posiblesCausas.jsp">
+			<forward name="success" path="/loadPossibleCause.do" />
+			<forward name="error" path="/posiblesCausas.jsp" />
+		</action>
+		
+		<action path="/editPPossibleCause"
+			type="com.desige.webDocuments.causa.actions.UpdatePossibleCauseAction" name="frmPossibleCause1"
+			scope="session" validate="false" input="/posiblesCausas.jsp">
+			<forward name="success" path="/loadPossibleCause.do" />
+			<forward name="error" path="/posiblesCausas.jsp" />
+		</action>
+
+		<!-- ACTION RECOMMENDED -->
+		<action path="/loadActionRecommended"
+			type="com.desige.webDocuments.accion.actions.LoadActionRecommendedAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/accionRecomendada.jsp" />
+			<forward name="error" path="/accionRecomendada.jsp" />
+		</action>
+
+		<action path="/newActionRecommended"
+			type="com.desige.webDocuments.accion.actions.UpdateActionRecommendedAction" name="frmActionRecommended"
+			scope="session" validate="false" input="/accionRecomendada.jsp">
+			<forward name="success" path="/loadActionRecommended.do" />
+			<forward name="error" path="/accionRecomendada.jsp" />
+		</action>
+
+		<action path="/loadActionRecommendedEdit"
+			type="com.desige.webDocuments.accion.actions.LoadEditActionRecommendedAction" name="frmActionRecommended1"
+			scope="session" validate="false" input="/accionRecomendada.jsp">
+			<forward name="success" path="/loadActionRecommended.do" />
+			<forward name="error" path="/accionRecomendada.jsp" />
+		</action>
+		
+		<action path="/editPActionRecommended"
+			type="com.desige.webDocuments.accion.actions.UpdateActionRecommendedAction" name="frmActionRecommended1"
+			scope="session" validate="false" input="/accionRecomendada.jsp">
+			<forward name="success" path="/loadActionRecommended.do" />
+			<forward name="error" path="/accionRecomendada.jsp" />
+		</action>
+		
+		<!-- PROGRAMA AUDITORIA -->
+		<action path="/loadProgramAudit"
+			type="com.desige.webDocuments.accion.actions.LoadProgramAuditAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/programAudit.jsp" />
+			<forward name="error" path="/programAudit.jsp" />
+		</action>
+
+		<action path="/newProgramAudit"
+			type="com.desige.webDocuments.accion.actions.UpdateProgramAuditAction" name="frmProgramAudit"
+			scope="session" validate="false" input="/programAudit.jsp">
+			<forward name="success" path="/loadProgramAudit.do" />
+			<forward name="error" path="/programAudit.jsp" />
+		</action>
+
+		<action path="/loadProgramAuditEdit"
+			type="com.desige.webDocuments.accion.actions.LoadEditProgramAuditAction" name="frmProgramAudit1"
+			scope="session" validate="false" input="/programAudit.jsp">
+			<forward name="success" path="/loadProgramAudit.do" />
+			<forward name="error" path="/programAudit.jsp" />
+		</action>
+		
+		<action path="/editProgramAudit"
+			type="com.desige.webDocuments.accion.actions.UpdateProgramAuditAction" name="frmProgramAudit1"
+			scope="session" validate="false" input="/programAudit.jsp">
+			<forward name="success" path="/loadProgramAudit.do" />
+			<forward name="error" path="/programAudit.jsp" />
+		</action>
+
+		<!-- PLAN AUDITORIA -->
+		<action path="/loadPlanAudit"
+			type="com.desige.webDocuments.accion.actions.LoadPlanAuditAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/planAudit.jsp" />
+			<forward name="error" path="/planAudit.jsp" />
+		</action>
+
+		<action path="/newPlanAudit"
+			type="com.desige.webDocuments.accion.actions.UpdatePlanAuditAction" name="frmPlanAudit"
+			scope="session" validate="false" input="/planAudit.jsp">
+			<forward name="success" path="/loadPlanAudit.do" />
+			<forward name="error" path="/planAudit.jsp" />
+		</action>
+
+		<action path="/loadPlanAuditEdit"
+			type="com.desige.webDocuments.accion.actions.LoadEditPlanAuditAction" name="frmPlanAudit1"
+			scope="session" validate="false" input="/planAudit.jsp">
+			<forward name="success" path="/loadPlanAudit.do" />
+			<forward name="error" path="/planAudit.jsp" />
+		</action>
+		
+		<action path="/editPlanAudit"
+			type="com.desige.webDocuments.accion.actions.UpdatePlanAuditAction" name="frmPlanAudit1"
+			scope="session" validate="false" input="/planAudit.jsp">
+			<forward name="success" path="/loadPlanAudit.do" />
+			<forward name="error" path="/planAudit.jsp" />
+		</action>
+
+		<!-- CARGAR SOLICITUD DE SACOP -->
+		<action path="/loadSacopRequest"
+			type="com.desige.webDocuments.sacop.actions.LoadSolicitudSacop" >
+			<forward name="success" path="/solicitudSacop.jsp" />
+			<forward name="created" path="/solicitudSacopCreada.jsp" />
+		</action>
+
+		<action path="/saveSacopRequest"
+			type="com.desige.webDocuments.sacop.actions.SaveSolicitudSacop" >
+			<forward name="success" path="/solicitudSacopExito.jsp" />
+			<forward name="error" path="/solicitudSacopError.jsp" />
+		</action>
+
+		<action path="/loadSacopHistoryAll"
+			type="com.desige.webDocuments.sacop.actions.LoadSacopHistoryAllAction" >
+			<forward name="cerrado" path="/principalSacop1Cerrado.jsp" />
+		</action>
+
+		<!-- 2006-03-20 fin -->
+		<!-- CARGA LO0S PRCESOS DEL SACOP END -->
+		<!-- CARGA LOS TITULOS DE LAS PLANILLAS SACOP INICIO -->
+		<action path="/LoadTitulosPlanillasSacop"
+			type="com.desige.webDocuments.sacop.actions.LoadTitulosPlanillasSacopAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/titulosplanillassacop.jsp" />
+			<forward name="error" path="/titulosplanillassacop.jsp" />
+		</action>
+		<!-- Action para gestionar la clasificacion de las SACOPs -->
+		<action path="/LoadClasificacionPlanillasSacop"
+			type="com.desige.webDocuments.sacop.actions.LoadClasificacionPlanillasSacopAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/clasificacionesSacop.jsp" />
+			<forward name="error" path="/clasificacionesSacop.jsp" />
+		</action>
+		<action path="/newTitulosPlanillasSacop"
+			type="com.desige.webDocuments.sacop.actions.UpdateTitulosPlanillasSacopAction"
+			name="PtitulosplanillaSacop" scope="session" validate="false"
+			input="/titulosplanillassacop.jsp">
+			<forward name="success" path="/LoadTitulosPlanillasSacop.do" />
+			<forward name="error" path="/titulosplanillassacop.jsp" />
+		</action>
+        <action path="/newClasificacionPlanillasSacop"
+            type="com.desige.webDocuments.sacop.actions.UpdateClasificacionPlanillasSacopAction"
+            name="PClasificacionPlanillaSacop" scope="session" validate="false"
+            input="/clasificacionesSacop.jsp">
+            <forward name="success" path="/LoadClasificacionPlanillasSacop.do" />
+            <forward name="error" path="/clasificacionesSacop.jsp" />
+        </action>
+		<action path="/loadTitulosPlanillasSacopEdit"
+            type="com.desige.webDocuments.sacop.actions.LoadEditTitulosPlanillasSacopAction"
+            name="editPtitleSacop" scope="session" validate="false"
+            input="/titulosplanillassacop.jsp">
+            <forward name="success" path="/LoadTitulosPlanillasSacop.do" />
+            <forward name="error" path="/titulosplanillassacop.jsp" />
+        </action>
+        <action path="/loadClasificacionPlanillasSacopEdit"
+            type="com.desige.webDocuments.sacop.actions.LoadEditClasificacionPlanillasSacopAction"
+            name="editPClasificacionSacop" scope="session" validate="false"
+            input="/clasificacionesSacop.jsp">
+            <forward name="success" path="/LoadClasificacionPlanillasSacop.do" />
+            <forward name="error" path="/clasificacionesSacop.jsp" />
+        </action>
+
+		<action path="/editPtitleSacop"
+			type="com.desige.webDocuments.sacop.actions.UpdateTitulosPlanillasSacopAction"
+			name="editPtitleSacop" scope="session" validate="false"
+			input="/titulosplanillassacop.jsp">
+			<forward name="success" path="/LoadTitulosPlanillasSacop.do" />
+			<forward name="error" path="/titulosplanillassacop.jsp" />
+		</action>
+		<action path="/editPClasificacionSacop"
+            type="com.desige.webDocuments.sacop.actions.UpdateClasificacionPlanillasSacopAction"
+            name="editPClasificacionSacop" scope="session" validate="false"
+            input="/clasificacionesSacop.jsp">
+            <forward name="success" path="/LoadClasificacionPlanillasSacop.do" />
+            <forward name="error" path="/clasificacionesSacop.jsp" />
+        </action>
+		<!--PtitulosplanillaSacop -->
+		<!-- CARGA LOS TITULOS DE LAS PLANILLAS SACOP FIN -->
+
+
+		<!--Fin con la carga de los procesos de sacop -->
+		<!-- BEGIN actions TypeDocuments -->
+
+		<action path="/loadTypeDoc"
+			type="com.desige.webDocuments.typeDocuments.actions.LoadTypeDocumentsAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/editField.jsp" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/loadTypeDocEdit"
+			type="com.desige.webDocuments.typeDocuments.actions.LoadEditTypeDocAction"
+			name="editTypeDoc" scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadTypeDoc.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/newTypeDoc"
+			type="com.desige.webDocuments.typeDocuments.actions.UpdateTypeDocumentsAction"
+			name="newTypeDoc" scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadTypeDoc.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/editTypeDoc"
+			type="com.desige.webDocuments.typeDocuments.actions.UpdateTypeDocumentsAction"
+			name="editTypeDoc" scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadTypeDoc.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<!-- END actions TypeDocuments -->
+		<!-- BEGIN actions City -->
+		<action path="/loadCity"
+			type="com.desige.webDocuments.city.actions.LoadCityAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/editField.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/loadCityEdit"
+			type="com.desige.webDocuments.city.actions.LoadEditCityAction" name="city"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadCity.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/newCity"
+			type="com.desige.webDocuments.city.actions.EditCityAction" name="insertCity"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadCity.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/editCity"
+			type="com.desige.webDocuments.city.actions.EditCityAction" name="editCityForm"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadCity.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<!-- END actions City -->
+
+		<!-- BEGIN actions State -->
+		<action path="/loadState"
+			type="com.desige.webDocuments.state.actions.LoadStateAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/editField.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/loadStateEdit"
+			type="com.desige.webDocuments.state.actions.LoadEditStateAction"
+			name="state" scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadState.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/newState"
+			type="com.desige.webDocuments.state.actions.EditStateAction" name="insertState"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadState.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<action path="/editState"
+			type="com.desige.webDocuments.state.actions.EditStateAction" name="editStateForm"
+			scope="session" validate="false" input="/editField.jsp">
+			<forward name="success" path="/loadState.do" />
+			<forward name="error" path="/editField.jsp" />
+		</action>
+
+		<!-- END actions State -->
+
+		<!-- BEGIN actions WorkFlows -->
+		<action path="/newWF"
+			type="com.desige.webDocuments.workFlows.actions.LoadDataWorkFlow"
+			name="newWF" scope="session" validate="false">
+			<forward name="success" path="/error.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/closeWF"
+			type="com.desige.webDocuments.workFlows.actions.CloseWorkFlowAction"
+			name="" scope="session" validate="false">
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/caceledWF"
+			type="com.desige.webDocuments.workFlows.actions.CanceledWorkFlowAction"
+			name="" scope="session" validate="false">
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/completedWF"
+			type="com.desige.webDocuments.workFlows.actions.CompletedWorkFlowAction"
+			name="" scope="session" validate="false">
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/saveWF"
+			type="com.desige.webDocuments.workFlows.actions.EditWorkFlowAction"
+			name="newWF" scope="session" validate="false" input="/newWorkflow.jsp">
+			<forward name="success" path="/showDataWorkFlow.jsp" />
+			<forward name="error" path="/newWorkflow.jsp" />
+		</action>
+
+		<action path="/loadWF"
+			type="com.desige.webDocuments.workFlows.actions.LoadWorkFlowAction"
+			name="showDataWF" scope="session" validate="false">
+			<forward name="success" path="/editWorkFlow.jsp" />
+			<forward name="struct" path="/newStruct.jsp" />
+			<forward name="editFlexFlow" path="/editFlexFlow.jsp" />
+			<!--<forward name="error" path="/error.jsp"/> -->
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadHistoryWF"
+			type="com.desige.webDocuments.workFlows.actions.LoadHistoryWorkFlowAction"
+			name="showDataWF" scope="session" validate="false">
+			<forward name="success" path="/HistoryWF.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/responseWF"
+			type="com.desige.webDocuments.workFlows.actions.UpdateWorkFlowAction"
+			name="responseWF" scope="session" validate="false" input="/editWorkFlow.jsp">
+			<forward name="success" path="/loadWF.do" />
+			<forward name="error" path="/editWorkFlow.jsp" />
+		</action>
+
+		<action path="/loadAllWF"
+			type="com.desige.webDocuments.workFlows.actions.LoadWorkFlowsAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/marco.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="reload" path="/principal.jsp" />
+		</action>
+
+		<action path="/loadDocumentRequired"
+			type="com.desige.webDocuments.workFlows.actions.LoadDocumentRequiredAction"
+			name="" scope="request" validate="false">
+			<forward name="success" path="/principalDocReq.jsp" />
+		</action>
+
+		<action path="/loadInboxWFMyTask"
+			type="com.desige.webDocuments.workFlows.actions.LoadAllWorkFlows"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/inboxWFsMyTask.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+		<action path="/loadInboxWFOrdersTask"
+			type="com.desige.webDocuments.workFlows.actions.LoadAllWorkFlows"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/inboxWFsOrdersTask.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/loadInboxWF"
+			type="com.desige.webDocuments.workFlows.actions.LoadAllWorkFlows"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/inboxWFs.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/deleteInboxWF"
+			type="com.desige.webDocuments.workFlows.actions.DeleteWFsAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/loadInboxWF.do" />
+			<forward name="successMyTask" path="/loadInboxWFMyTask.do" />
+			<forward name="successOrdersTask" path="/loadInboxWFOrdersTask.do" />
+			<forward name="error" path="/loadInboxWF.do" />
+		</action>
+
+		<!-- BEGIN actions Formularios -->
+		<action path="/loadDocumentFormat"
+			type="com.desige.webDocuments.document.actions.loadDocumentFormat"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/editFieldAccept.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<!-- END actions WorkFlows -->
+
+		<!-- BEGIN actions Documents -->
+		<action path="/showPublished"
+			type="com.desige.webDocuments.document.actions.ShowDocsPublishedAction"
+			name="" scope="session" validate="false" input="">
+			<forward name="success" path="/published.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		
+		
+		<!-- BEGIN actions darwinuzcategui showRecibos.do-->
+		<action path="/showRecibos"
+			type="com.gestionEnvio.custon.dostorres.actions.ShowRecibosAction"
+			name="" scope="session" validate="false" input="">
+			<forward name="success" path="/recibos.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		
+		<!-- BEGIN actions darwinuzcategui showRecibosPendiente.do-->
+		<action path="/showRecibosPendiente"
+			type="com.gestionEnvio.custon.dostorres.actions.ShowRecibosPendienteAction"
+			name="" scope="session" validate="false" input="">
+			<forward name="success" path="/recibosPendientes.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		
+		<action path="/orderRecibo"
+		   type="com.gestionEnvio.custon.dostorres.actions.OrdenRecibosAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="successRec" path="/recibos.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		
+		<action path="/orderReciboPendiente"
+		   type="com.gestionEnvio.custon.dostorres.actions.OrdenRecibosPendientesAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="successRec" path="/recibosPendientes.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		
+
+		<action path="/searchDocument"
+			type="com.desige.webDocuments.document.actions.SearchDocAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="success" path="/searchDocument.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/orderDocument"
+			type="com.desige.webDocuments.document.actions.OrderDocAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="success" path="/searchDocument.jsp" />
+			<forward name="successPub" path="/published.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<action path="/newDocument"
+			type="com.desige.webDocuments.document.actions.EditDocumentAction"
+			name="newDocument" scope="session" validate="false" input="/newStruct.jsp">
+			<forward name="success" path="/error.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/editCheckOut"
+			type="com.desige.webDocuments.document.actions.EditDocCheckOutAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/openRegister.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/updateDocCheckOut"
+			type="com.desige.webDocuments.document.actions.UpdateDocumentAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/info.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/upploadFile"
+			type="com.desige.webDocuments.document.actions.UpploadFileAction"
+			name="newDocument" scope="session" validate="false" input="/upploadFile.jsp">
+			<forward name="success" path="/error.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/showDocumentNorms"
+			type="com.desige.webDocuments.norms.actions.showDocumentNorms" name="docsNorms"
+			scope="session" validate="false">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/showMSG.jsp" />
+		</action>
+		<action path="/showDocumentSacop"
+			type="com.desige.webDocuments.sacop.actions.showDocumentSacop" name="sacoplantillabd"
+			scope="session" validate="false">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/showMSG.jsp" />
+		</action>
+		<action path="/showDocument"
+			type="com.desige.webDocuments.document.actions.ShowDocument" name="showDocument"
+			scope="session" validate="false">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/showMSG.jsp" />
+		</action>
+		<!-- Action to Load data Document -->
+
+		<!--30 DE JULIO 2005 INICIO -->
+		<action path="/loadDataFirmantes"
+			type="com.desige.webDocuments.document.actions.loadDataFirmantes"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/viewDocument.jsp" />
+			<forward name="error" path="/showMSG.jsp" />
+		</action>
+
+		<action path="/loadsolicitudImpresion"
+			type="com.desige.webDocuments.document.actions.loadsolicitudImpresion"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/showSolicitudImpresion.jsp" />
+			<!--<forward name="loadDataDoc" path="/loadDataDoc.do"/> -->
+			<forward name="showInfo" path="/topDocument.jsp" />
+			<forward name="error" path="/showMSG.jsp" />
+		</action>
+		
+		<!--30 DE JULIO 2005 FIN -->
+
+		<!--Luis Cisneros -->
+		<!--26/03/07 -->
+		<!--Filtro para la lista de usuarios -->
+		<action path="/filtroSessionUsuarios"
+			type="com.desige.webDocuments.document.actions.FiltroUsuariosSession"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/showSolicitudImpresion.jsp" />
+			<forward name="error" path="/showMSG.jsp" />
+		</action>
+		<!--26/03/07 FIN -->
+
+		<!-- Action to Load data Document -->
+		<action path="/loadDataDoc"
+			type="com.desige.webDocuments.document.actions.LoadDataDocument"
+			name="showDocument" scope="session" validate="false">
+			<forward name="login" path="/inicioSession.do" />
+			<forward name="success" path="/viewDocument.jsp" />
+			<forward name="error" path="/showMSG.jsp" />
+		</action>
+
+		<action path="/loadDataDocTarget" type="com.desige.webDocuments.document.actions.LoadDataDocumentTargetAction" />
+
+		<action path="/showDataDocument"
+			type="com.desige.webDocuments.document.actions.ShowDataDocument"
+			name="showDocument" scope="session" validate="false">
+			<forward name="success" path="/showDataDocument.jsp" />
+			<forward name="searchdocindividual" path="/searchDocument.jsp" />
+			<forward name="searchpublicdoc" path="/published.jsp" />
+			<forward name="struct" path="/newStruct.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/editDataDocument"
+			type="com.desige.webDocuments.document.actions.EditDocumentAction"
+			name="showDocument" scope="session" validate="false">
+			<forward name="success" path="/editDataDocument.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadEditDataDocument"
+			type="com.desige.webDocuments.document.actions.EditDocumentAction"
+			name="showDocument" scope="session" validate="false">
+			<forward name="success" path="/editDataDocument.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/loadAllDocuments"
+			type="com.desige.webDocuments.document.actions.LoadAllDocuments"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/documentsLinks.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/loadAllDocumentsRelated"
+			type="com.desige.webDocuments.document.actions.LoadAllDocuments"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/documentsLinksRelated.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/loadAllDocumentsRelatedSingle"
+			type="com.desige.webDocuments.document.actions.LoadAllDocuments"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/documentsLinksRelatedSingle.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/loadHistoryDocs"
+			type="com.desige.webDocuments.document.actions.LoadHistoryDocsAction"
+			name="dataHistoryStruct" scope="session" validate="false">
+			<forward name="success" path="/HistoryStruct.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadCheckOut"
+			type="com.desige.webDocuments.document.actions.LoadDataCheckOutDocAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/checkOut.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadCheckIn"
+			type="com.desige.webDocuments.document.actions.LoadDataCheckInAction"
+			name="checkInDoc" scope="session" validate="false">
+			<forward name="success" path="/checkIn.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/publicDocument"
+			type="com.desige.webDocuments.document.actions.PublicDocumentAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/loadStructMain.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/ratifyDocument"
+			type="com.desige.webDocuments.document.actions.RatifyDocumentAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/loadStructMain.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/backCheckOut"
+			type="com.desige.webDocuments.document.actions.BackCheckOutDocAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/loadStructMain.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/moveDoc"
+			type="com.desige.webDocuments.document.actions.MoveDocAction" name="moveDocForm"
+			scope="session" validate="false">
+			<forward name="success" path="/loadStructMain.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/backCheckIn"
+			type="com.desige.webDocuments.document.actions.BackCheckInDocAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/loadStructMain.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/deleteDoc"
+			type="com.desige.webDocuments.document.actions.DeleteDocumentAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/loadStructMain.do" />
+			<forward name="showDoc" path="/showDataDocument.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<!-- END actions Documents -->
+
+		<!-- BEGIN actions Struct -->
+
+		<action path="/moveStruct"
+			type="com.desige.webDocuments.structured.actions.MoveStructAction"
+			name="moveStructForm" scope="session" validate="false">
+			<forward name="success" path="/loadStructMain.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadStructMain"
+			type="com.desige.webDocuments.structured.actions.LoadStructMain"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/main-tree.jsp" />
+			<forward name="error" path="/loadAllStruct.do" />
+		</action>
+
+		<action path="/publicDocs"
+			type="com.desige.webDocuments.structured.actions.PublicDocs" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/loadStructMain.do" />
+			<forward name="error" path="/loadStructMain.do" />
+		</action>
+
+		<action path="/loadAllStruct"
+			type="com.desige.webDocuments.structured.actions.LoadAllStructAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/newStruct.jsp" />
+			<forward name="selectStruct" path="/selectStruct.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/loadStructEdit"
+			type="com.desige.webDocuments.structured.actions.LoadEditStructAction"
+			name="loadStruct" scope="session" validate="false" input="/newStruct.jsp">
+			<forward name="success" path="/editStruct.jsp" />
+			<forward name="error" path="/newStruct.jsp" />
+		</action>
+
+		<action path="/newStruct"
+			type="com.desige.webDocuments.structured.actions.EditStructAction"
+			name="insertStruct" scope="session" validate="false" input="/newStruct.jsp">
+			<forward name="success" path="/error.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/newStructLoad"
+			type="com.desige.webDocuments.structured.actions.EditStructAction"
+			name="insertStruct" scope="session" validate="false" input="/newStruct.jsp">
+			<forward name="success" path="/editStruct.jsp" />
+			<forward name="error" path="/loadAllStruct.do" />
+		</action>
+
+		<action path="/editStruct"
+			type="com.desige.webDocuments.structured.actions.EditStructAction"
+			name="editarStruct" scope="session" validate="false" input="/newStruct.jsp">
+			<forward name="success" path="/error.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/loadHistoryStruct"
+			type="com.desige.webDocuments.structured.actions.LoadDataHistoryAction"
+			name="dataHistoryStruct" scope="session" validate="false">
+			<forward name="success" path="/HistoryStruct.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<!-- END actions Struct -->
+
+		<!-- BEGIN actions Perfil -->
+		<action path="/loadPerfil" forward="/perfil.jsp">
+		</action>
+
+		<action path="/loadPerfilFicha"
+			type="com.desige.webDocuments.perfil.actions.LoadPerfilAction" name="perfil"
+			scope="session" validate="false">
+			<forward name="success" path="/perfilFicha.jsp" />
+			<forward name="error" path="/index.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/editPerfil"
+			type="com.desige.webDocuments.perfil.actions.EditPerfilAction" name="perfil"
+			scope="session" input="/perfilFicha.jsp" validate="false">
+			<!-- Luis Cisneros 12/03/07 Si no pasa las validaciones se queda (noSuccess) 
+				si las pasa, se va a la pestana ppal. -->
+			<forward name="noSuccess" path="/loadPerfilFicha.do" />
+			<forward name="success" path="/loadPerfilFicha.do" />
+			<forward name="successChange" path="/logout.do?pag=2" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+		<!-- END actions Perfil -->
+
+		<!-- BEGIN actions Urls -->
+		<action path="/loadUrls"
+			type="com.desige.webDocuments.enlaces.actions.LoadUrlsAction" name="perfil"
+			scope="session" validate="false" input="perfil.jsp">
+			<forward name="success" path="/urls.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/loadEdit"
+			type="com.desige.webDocuments.enlaces.actions.ShowUrlsAction" name="urls"
+			scope="session" validate="false" input="/urls.jsp">
+			<forward name="success" path="/loadUrls.do" />
+			<forward name="error" path="/urls.jsp" />
+		</action>
+
+		<action path="/editUrls"
+			type="com.desige.webDocuments.enlaces.actions.EditUrlsAction" name="editarUrls"
+			scope="session" validate="false" input="/urls.jsp">
+			<forward name="success" path="/loadUrls.do" />
+			<forward name="error" path="/urls.jsp" />
+		</action>
+
+		<action path="/newUrlsUser"
+			type="com.desige.webDocuments.enlaces.actions.EditUrlsAction" name="newUrls"
+			scope="session" validate="false" input="/urls.jsp">
+			<forward name="success" path="/loadUrls.do" />
+			<forward name="error" path="/urls.jsp" />
+		</action>
+		<!-- END actions Urls -->
+
+		<action path="/loadParameters"
+			type="com.desige.webDocuments.parameters.actions.LoadParametersAction"
+			name="loadParameters" scope="session" validate="false">
+			<forward name="success" path="/parameters.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/saveParameters"
+			type="com.desige.webDocuments.parameters.actions.EditParametersAction"
+			name="loadParameters" scope="session" validate="false">
+			<forward name="success" path="/administracionMain.do" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<!-- BEGIN actions Inicio -->
+		<action path="/inicio" type="com.desige.webDocuments.users.actions.Inicio">
+			<forward name="home" path="/main.jsp" />
+			<forward name="configure" path="/config.jsp" />
+		</action>
+		<!-- END actions Inicio -->
+
+		<!-- BEGIN actions Inicio -->
+		<action path="/Inicio" type="com.desige.webDocuments.users.actions.Inicio">
+			<forward name="home" path="/main.jsp" />
+			<forward name="configure" path="/config.jsp" />
+		</action>
+		<!-- END actions Inicio -->
+		<!-- BEGIN actions Mail -->
+		<action path="/loadMail"
+			type="com.desige.webDocuments.mail.actions.LoadSendMailAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/sendMail.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadMailAll" type="com.desige.webDocuments.mail.actions.LoadMailAll"
+			name="sendMail" scope="session" validate="false">
+			<forward name="success" path="/sendMail.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/sendMail"
+			type="com.desige.webDocuments.mail.actions.SendMailAction" name="sendMail"
+			scope="session" validate="false">
+			<forward name="success" path="/loadInbox.do" />
+			<forward name="error" path="/sendMail.jsp" />
+			<forward name="showDoc" path="/showDataDocument.do" />
+		</action>
+
+		<!-- Este action Carga los mensajes enviados por el usuario que se encuentre 
+			actualmente log en el sistema -->
+		<action path="/loadMailSents"
+			type="com.desige.webDocuments.mail.actions.LoadMailsSentsAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/mailsSents.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadInbox"
+			type="com.desige.webDocuments.mail.actions.LoadMailsInbox" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/inbox.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/loadInboxEntry"
+			type="com.desige.webDocuments.mail.actions.LoadMailsInbox" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/inboxEntry.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/deleteMail"
+			type="com.desige.webDocuments.mail.actions.DeleteMailForUserAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/loadInboxEntry.do" />
+			<forward name="successSents" path="/loadMailSents.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/showDetailsMail"
+			type="com.desige.webDocuments.mail.actions.LoadDetailMailAction"
+			name="sendMail" scope="session" validate="false">
+			<forward name="success" path="/showDataMail.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/contacts"
+			type="com.desige.webDocuments.mail.actions.LoadContactsAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/contacts.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/insertContacts"
+			type="com.desige.webDocuments.mail.actions.EditContactsAction" name="addressMail"
+			scope="session" validate="false">
+			<forward name="success" path="/contacts.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/editContacts"
+			type="com.desige.webDocuments.mail.actions.LoadContactForEditAction"
+			name="addressMail" scope="session" validate="false">
+			<forward name="success" path="/insertContacts.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<!-- END actions Mail -->
+
+		<!-- BEGIN actions Seguridad -->
+
+		<action path="/updateSecurityUser"
+			type="com.desige.webDocuments.seguridad.actions.EditSecurityStructUserAction"
+			name="securityUser" scope="session" validate="false" input="allUsers.jsp">
+			<forward name="success" path="/loadAllUser.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/updateSecurityUserRecord"
+			type="com.desige.webDocuments.seguridad.actions.EditSecurityUserRecordAction"
+			name="securityUser" scope="session" validate="false" input="allUsersRecord.jsp">
+			<forward name="success" path="/loadAllUserRecord.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/deleteSecUser"
+			type="com.desige.webDocuments.seguridad.actions.DeleteSecurityStructUser"
+			name="securityUser" scope="session" validate="false" input="allUsers.jsp">
+			<forward name="success" path="/loadAllUser.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/deleteSecDocUser"
+			type="com.desige.webDocuments.seguridad.actions.DeleteSecurityDocUser"
+			name="securityUser" scope="session" validate="false" input="allUsers.jsp">
+			<forward name="success" path="/loadAllUser.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/deleteSecRecordUser"
+			type="com.desige.webDocuments.seguridad.actions.DeleteSecurityRecordUser"
+			name="securityUser" scope="session" validate="false" input="allUsersRecord.jsp">
+			<forward name="success" path="/loadAllUserRecord.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/deleteSecDocGroup"
+			type="com.desige.webDocuments.seguridad.actions.DeleteSecurityDocGroup"
+			name="securityUser" scope="session" validate="false" input="allGroups.jsp">
+			<forward name="success" path="/loadAllGroups.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/deleteSecRecordGroup"
+			type="com.desige.webDocuments.seguridad.actions.DeleteSecurityRecordGroup"
+			name="securityUser" scope="session" validate="false" input="allGroupsRecord.jsp">
+			<forward name="success" path="/loadAllGroupsRecord.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadSecurityUser"
+			type="com.desige.webDocuments.seguridad.actions.LoadSecurityUserAction"
+			name="securityUser" scope="session" validate="false" input="allUsers.jsp">
+			<forward name="success" path="/editSecurityUsersI.jsp" />
+			<forward name="secLocation" path="/editSecurityLocation.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/loadSecurityUserRecord"
+			type="com.desige.webDocuments.seguridad.actions.LoadSecurityUserRecordAction"
+			name="securityUser" scope="session" validate="false" input="allUsersRecord.jsp">
+			<forward name="success" path="/editSecurityUsersIRecord.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/loadAllUser"
+			type="com.desige.webDocuments.seguridad.actions.LoadAllUsersAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/allUsers.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadAllUserRecord"
+			type="com.desige.webDocuments.seguridad.actions.LoadAllUsersRecordAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/allUsersRecord.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadUsersToEdit"
+			type="com.desige.webDocuments.users.actions.LoadUsersToEditAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/usersToEdit.jsp" />
+			<forward name="loadGroups" path="/groupsToEdit.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!-- simon 15 de julio 2005 inicio -->
+		<action path="/loadUsersToSession"
+			type="com.desige.webDocuments.users.actions.LoadUsersToSessionAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/usersToSession.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!--simon 15 de juliuo 2005 fin -->
+
+		<action path="/loadAllGroups"
+			type="com.desige.webDocuments.seguridad.actions.LoadAllGroupsAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/allGroups.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadAllGroupsRecord"
+			type="com.desige.webDocuments.seguridad.actions.LoadAllGroupsRecordAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/allGroupsRecord.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadSecurityGroups"
+			type="com.desige.webDocuments.seguridad.actions.LoadSecurityGroupsAction"
+			name="securityUser" scope="session" validate="false" input="allGroups.jsp">
+			<forward name="success" path="/editSecurityGroupsI.jsp" />
+			<forward name="secLocation" path="/editSecurityLocation.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/loadSecurityGroupsRecord"
+			type="com.desige.webDocuments.seguridad.actions.LoadSecurityGroupsRecordAction"
+			name="securityUser" scope="session" validate="false" input="allGroupsRecord.jsp">
+			<forward name="success" path="/editSecurityGroupsIRecord.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/updateSecurityGroup"
+			type="com.desige.webDocuments.seguridad.actions.EditSecurityStrucGroupAction"
+			name="securityUser" scope="session" validate="false" input="editSecurityGroups.jsp">
+			<forward name="success" path="/loadAllGroups.do" />
+			<forward name="error" path="/loadSecurityGroups.do" />
+		</action>
+
+		<action path="/updateSecurityGroupRecord"
+			type="com.desige.webDocuments.seguridad.actions.EditSecurityGroupRecordAction"
+			name="securityUser" scope="session" validate="false" input="allGroupsRecord.jsp">
+			<forward name="success" path="/loadAllGroupsRecord.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/deletePermission"
+			type="com.desige.webDocuments.seguridad.actions.DeleteSecurityGroupStruct"
+			name="securityUser" scope="session" validate="false" input="editSecurityGroups.jsp">
+			<forward name="success" path="/loadAllGroups.do" />
+			<forward name="error" path="/loadSecurityGroups.do" />
+		</action>
+
+		<action path="/loadSeguridad"
+			type="com.desige.webDocuments.seguridad.actions.LoadSeguridadAction"
+			name="SeguridadForm" scope="session" validate="false">
+			<forward name="success" path="/seguridadUser.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/editSeguridad"
+			type="com.desige.webDocuments.seguridad.actions.EditSeguridadAction"
+			name="SeguridadForm" scope="session" validate="false">
+			<forward name="success" path="/seguridadUser.jsp" />
+			<forward name="successLista" path="/seguridadLista.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/loadSeguridadGrupo"
+			type="com.desige.webDocuments.seguridad.actions.EditSeguridadGrupoAction"
+			name="SeguridadForm" scope="session" validate="false">
+			<forward name="success" path="/seguridadGrupo.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/editSeguridadGrupo"
+			type="com.desige.webDocuments.seguridad.actions.EditSeguridadGrupoAction"
+			name="SeguridadForm" scope="session" input="/seguridadGrupo.jsp"
+			validate="false">
+			<forward name="success" path="/seguridadGrupo.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+		<!-- END actions Seguridad -->
+		<action path="/showMenu"
+			type="com.desige.webDocuments.users.actions.RedirectAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/superior.jsp" />
+		</action>
+		<!-- BEGIN actions Activities -->
+		<action path="/createAct"
+			type="com.desige.webDocuments.activities.actions.CreateActivitiesAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/activities.jsp" />
+			<forward name="newFlexFlow" path="/editActivities.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/saveActivity"
+			type="com.desige.webDocuments.activities.actions.SaveActivityAction"
+			name="activitiesForm" scope="session" validate="false" input="activities.jsp">
+			<forward name="successEdit" path="/createAct.do" />
+			<forward name="success" path="/subActivities.jsp" />
+			<forward name="successDel" path="/createAct.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/saveSubActivity"
+			type="com.desige.webDocuments.activities.actions.SaveSubActivityAction"
+			name="subActivity" scope="session" validate="false" input="subActivities.jsp">
+			<forward name="success" path="/createAct.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadSubActivity"
+			type="com.desige.webDocuments.activities.actions.LoadSubActivityAction"
+			name="subActivity" scope="session" validate="false">
+			<forward name="success" path="/subActivities.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadActivity"
+			type="com.desige.webDocuments.activities.actions.LoadActivityAction"
+			name="activitiesForm" scope="session" validate="false">
+			<!-- <forward name="success" path="/activities.jsp"/> -->
+			<forward name="success" path="/editActivities.jsp" />
+			<forward name="successSub" path="/subActivities.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadActUsers"
+			type="com.desige.webDocuments.activities.actions.LoadUserActivitiesAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/associateActUser.jsp" />
+			<forward name="successAfter" path="/associateActUserAfter.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/saveNewUsersSubActivies"
+			type="com.desige.webDocuments.activities.actions.SaveNewUsersSubActiviesAction"
+			name="selection" scope="session" validate="false">
+			<forward name="success" path="/associateActUserAfter.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<!-- -->
+		<action path="/saveActUsers"
+			type="com.desige.webDocuments.activities.actions.AssociateUsersAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/associateActUser.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<!-- Asociate Activitys for User -->
+		<action path="/actXUser"
+			type="com.desige.webDocuments.activities.actions.AssociateActXUserAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/actXUser.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!-- Create Flex Flow -->
+		<action path="/createFlexFlow"
+			type="com.desige.webDocuments.workFlows.actions.CreateFlexFlowAction"
+			name="newWF" scope="session" validate="false">
+			<forward name="success" path="/flexWorkflow.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!-- Change Activity in the Flex Flow -->
+		<action path="/changeActFlex"
+			type="com.desige.webDocuments.workFlows.actions.LoadActFlexFlowAction"
+			name="newWF" scope="session" validate="false" input="/flexWorkflow.jsp">
+			<forward name="success" path="/flexWorkflow.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<!-- Change Activity in the Flex Flow -->
+		<action path="/newAct"
+			type="com.desige.webDocuments.workFlows.actions.CreateActAction"
+			name="activitiesForm" scope="session" validate="false">
+			<forward name="success" path="/subActivities.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<!-- Carga y Muestra todos los Flujos definidos por el usuario -->
+		<action path="/loadNewFlexFlow"
+			type="com.desige.webDocuments.workFlows.actions.LoadActNewWFAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/flexFlowActivities.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!-- Crea el Flujo de Trabajo Parametrico -->
+		<action path="/saveFlexFlow"
+			type="com.desige.webDocuments.workFlows.actions.SaveFlexFlowAction"
+			name="newWF" scope="session" validate="false" input="/flexWorkFlow.jsp">
+			<forward name="success" path="/showDataFlexFlow.jsp" />
+			<forward name="error" path="/flexWorkflow.jsp" />
+		</action>
+		<!-- Guarda la Respuesta de los Usuarios en el Flex Flow -->
+		<action path="/responseFlexFlow"
+	type="com.desige.webDocuments.workFlows.actions.SaveFlexFlowResponseAction"
+	name="responseWF" scope="session" validate="false" input="/editFlexFlow.jsp">
+			<forward name="success" path="/loadWF.do?isFlexFlow=true" />
+			<forward name="error" path="/editFlexFlow.jsp" />
+		</action>
+		<!-- Muestra firmantes de un Flujo de Trabajo Parametrico y permite seleccionar 
+			un usuario o actividad para reiniciar el flujo -->
+		<action path="/showUsersFlexFlow"
+			type="com.desige.webDocuments.workFlows.actions.ShowUsersFlexFlowAction"
+			name="responseWF" scope="session" input="/editFlexFlow.jsp" validate="false">
+			<forward name="success" path="/reasigneUserFlexFlow.jsp" />
+			<forward name="error" path="/reasigneUserFlexFlow.jsp" />
+		</action>
+		<!-- Permite reiniciar el Flex Flow a partir del usuario o actividad seleccionada -->
+		<action path="/reasigneFlexFlow"
+			type="com.desige.webDocuments.workFlows.actions.ReasigneFlexFlowAction"
+			name="responseWF">
+			<forward name="success" path="/reasigneUserFlexFlow.jsp" />
+			<forward name="error" path="/reasigneUserFlexFlow.jsp" />
+		</action>
+		<!-- END actions Activities -->
+
+
+		<!-- BEGIN actions Ajax -->
+		<action path="/markCheckOutAjax"
+			type="com.desige.webDocuments.workFlows.actions.MarkCheckOutAction" />
+		<action path="/visorPdfAjax"
+			type="com.desige.webDocuments.workFlows.actions.VisorPdfAction" />
+		<action path="/visorFilesPdfAjax"
+            type="com.desige.webDocuments.files.actions.PrepareFilesToVisorAction">
+            <forward name="showMessage" path="/filesView.do"></forward>
+        </action>
+		<action path="/fillMainAjax"
+			type="com.desige.webDocuments.workFlows.actions.FillMainAction" />
+		<action path="/markOptionAjax"
+			type="com.desige.webDocuments.workFlows.actions.MarkOptionAction" />
+		<action path="/updateImpresionAjax"
+			type="com.desige.webDocuments.workFlows.actions.UpdatePermisoImpresionAction" />
+		<action path="/updateLicenciaAjax"
+			type="com.desige.webDocuments.workFlows.actions.UpdateLicenciaAction" />
+		<action path="/fillFieldSelectAjax"
+			type="com.desige.webDocuments.workFlows.actions.FillFieldSelectAction" />
+		<action path="/solicitarLicenciaAjax"
+			type="com.desige.webDocuments.workFlows.actions.SolicitarLicenciaAction" />
+		<action path="/nuevaConexionAjax"
+			type="com.desige.webDocuments.workFlows.actions.NuevaConexionAction" />
+		<action path="/loadSubNode"
+			type="com.desige.webDocuments.workFlows.actions.LoadSubNodeAction" />
+		<action path="/validateUserAjax"
+			type="com.desige.webDocuments.workFlows.actions.ValidateUserAction" />
+		<action path="/updateNormAjax"
+			type="com.desige.webDocuments.workFlows.actions.UpdateNormAction" />
+		<action path="/markCheckTransactionAjax"
+			type="com.desige.webDocuments.workFlows.actions.MarkCheckTransactionAction" />
+		<!-- END actions Ajax -->
+
+		<!-- BEGIN actions servicioDocumento -->
+		<action path="/obtenerUsuarioWS" type="com.desige.webDocuments.serviceDocument.actions.ObtenerUsuarioAction" />
+		<action path="/obtenerDocumentoWS" type="com.desige.webDocuments.serviceDocument.actions.ObtenerDocumentoAction" />
+		<action path="/obtenerDocumentosBloqueadosWS" type="com.desige.webDocuments.serviceDocument.actions.ObtenerDocumentosBloqueadosAction" />
+		<action path="/guardarDocumentoWS" type="com.desige.webDocuments.serviceDocument.actions.GuardarDocumentoAction" />
+		<action path="/guardarVersionDocumentoWS" type="com.desige.webDocuments.serviceDocument.actions.GuardarVersionDocumentoAction" />
+		<action path="/obtenerDocumentoVersionWS" type="com.desige.webDocuments.serviceDocument.actions.ObtenerDocumentoVersionAction" />
+		<action path="/obtenerUltimoDocumentoCreadoWS" type="com.desige.webDocuments.serviceDocument.actions.ObtenerUltimoDocumentoCreadoAction" />
+		<action path="/actualizarNombreDocumentoWS" type="com.desige.webDocuments.serviceDocument.actions.ActualizarNombreDocumentoAction" />
+		<action path="/recibirDocumentoExternosWS"  type="com.desige.webDocuments.serviceDocument.actions.RecibirDocumentoExternosAction" />
+		<action path="/enviarWhatsAppWS"  type="com.desige.webDocuments.serviceDocument.actions.EnviarMensajeWhatsappAction" />
+		<!-- END actions servicioDocumento -->
+		
+		<!-- BEGIN actions servicioDocumento Externos Qweb (Backend para Interacion EXternas con Clientes -->
+		<!-- <action path="/recibirDocumentoExternosWS" type="com.desige.webDocuments.serviceDocument.actions.RecibirDocumentoExternosAction" /> -->
+		
+		<!-- END actions servicioDocumento Externos-->
+
+
+		<!-- BEGIN Migracion -->
+		<action path="/migracion" type="com.focus.migracion.actions.MigracionAction">
+			<forward name="success" path="/migracion.jsp" />
+			<forward name="error" path="/migracion.jsp" />
+		</action>
+
+		<action path="/ejecutarMigracion"
+			type="com.focus.migracion.actions.EjecutarMigracionAction" name="migracionForm">
+			<forward name="success" path="/migracion.jsp" />
+			<forward name="error" path="/migracion.jsp" />
+		</action>
+
+		<action path="/importar" type="com.focus.migracion.actions.ImportarAction">
+			<forward name="success" path="/importar.jsp" />
+			<forward name="success1" path="/importar1.jsp" />
+			<forward name="success2" path="/importar2.jsp" />
+			<forward name="success3" path="/importar3.jsp" />
+			<forward name="success4" path="/importar4.jsp" />
+			<forward name="success5" path="/importar5.jsp" />
+			<forward name="success6" path="/importar6.jsp" />
+			<forward name="error" path="/importar.jsp" />
+		</action>
+
+		<action path="/importarIndice" type="com.focus.migracion.actions.ImportarIndiceAction">
+			<forward name="success" path="/importarIndice.jsp" />
+		</action>
+		<!-- END Migracion -->
+
+		<!-- BEGIN Digital -->
+		<action path="/searchDigital"
+			type="com.desige.webDocuments.digital.actions.SearchDigitalAction"
+			name="" scope="session" validate="false" input="">
+			<forward name="success" path="/searchDigital.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/digitalNew"
+			type="com.desige.webDocuments.files.actions.DigitalNewAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="success" path="/digitalNew.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/digitalRegister"
+			type="com.desige.webDocuments.files.actions.DigitalRegisterAction"
+			name="" scope="session" validate="false" input="">
+			<forward name="success" path="/digitalRegister.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/digitalImporter"
+			type="com.desige.webDocuments.files.actions.DigitalImporterAction"
+			name="" scope="session" validate="false" input="">
+			<forward name="success" path="/digitalImporter.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+
+		<!-- END Digital -->
+
+		<!-- BEGIN Files -->
+		<action path="/searchFiles"
+			type="com.desige.webDocuments.files.actions.SearchFilesAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="success" path="/searchFiles.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/filesNew"
+			type="com.desige.webDocuments.files.actions.FilesNewAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="success" path="/filesNew.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/filesNewSave"
+			type="com.desige.webDocuments.files.actions.FilesNewSaveAction" name="filesNewSave"
+			scope="session" validate="false" input="filesNew">
+			<forward name="success" path="/filesNew.do?id=nuevo" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/filesRegister"
+			type="com.desige.webDocuments.files.actions.FilesRegisterAction"
+			name="" scope="session" validate="false" input="">
+			<forward name="success" path="/filesRegister.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/filesView"
+			type="com.desige.webDocuments.files.actions.FilesViewAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="success" path="/filesView.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/filesRegisterSave"
+			type="com.desige.webDocuments.files.actions.FilesRegisterSaveAction"
+			name="filesRegisterSave" scope="session" validate="false" input="">
+			<forward name="success" path="/filesView.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/orderFiles"
+			type="com.desige.webDocuments.files.actions.OrderFilesAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="success" path="/searchFiles.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/CrearReporteFiles" type="com.desige.webDocuments.excel.CrearReporteFiles"
+			scope="session" validate="false" input="/searchFiles.do">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/searchFiles.do" />
+		</action>
+
+		<action path="/filesDelete"
+			type="com.desige.webDocuments.files.actions.FilesDeleteAction" name=""
+			scope="request" validate="false" input="">
+			<forward name="success" path="/searchFiles.do?start=true" />
+			<forward name="notSuccess" path="/searchFiles.do?start=true" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/filesRelation"
+			type="com.desige.webDocuments.files.actions.FilesRelationAction"
+			name="" scope="request" validate="false" input="">
+			<forward name="success" path="/filesRelation.jsp" />
+			<forward name="notSuccess" path="/filesView.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/filesSaveRelation"
+			type="com.desige.webDocuments.files.actions.FilesSaveRelationAction"
+			name="" scope="request" validate="false" input="">
+			<forward name="success" path="/filesRelation.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/FilesLoadData"
+			type="com.desige.webDocuments.document.actions.FilesLoadData" name="showDocument"
+			scope="session" validate="false">
+			<forward name="login" path="/inicioSession.do" />
+			<forward name="success" path="/viewDocument.jsp" />
+			<forward name="error" path="/showMSG.jsp" />
+		</action>
+
+		<action path="/loadHistoryFiles"
+			type="com.desige.webDocuments.files.actions.LoadHistoryFilesAction"
+			name="dataHistoryStruct" scope="session" validate="false">
+			<forward name="success" path="/HistoryStruct.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadAllUserFiles"
+			type="com.desige.webDocuments.files.actions.LoadAllUsersFilesAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/allUsersFiles.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadSecurityUserFiles"
+			type="com.desige.webDocuments.files.actions.LoadSecurityUserFilesAction"
+			name="securityUser" scope="session" validate="false" input="allUsersFiles.jsp">
+			<forward name="success" path="/editSecurityUsersIFiles.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/deleteSecFilesUser"
+			type="com.desige.webDocuments.files.actions.DeleteSecurityFilesUser"
+			name="securityUser" scope="session" validate="false" input="allUsersFiles.jsp">
+			<forward name="success" path="/loadAllUserFiles.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadAllGroupsFiles"
+			type="com.desige.webDocuments.files.actions.LoadAllGroupsFilesAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/allGroupsFiles.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/loadSecurityGroupsFiles"
+			type="com.desige.webDocuments.files.actions.LoadSecurityGroupsFilesAction"
+			name="securityUser" scope="session" validate="false" input="allGroupsFiles.jsp">
+			<forward name="success" path="/editSecurityGroupsIFiles.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		<action path="/deleteSecFilesGroup"
+			type="com.desige.webDocuments.files.actions.DeleteSecurityFilesGroup"
+			name="securityUser" scope="session" validate="false" input="allGroupsFiles.jsp">
+			<forward name="success" path="/loadAllGroupsFiles.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/filtersFilesMain"
+			type="com.desige.webDocuments.record.actions.MarkFiltersRecordAction"
+			name="recordForm" scope="session">
+			<forward name="success" path="/recordFiltersMain.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/updateSecurityUserFiles"
+			type="com.desige.webDocuments.files.actions.EditSecurityUserFilesAction"
+			name="securityUser" scope="session" validate="false" input="allUsersFiles.jsp">
+			<forward name="success" path="/loadAllUserFiles.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/updateSecurityGroupFiles"
+			type="com.desige.webDocuments.files.actions.EditSecurityGroupFilesAction"
+			name="securityUser" scope="session" validate="false" input="allGroupsFiles.jsp">
+			<forward name="success" path="/loadAllGroupsFiles.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/crearExpedienteZip"
+			type="com.desige.webDocuments.files.actions.CrearExpedienteZipAction"
+			scope="request" validate="false" input="">
+			<forward name="success" path="/printDoc.jsp" />
+			<forward name="error" path="/infoExpedienrte.jsp" />
+		</action>
+
+		<action path="/filesSaveVersion"
+			type="com.desige.webDocuments.files.actions.FilesSaveVersionAction"
+			name="" scope="request" validate="false" input="">
+			<forward name="success" path="/filesView.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/filesVersion"
+			type="com.desige.webDocuments.files.actions.FilesVersionAction" name=""
+			scope="request" validate="false" input="">
+			<forward name="success" path="/filesVersion.jsp" />
+			<forward name="notSuccess" path="/filesView.do" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!-- END Files -->
+
+
+		<!-- BEGIN Record -->
+		<action path="/filtersRecord"
+			type="com.desige.webDocuments.record.actions.MarkFiltersRecordAction"
+			name="recordForm" scope="session">
+			<forward name="success" path="/recordFilters.jsp" />
+			<forward name="error" path="/info.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/filtersRecordMain"
+			type="com.desige.webDocuments.record.actions.MarkFiltersRecordAction"
+			name="recordForm" scope="session">
+			<forward name="success" path="/recordFiltersMain.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/usersRecord"
+			type="com.desige.webDocuments.record.actions.MarkUsersRecordAction"
+			scope="session">
+			<forward name="success" path="/recordUsers.jsp" />
+			<forward name="error" path="/infoIframe.jsp" />
+		</action>
+
+		<action path="/generateReportRecord"
+			type="com.desige.webDocuments.record.actions.GenerateReportRecordAction"
+			name="recordForm" scope="session">
+			<forward name="success" path="/recordGenerate.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/markFiltersRecordAjax"
+			type="com.desige.webDocuments.record.actions.MarkFiltersAjaxAction" />
+
+		<action path="/loadMailRecord"
+			type="com.desige.webDocuments.record.actions.LoadSendReportAction"
+			name="" scope="session" validate="false">
+			<forward name="success" path="/recordSendMail.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/sendMailRecord"
+			type="com.desige.webDocuments.record.actions.SendReportAction" name="sendMail"
+			scope="session" validate="false">
+			<forward name="success" path="/recordFiltersFrame.jsp" />
+			<forward name="error" path="/recordSendMail.jsp" />
+		</action>
+		<!-- END Record -->
+
+		<!-- BEGIN documents -->
+		<action path="/documentNew"
+			type="com.desige.webDocuments.files.actions.DocumentNewAction" name=""
+			scope="session" validate="false" input="">
+			<forward name="success" path="/documentNew.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/documentNewSave"
+			type="com.desige.webDocuments.files.actions.DocumentNewSaveAction"
+			name="documentNewSave" scope="session" validate="false" input="documentNew">
+			<forward name="success" path="/documentNew.do?id=nuevo" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+		<!-- END documents -->
+
+
+		<action path="/administracion"
+			type="com.desige.webDocuments.parameters.actions.AdministracionAction"
+			name="loadParameters" scope="session" validate="false">
+			<forward name="success" path="/administracion.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/administracionMain"
+			type="com.desige.webDocuments.parameters.actions.AdministracionAction"
+			name="loadParameters" scope="session" validate="false">
+			<forward name="success" path="/administracionMain.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<action path="/enlinea"
+			type="com.desige.webDocuments.parameters.actions.EnLineaAction" name="loadParameters"
+			scope="session" validate="false">
+			<forward name="success" path="/enlinea.jsp" />
+			<forward name="error" path="/info.jsp" />
+		</action>
+
+		<action path="/digitalizarLoad" type="com.focus.scanner.DigitalizarLoadAction"
+			scope="request" validate="false">
+			<forward name="success" path="/digitalizar.jsp" />
+			<forward name="successLote" path="/digitalizarLote.jsp" />
+		</action>
+
+		<action path="/loadFileDigital" type="com.focus.scanner.LoadFileDigitalAction" />
+		<action path="/loadFileDigitalLote" type="com.focus.scanner.LoadFileDigitalLoteAction" />
+
+		<action path="/upploadFileFrame"
+			type="com.desige.webDocuments.document.actions.UpploadFileFrameAction">
+			<forward name="success" path="/upploadFileFrame.jsp" />
+			<forward name="successLista" path="/searchDigitalLista.jsp" />
+		</action>
+
+		<action path="/correlativo" type="com.focus.scanner.CorrelativoAction">
+			<forward name="success" path="/correlativo.jsp" />
+		</action>
+
+		<action path="/uploadImage" type="com.focus.action.UploadImageAction">
+			<forward name="success" path="/uploadImage.jsp" />
+		</action>
+
+		<action path="/uploadCache" type="com.focus.action.UploadCacheAction" />
+
+		<action path="/showAttached" type="com.focus.action.ShowAttachedAction">
+			<forward name="success" path="/attached.jsp" />
+			<forward name="success0" path="/attached0.jsp" />
+			<forward name="success1" path="/attached1.jsp" />
+		</action>
+
+		<action path="/listUser" type="com.focus.action.ListUserAction">
+			<forward name="success" path="/listUser.jsp" />
+		</action>
+
+		<action path="/listDocUnRead" type="com.focus.action.ListDocUnReadAction">
+			<forward name="success" path="/listDocUnRead.jsp" />
+		</action>
+
+		<action path="/listTransaction" type="com.focus.qweb.ctrl.TransactionAction">
+			<forward name="success" path="/listTransaction.jsp" />
+		</action>
+
+		<action path="/manual" type="com.focus.qweb.ctrl.ManualAction">
+			<forward name="success" path="/manual.jsp" />
+		</action>
+
+		<action path="/listTransactionConsulta"
+			type="com.desige.webDocuments.parameters.actions.ListTransactionConsulta" >
+			<forward name="success" path="/listTransactionConsulta.jsp" />
+			<forward name="errorNotAuthorized" path="/logout.do" />
+		</action>
+
+		<!-- action para permitir la descarga de un archivo excel (solo para administradores) 
+			que permitira obtener la informacion de todos los tipos de flujos de todos 
+			los usuarios del sistema -->
+		<action path="/prepareFlowsReport" type="com.focus.flows.action.AllFlowExcelReportAction" />
+		<action path="/sendMassiveMail" type="com.focus.flows.action.SendMassiveMailAction" />
+		<action path="/ajaxDigitalRecordUpdate" type="com.desige.webDocuments.digital.actions.AjaxStoreDocumentData" />
+
+		<!-- ajax -->
+		<action path="/upploadFileAjaxFrame"
+			type="com.desige.webDocuments.document.actions.UpploadFileFrameAjaxAction" />
+		<action path="/findTypeDocumentAjax"
+			type="com.desige.webDocuments.document.actions.FindTypeDocumentAjaxAction" />
+		<action path="/createSacopPdfAjax"
+			type="com.desige.webDocuments.document.actions.CreateSacopPdfAjaxAction" />
+			
+		<!-- ACTION DE CREAR PDF RECIBO -->
+		<action path="/createReciboPdfAjax"
+			type="com.desige.webDocuments.document.actions.CreateSacopPdfAjaxAction" />
+			
+
+		<!-- prueba de lectura de archivo excel -->
+		<action path="/excel" type="com.focus.migracion.actions.ExcelAction">
+			<forward name="success" path="/excel.jsp" />
+		</action>
+
+		<action path="/testAjax"
+			type="com.desige.webDocuments.workFlows.actions.TestAction" />
+			
+		<!-- BEGIN actions recibos de cobro DARWINUZCATEGUI -->
+		
+		
+		<action path="/CargarRecibo"
+		
+			type="com.gestionEnvio.custon.dostorres.actions.CargarReciboAction" name=""
+			scope="session" validate="false">
+			<forward name="success" path="/recibos.jsp" />
+			<forward name="error" path="/index.jsp" />
+		</action>
+
+		
+		<!-- END actions City -->
+			
+
+        
+	</action-mappings>
+</struts-config>

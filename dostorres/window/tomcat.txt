@@ -1,0 +1,4 @@
+Esta linea de comando se usa cuando no se puede arrancar de modo normal el openoffice desde
+la aplicacion, es utilizada en el sistema operativo window.
+
+tomcat5 //TS//Tomcat5 --Classpath="%JAVA_HOME%\lib\tools.jar";"%CATALINA_HOME%\bin\bootstrap.jar";"%OOOLIBPATH%\classes\juh.jar";"%OOOLIBPATH%\classes\\unoil.jar"

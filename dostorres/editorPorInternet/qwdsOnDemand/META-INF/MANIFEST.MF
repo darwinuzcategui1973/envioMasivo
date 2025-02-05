@@ -1,0 +1,143 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.3
+Created-By: 1.6.0_32-b05 (Sun Microsystems Inc.)
+
+Name: com/focus/qwds/ondemand/cliente/pruebas/TestOpen.class
+SHA1-Digest: uzaKEOnYLIunJUJBTxBx4Z6wnmI=
+
+Name: com/focus/qwds/ondemand/cliente/pruebas/TestOpen$Action.class
+SHA1-Digest: jY0soQMCzY2ASlzUcfKsAJEw8vo=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/ManejoDocumentoUnico$1
+ .class
+SHA1-Digest: crazw8JhYRTNBg8OXTsSi0c2ICg=
+
+Name: configuracion/Configuracion.class
+SHA1-Digest: xJp4kZv+ZjRewk+0JogMdQ0Ed0k=
+
+Name: com/focus/qwds/ondemand/cliente/utils/Iniciable.class
+SHA1-Digest: YscGfMSiSHR1q56uXpjxlmH0Drk=
+
+Name: configuracion/Manifest.txt
+SHA1-Digest: hHYYcU4DtokjjZS6dYIE5l9dQAs=
+
+Name: com/focus/qwds/ondemand/cliente/utils/IniciarRegistro.class
+SHA1-Digest: 4oIa8wBU1zfK6zitnoj9eLQL5tw=
+
+Name: com/focus/qwds/ondemand/server/configuracion/Conf.xml
+SHA1-Digest: 11sQ6YV4bs/ozcrnascBUhGBYgo=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/tablemodels/JTableButt
+ onRenderer.class
+SHA1-Digest: 1wScLxltCtXFaEw6TmBMPPzK1oM=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/ManejoDocumentoUnico$2
+ .class
+SHA1-Digest: VEEnvHqKGKWc8qe8RvXMm+2Z9iI=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/ListadoDocumentos.clas
+ s
+SHA1-Digest: GmemabVXs2g9+hp+0mY0B70hjEY=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/Usuario.class
+SHA1-Digest: XU5fI4gEQA3mrP51LPaivM69dP4=
+
+Name: com/focus/qwds/ondemand/cliente/utils/Iniciar.class
+SHA1-Digest: ZY+UD+eGZUcjhlDWcYq2H/hyAlU=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/tablemodels/ModeloTabl
+ aDocumentos.class
+SHA1-Digest: l7dSkOdRrJRChPrlCu7jfVlnlKk=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/LoginInvalidoExcept
+ ion.class
+SHA1-Digest: hRNqLBef8dO8nektMZEq0jaCCFk=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/InicioSesion$3.class
+SHA1-Digest: RToidbzFXRv8c6Vx1neYUAVTZo4=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/ServicioDocumentoWS
+ .class
+SHA1-Digest: SZ/jazFAlN8Zz03MXOSNeaNCuv0=
+
+Name: configuracion/Configuracion.properties
+SHA1-Digest: DdwKRhxO8jW4kIRtpk225F9y4Yg=
+
+Name: com/focus/qwds/ondemand/cliente/utils/ReadRemoteFileUtil.class
+SHA1-Digest: l4KGzDBiDn89Mb0CGZ92gL/Fj4A=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/listeners/ListenerDesc
+ argar.class
+SHA1-Digest: key3BHTREWNNCybCyJqQ26BIX4g=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/listeners/ListenerEdit
+ ar.class
+SHA1-Digest: TVuusdaM8x8hLdyEB/7Czkt2pNM=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/InicioSesion$2.class
+SHA1-Digest: x98C8lVKNh0Le4txX5gGOuwjmGg=
+
+Name: com/focus/qwds/ondemand/server/configuracion/properties.dtd
+SHA1-Digest: PDnIeaPf2hk7tIl+XYnLq8hoWFU=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/listeners/ListenerApli
+ carCambios.class
+SHA1-Digest: cI2F5cRjX+ZaZmEv4oHuyvJ0xJA=
+
+Name: com/focus/qwds/ondemand/cliente/utils/Encryptor.class
+SHA1-Digest: iV//3PCmDElXg2LQNnDZcSxObig=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/listeners/JTableButton
+ MouseListener.class
+SHA1-Digest: W3Ma4bCSEZCNByGs72oX+DzKV3g=
+
+Name: com/focus/qwds/ondemand/cliente/pruebas/PruebaWebService.class
+SHA1-Digest: /4tx5CBq0TQ9/MW8n1EbHnLMhCo=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/ManejoDocumentoUnico.c
+ lass
+SHA1-Digest: G32jmfeN19kLSwFQ1cqBaCfEAYw=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/ServicioDocumentoWS
+ Service.class
+SHA1-Digest: a88vVnQm03LBAU2MR/q1s1MW1No=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/ServicioDocumentoWS
+ Proxy.class
+SHA1-Digest: eDINrlCrqJakhs4iTmtnt8m/WfQ=
+
+Name: com/focus/qwds/ondemand/cliente/utils/DescargarFixItDDEExcel.cla
+ ss
+SHA1-Digest: R06BKfIcr/hwF+6IIc2pCmSmgYA=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/Documento.class
+SHA1-Digest: J2wFU/IsSTeHtx5s0vVLLdd4YQo=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/ServicioDocumentoWS
+ ServiceLocator.class
+SHA1-Digest: dDAN5HvBMagLvk6X1adg8osc4h4=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/ErrorDeAplicaqcion.
+ class
+SHA1-Digest: WYx9ZJdeHCqhqcaaM6MMfFQWpwA=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/listeners/ListenerAbri
+ r.class
+SHA1-Digest: 9z6aF0k68lED+lsNXkuo7SYLteM=
+
+Name: com/focus/qwds/ondemand/server/documentos/ws/ServicioDocumentoWS
+ PortBindingStub.class
+SHA1-Digest: xxkkl5F2ue+3eom1/RAVrB0mT3c=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/InicioSesion$1.class
+SHA1-Digest: x+T4pC2KB8H95PhIu+X3Znb+H3o=
+
+Name: com/focus/qwds/ondemand/cliente/utils/DDEExcelUtil.class
+SHA1-Digest: aPPWRwc+5o9S0kLglGeWIBB+7HQ=
+
+Name: com/focus/qwds/ondemand/cliente/pantallas/InicioSesion.class
+SHA1-Digest: 477dBo/Xi963AEqQTGqrPhdWfrs=
+
+Name: com/focus/qwds/ondemand/cliente/utils/DDEExcelUtil$1.class
+SHA1-Digest: yA53p1XDFXkCtnVmOsYFNRsiKxM=
+

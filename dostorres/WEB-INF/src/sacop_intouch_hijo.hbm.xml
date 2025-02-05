@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.focus.wonderware.intocuh_sacop.forms.Sacop_Intouchh_frm" table="tbl_sacop_intouch_hijo">
+		    <id name="idtagname" type="java.lang.Long" column="idtagname">
+			<generator class="assigned"/>
+		    </id>
+
+                <property name="tagname">
+                   <column name="tagname"/>
+                </property> 
+
+                <property name="idplanillasacop1">
+                   <column name="idplanillasacop1"/>
+                </property>
+
+                <property name="disparadasacop">
+                          <column name="disparadasacop"/>
+                </property>
+           
+                
+                <property name="active">
+                          <column name="active"/>
+                </property>
+	</class>
+	<query name="Sacop_Intouchh_frm.alls"><![CDATA[ FROM Sacop_Intouchh_frm Order by lower(tagname)]]></query>
+</hibernate-mapping>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.sacop.forms.TitulosPlanillasSacop" table="tbl_titulosplanillassacop">
+		<id name="numtitulosplanillas" type="java.lang.Long" column="numtitulosplanillas">
+			<generator class="assigned"/>
+		</id>
+		<property name="titulosplanillas">
+			<column name="titulosplanillas"/>
+		</property>
+    	<property name="active">
+			<column name="active"/>
+		</property>
+	</class>
+	<query name="titulosplanillassacop.alls"><![CDATA[ FROM TitulosPlanillasSacop Order by lower(titulosplanillas)]]></query>
+</hibernate-mapping>

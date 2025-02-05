@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration monitorinterval="10">
+    <!-- Entorno en línea cicd -->
+    <properties>
+        <!-- <property name="LOG_HOME">${sys:log.dir}</property>-->
+        <property name="LOG_HOME">${sys:user.dir}/logs</property>
+        <property name="projectName">qwebdocuments</property>
+    </properties>
+         <!-- Fuente de salida -->
+    <Appenders>
+                 <!-- Salida a la consola -->
+        <Console name="STDOUT"  target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss sss} %-5p %t %l(%r) %m%n" />
+            <ThresholdFilter level="info" />
+        </Console>
+                 <!-- Salida a archivo -->
+        <RollingFile name="RollingFileDebug" fileName="${LOG_HOME}/${projectName}/${projectName}.111.log"
+                     filePattern="${LOG_HOME}/${projectName}/${projectName}.log.%d{yyyy-MM-dd HH}h">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss sss} %-5p %t %l %m%n " />
+            <ThresholdFilter level="DEBUG" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="24" />
+            </Policies>
+                         <!-- Cortar archivos según el intervalo de tiempo, el intervalo de corte es el intervalo 1h -->
+            <!--<TimeBasedTriggeringPolicy modulate="true" interval="24" />-->
+                         <!-- Corta archivos según el tamaño del archivo, el intervalo de corte es de 3 KB y la unidad también puede ser MB, GB, TB -->
+            <!--<SizeBasedTriggeringPolicy size="3KB" />-->
+                         <!-- Solo se permiten 10 archivos al mismo tiempo -->
+            <!--<DefaultRolloverStrategy max="10"/>-->
+        </RollingFile>
+ 
+        <RollingFile name="RollingFileError" fileName="${LOG_HOME}/${projectName}/${projectName}.log"
+                     filePattern="${LOG_HOME}/${projectName}/${projectName}.log.%d{yyyy-MM-dd hh-mm}">
+            <ThresholdFilter level="ERROR" />
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss sss} %-5p %t %l(%r) %m%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+        </RollingFile>
+ 
+    </Appenders>
+ 
+    <Loggers>
+                 <!-- Filtrar diversa información DEBUG de spring y mmybatis -->
+        <logger name="org.springframework" level="INFO" />
+        <logger name="org.mybatis" level="INFO" />
+        <root level="DEBUG">
+            <appender-ref ref="STDOUT" />
+            <appender-ref ref="RollingFileDebug" />
+            <appender-ref ref="RollingFileError" />
+        </root>
+ 
+    </Loggers>
+ 
+</Configuration>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.focus.wonderware.intocuh_sacop.forms.Sacop_Intouch_Conftagname" table="tbl_conftagname">
+		    <id name="idtagname" type="java.lang.Long" column="idtagname">
+			<generator class="assigned"/>
+		    </id>
+                <property name="tipotag">
+                   <column name="tipotag"/>
+                </property>
+
+                <property name="tipoalarma">
+                   <column name="tipoalarma"/>
+                </property>
+
+                <property name="valor">
+                   <column name="valor"/>
+                </property>
+
+
+                <property name="active">
+                          <column name="active"/>
+                </property>
+	</class>
+	<query name="Sacop_Intouch_Conftagname.alls"><![CDATA[ FROM Sacop_Intouch_Conftagname Order by lower(tipotag)]]></query>
+</hibernate-mapping>
+

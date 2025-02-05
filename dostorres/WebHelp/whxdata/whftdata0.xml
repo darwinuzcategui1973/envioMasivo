@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<ftstdata>
+<topic name="Agregar Documento" url="_Agregar_Documento.htm" />
+<topic name="Áreas:" url="_reas.htm" />
+<topic name="Ver / Editar Seguridad:" url="_Ver_Editar_Seguridad.htm" />
+<topic name="Acceso Completo" url="Acceso_Completo.htm" />
+<topic name="Adicionar / Editar Permisos" url="Adicionar_Editar_Permisos.htm" />
+<topic name="Adicionar nueva cuenta de usuario:" url="Adicionar_nueva_cuenta_de_usuario.htm" />
+<topic name="Adicionar nuevo grupo de usuario:" url="Adicionar_nuevo_grupo_de_usuario.htm" />
+<topic name="Administración Del Sistema" url="Administraci_n_Del_Sistema.htm" />
+<topic name="Administrar Normas ISO:" url="Administrar_Normas_ISO.htm" />
+<topic name="Administrar Tipos de Documentos:" url="Administrar_Tipos_de_Documentos.htm" />
+<topic name="Agregar Carpeta/Proceso" url="Agregar_Carpeta_Proceso.htm" />
+<topic name="AgregarLocalidad" url="AgregarLocalidad.htm" />
+<topic name="Ambiente de Producción QWEBDOCUMENTS®" url="Ambiente_de_Producci_n_QWEBDOCUMENTS_.htm" />
+<topic name="Ambiente de Prueba QWEBDOCUMENTS®" url="Ambiente_de_Prueba_QWEBDOCUMENTS_.htm" />
+<topic name="Ayuda" url="Ayuda.htm" />
+<topic name="Biblioteca de Clases" url="Biblioteca_de_Clases.htm" />
+<topic name="Biblioteca de Datos de la Aplicación" url="Biblioteca_de_Datos_de_la_Aplicaci_n.htm" />
+<topic name="Biblioteca de Objetos Ejecutables" url="Biblioteca_de_Objetos_Ejecutables.htm" />
+<topic name="BIENVENIDO A QWEBDOCUMENTS®." url="BIENVENIDO_A_QWEBDOCUMENTS_.htm" />
+<topic name="Bloquear" url="Bloquear.htm" />
+<topic name="Cambiar la contraseña del usuario:" url="Cambiar_la_contrase_a_del_usuario.htm" />
+<topic name="Campos de la Compañía" url="Campos_de_la_Compa_a.htm" />
+<topic name="Campos de la Localidad" url="Campos_de_la_Localidad.htm" />
+<topic name="Campos de la Localidad en Agregar Carpeta/Proceso" url="Campos_de_la_Localidad_en_Agregar_Carpeta_Proceso.htm" />
+<topic name="Como Imprimir" url="Como_Imprimir.htm" />
+<topic name="Configuración de correo:" url="Configuraci_n_de_correo.htm" />
+<topic name="Configuración de estructura de trabajo:" url="Configuraci_n_de_estructura_de_trabajo.htm" />
+<topic name="Configuración de Seguridad" url="Configuraci_n_de_Seguridad.htm" />
+<topic name="Configuración Inicio de Sesión:" url="Configuraci_n_Inicio_de_Sesi_n.htm" />
+<topic name="Configuración SACOP:" url="Configuraci_n_SACOP.htm" />
+<topic name="Copias Controladas" url="Copias_Controladas.htm" />
+<topic name="Copias No Controladas" url="Copias_No_Controladas.htm" />
+<topic name="Crear Registro" url="Crear_Registro.htm" />
+<topic name="Descripción efectiva de permisos" url="Descripci_n_efectiva_de_permisos.htm" />
+<topic name="Deshacer Bloqueo" url="Deshacer_Bloqueo.htm" />
+<topic name="Detalles de la Compañía" url="Detalles_de_la_Compa_a.htm" />
+<topic name="Detalles de Localidad" url="Detalles_de_Localidad.htm" />
+<topic name="Editar configuración de QWEBDOCUMENTS®:" url="Editar_configuraci_n_de_QWEBDOCUMENTS_.htm" />
+<topic name="Editar cuenta de usuario:" url="Editar_cuenta_de_usuario.htm" />
+<topic name="Editar Grupos:" url="Editar_Grupos.htm" />
+<topic name="Editar Propiedades de la Compañía" url="Editar_Propiedades_de_la_Compa_a.htm" />
+<topic name="Eliminar" url="Eliminar.htm" />
+<topic name="Enviar mensaje del sistema a los usuarios:" url="Enviar_mensaje_del_sistema_a_los_usuarios.htm" />
+<topic name="Estructura (EOC)" url="Estructura_EOC.htm" />
+<topic name="Flujos de Trabajo" url="Flujos_de_Trabajo.htm" />
+<topic name="Hereda Seguridad" url="Hereda_Seguridad.htm" />
+<topic name="Heredar" url="Heredar.htm" />
+<topic name="Histórico" url="Hist_rico.htm" />
+<topic name="Manual Actualizado_reyna" url="Manual_Actualizado_reyna.htm" />
+<topic name="Maximizando/Minimizando la estructura" url="Maximizando_Minimizando_la_estructura.htm" />
+<topic name="Menú de Documentos" url="Men_de_Documentos.htm" />
+<topic name="Menú de Localidad/Carpeta/Proceso" url="Men_de_Localidad_Carpeta_Proceso.htm" />
+<topic name="Menú de Módulos" url="Men_de_M_dulos.htm" />
+<topic name="Menú de Opciones" url="Men_de_Opciones.htm" />
+<topic name="Menú Principal" url="Men_Principal.htm" />
+<topic name="Mensajes" url="Mensajes.htm" />
+<topic name="Modificar" url="Modificar.htm" />
+<topic name="Mover" url="Mover.htm" />
+<topic name="Módulo Administración" url="M_dulo_Administraci_n.htm" />
+<topic name="Notificaciones emitidas por el sistema:" url="Notificaciones_emitidas_por_el_sistema.htm" />
+<topic name="Opciones de la Compañía" url="Opciones_de_la_Compa_a.htm" />
+<topic name="Opciones de la Localidad" url="Opciones_de_la_Localidad.htm" />
+<topic name="Opción de Impresión de un Documento" url="Opci_n_de_Impresi_n_de_un_Documento.htm" />
+<topic name="Origen de la SACOP:" url="Origen_de_la_SACOP.htm" />
+<topic name="Paneles de Control de Compañía" url="Paneles_de_Control_de_Compa_a.htm" />
+<topic name="Para agregar más usuarios o grupos al elemento actual:" url="Para_agregar_m_s_usuarios_o_grupos_al_elemento_actual.htm" />
+<topic name="Para imprimir la vista actual:" url="Para_imprimir_la_vista_actual.htm" />
+<topic name="Para ver o modificar la seguridad definida a cada usuario o" url="Para_ver_o_modificar_la_seguridad_definida_a_cada_usuario_o.htm" />
+<topic name="Para visualizar una lista de todos los usuarios o Grupos que" url="Para_visualizar_una_lista_de_todos_los_usuarios_o_Grupos_que.htm" />
+<topic name="Pasos a seguir para la activación de un Flujo de Trabajo de" url="Pasos_a_seguir_para_la_activaci_n_de_un_Flujo_de_Trabajo_de.htm" />
+<topic name="Permisología Usuarios/Grupos por el Módulo de Estructura" url="Permisolog_a_Usuarios_Grupos_por_el_M_dulo_de_Estructura.htm" />
+<topic name="Permisos a Grupos" url="Permisos_a_Grupos.htm" />
+<topic name="Permisos a Usuario/Permisos a Grupos" url="Permisos_a_Usuario_Permisos_a_Grupos.htm" />
+<topic name="Permisos a Usuarios" url="Permisos_a_Usuarios.htm" />
+<topic name="Predeterminado" url="Predeterminado.htm" />
+<topic name="Principal" url="Principal.htm" />
+<topic name="Propiedades" url="Propiedades.htm" />
+<topic name="Propiedades" url="Propiedades1.htm" />
+<topic name="Propiedades" url="Propiedades2.htm" />
+<topic name="Quitar Permisos a Grupos" url="Quitar_Permisos_a_Grupos.htm" />
+<topic name="Quitar Permisos a Usuarios" url="Quitar_Permisos_a_Usuarios.htm" />
+<topic name="Requerimientos de Hardware y Software" url="Requerimientos_de_Hardware_y_Software.htm" />
+<topic name="Responsables" url="Responsables.htm" />
+<topic name="Roles de la Estructura (EOC)" url="Roles_de_la_Estructura_EOC.htm" />
+<topic name="Ruta del Documento" url="Ruta_del_Documento.htm" />
+<topic name="SACOP´s por el módulo Administración:" url="SACOP_s_por_el_m_dulo_Administraci_n.htm" />
+<topic name="Secciones de la ventana Principal" url="Secciones_de_la_ventana_Principal.htm" />
+<topic name="Sesión de usuarios:" url="Sesi_n_de_usuarios.htm" />
+<topic name="Sin acceso" url="Sin_acceso.htm" />
+<topic name="Solicitud de Acciones Correctivas o Preventivas (SACOP´s)" url="Solicitud_de_Acciones_Correctivas_o_Preventivas_SACOP_s.htm" />
+<topic name="Status de SACOP´s:" url="Status_de_SACOP_s.htm" />
+<topic name="Tipos de acceso de seguridad" url="Tipos_de_acceso_de_seguridad.htm" />
+<topic name="Ver todas las cuentas de usuarios:" url="Ver_todas_las_cuentas_de_usuarios.htm" />
+<topic name="Vista efectiva de permisos" url="Vista_efectiva_de_permisos.htm" />
+<topic name="Visualización de Carpetas/Procesos y Documentos" url="Visualizaci_n_de_Carpetas_Procesos_y_Documentos.htm" />
+<topic name="¿Cómo obtener QWEBDOCUMENTS®?" url="_C_mo_obtener_QWEBDOCUMENTS_.htm" />
+<topic name="¿Qué es QWEBDOCUMENTS®?" url="_Qu_es_QWEBDOCUMENTS_.htm" />
+
+</ftstdata>  

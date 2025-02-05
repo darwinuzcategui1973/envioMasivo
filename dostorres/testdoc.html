@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+        <script type="text/javascript" src="https://www.docxjs.com/js/build/latest.jsviewer.min.js">
+    </head>
+    <body>
+        <input id="inputFiles" type="file" name="files[]" multiple="false">
+        <div id="loaded-layout" style="width:100%;height:800px;/>
+        <script>
+            $(document).ready(function(){
+                //Input File
+                var $inputFiles = $('#inputFiles');
+
+                //File Change Event
+                $inputFiles.on('change', function (e) {
+
+                    //File Object Information
+                    var files = e.target.files;
+
+                    //Create DocxJS or CellJS or SlideJS
+                    var docxJS = new DocxJS();
+
+                    //File Parsing
+                    docxJS.parse(
+                        files[0],
+                        function () {
+                            //After Rendering
+                            docxJS.render($('#loaded-layout')[0], function (result) {
+                                if (result.isError) {
+                                    console.log(result.msg);
+                                } else {
+                                    console.log("Success Render");
+                                }
+                            });
+                        }, function (e) {
+                            console.log("Error!", e);
+                        }
+                    );
+                });
+            });
+        </script>
+    </body>
+</html>

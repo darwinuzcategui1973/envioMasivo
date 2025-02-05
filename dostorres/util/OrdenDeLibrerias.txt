@@ -1,0 +1,5 @@
+jre\lib\rt.jar
+jre\lib\resources.jar
+jre\lib\jsse.jar
+jre\lib\jce.jar
+common\lib\servlet-api.jar

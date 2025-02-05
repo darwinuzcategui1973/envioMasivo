@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<fts>
+<chunkinfo url="whfwdata0.xml" first=" " last="bloqueada"/>
+<chunkinfo url="whfwdata1.xml" first="bloqueado" last="derecha"/>
+<chunkinfo url="whfwdata2.xml" first="derecho" last="finalizada"/>
+<chunkinfo url="whfwdata3.xml" first="finalizado" last="modificar"/>
+<chunkinfo url="whfwdata4.xml" first="modulo" last="propias "/>
+<chunkinfo url="whfwdata5.xml" first="propiedad" last="tendrán"/>
+<chunkinfo url="whfwdata6.xml" first="tenga" last="ya"/>
+
+<tchunkinfo first="0" last="96" url="whftdata0.xml" />
+
+</fts>

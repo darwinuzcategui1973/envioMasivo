@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.perfil.forms.PerfilActionForm" table="person">
+		<id name="id" type="long" column="idPerson">
+			<generator class="assigned"/>
+		</id>
+		<property name="user">
+			<column name="nameUser"/>
+		</property>
+		<property name="clave">
+			<column name="clave"/>
+		</property>
+		<property name="idGrupo">
+			<column name="idGrupo"/>
+		</property>
+		<property name="apellidos">
+			<column name="Apellidos"/>
+		</property>
+		<property name="nombres">
+			<column name="Nombres"/>
+		</property>
+                <!-- 
+		<property name="cargo">
+			<column name="cargo"/>
+		</property>
+                -->
+		<property name="email">
+			<column name="email"/>
+		</property>	
+		<property name="direccion">
+			<column name="Direccion"/>
+		</property>	
+		<property name="ciudad">
+			<column name="Ciudad"/>
+		</property>	
+		<property name="estado">
+			<column name="Estado"/>
+		</property>	
+		<property name="pais">
+			<column name="CodPais"/>
+		</property>		
+		<property name="zip">
+			<column name="CodigoPostal"/>
+		</property>		
+		<property name="telefono">
+			<column name="Tlf"/>
+		</property>		
+		<property name="idioma">
+			<column name="IdLanguage"/>
+		</property>		
+		<property name="numRecordPages">
+			<column name="numRecordPages"/>
+		</property>
+		<property name="modo">
+			<column name="modo"/>
+		</property>
+		<property name="lado">
+			<column name="lado"/>
+		</property>
+		<property name="ppp">
+			<column name="ppp"/>
+		</property>
+		<property name="panel">
+			<column name="panel"/>
+		</property>
+		
+		
+        <many-to-one name="dataCargo" class="com.desige.webDocuments.cargo.forms.Cargo"
+                     column="cargo" lazy="false" not-found="ignore" not-null="false"/>
+        <!--<one-to-one name="dataCargo" lazy="false"/>-->
+<!--        <many-to-one name="ciudad" column="Ciudad" class="com.desige.webDocuments.city.forms.BaseCityForm"/>-->
+<!--        <one-to-one name="ciudad"-->
+<!--            class="com.desige.webDocuments.city.forms.BaseCityForm"-->
+<!--            constrained="true"/>-->
+<!--        <join table="Ciudad">-->
+<!--            <key column="IdCiudad"/>-->
+<!--            <property name="nameCity">-->
+<!--                <column name="Nombre"/>-->
+<!--		    </property>-->
+<!--        </join>-->
+	</class>
+    <query name="person.alls">
+        <![CDATA[ FROM PerfilActionForm WHERE accountActive = '1' ORDER BY lower(Apellidos)]]>
+    </query>
+    <query name="personwithouttmp.alls">
+        <![CDATA[ FROM PerfilActionForm WHERE accountActive = '1' and nameuser!='temporal' ORDER BY Apellidos]]>
+    </query>
+<!--    <query name="person.city.count">-->
+<!--        <![CDATA[ FROM PerfilActionForm WHERE accountActive = '1' ORDER BY lower(Apellidos)]]>-->
+<!--    </query>-->
+
+<!--    <query name="person.city.count">-->
+<!--        <![CDATA[ FROM PerfilActionForm WHERE accountActive = '1' ORDER BY lower(Apellidos)]]>-->
+<!--    </query>-->
+
+    <sql-query name="person.city.count">
+<!--		<return alias="a" class="com.desige.webDocuments.activities.forms.Activities"/>-->
+            SELECT COUNT(idPerson) FROM PerfilActionForm WHERE ciudad = ? 
+    </sql-query>
+</hibernate-mapping>

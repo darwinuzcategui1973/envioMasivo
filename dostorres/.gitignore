@@ -1,0 +1,34 @@
+WEB-INF/classes/
+work/
+WEB-INF/key.dat
+/bin/
+tmp/
+.tomcatplugin
+./.vscode
+../.vscode/
+../qwebconforma/.#webclasspath
+qweb/.externalToolBuilders/org.eclipse.wst.common.project.facet.core.builder.launch
+qweb/.externalToolBuilders/org.eclipse.wst.validation.validationbuilder.launch
+qweb/.vscode/settings.json
+qweb/db/create/.gitignore
+qweb/dockerQweb/DockerQWeb-Develop/DS-1.0.5 Volumenes persintecia de datos despues de remover contenedor/mi-repositorio-docker/998/3a0084cb46b1511c48b94428f063bbd8
+qweb/dockerQweb/dockerQWeb-Produ/.vscode/settings.json
+.vscode/
+/qwebconforma/.#webclasspath
+## cambio a gitignore para no colocar plugin de elipse
+.tomcatplugin
+
+
+/editDataDocument.jsp
+/filesRegister.jsp
+/filesView.jsp
+/published.jsp
+/searchDocument.jsp
+/searchDocumentUbicacion.jsp
+/showDataDocument.jsp
+/upploadFileDigital.jsp
+/upploadFileDocument.jsp
+qweb/published.jsp
+editorPorInternet/*.jnlp
+/editorPorInternet/*.jnlp
+

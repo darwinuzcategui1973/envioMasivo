@@ -1,0 +1,257 @@
+<!--  Main Style, it includes fonts, borders, colors -->
+BODY
+{
+	color:#000000;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	scrollbar-base-color: #999999;
+    scrollbar-arrow-color: #FFFFFF;
+    scrollbar-DarkShadow-Color: #999999; 
+	font-family: arial, verdana, ms sans serif;
+	font-size: 10 pt;
+	font-weight: normal
+}
+
+
+
+
+A, INPUT, OPTION, SELECT, TABLE, TD, TR 
+{
+	font-family: verdana, arial, ms sans serif;
+	font-size:11px
+}
+
+A:link.wizard{
+   color:#FFFF00; 
+   text-decoration:underline
+}
+
+A:visited.wizard {
+   color:#FFFF00; 
+   text-decoration:underline
+
+}
+
+A:hover.wizard{  
+   color:#FFFFFF; 
+   text-decoration:underline; cursor:hand
+
+}
+
+A:active.wizard{
+   color:#FFFF00; 
+   text-decoration:underline
+
+}
+
+
+TR.tablaspricipales
+{
+	border: 5px solid #CCCCCC;
+}
+
+TD.fuentesCeldaTituloGrande
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:16px;
+	color: #FFFFFF;
+}
+
+TD.fuentesCeldaTituloFondoNegro
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:16px;
+	color: #FFFFFF;
+	font-weight: strong
+}
+
+TD.fuentesCeldaTituloFondoNegroPo
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:16px;
+	color: #FFFFFF;
+	font-weight: strong
+}
+
+
+TD.fuentesCeldaTitulo
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:12px;
+	color: #FFFFFF;
+	background-color: #f4d10b
+}
+
+TD.fuentesCeldaAtrasSiguiente
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:11px;
+	color: #FFFFFF;
+	font-weight: bold
+}
+
+
+
+TD.fuentesCeldaInterior
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:12px;
+	color: #000000;
+	background-color: #CCCCCC
+}
+
+
+.Border4sides {
+	border: 1px solid #CCCCCC 
+}
+
+.BorderInferior {
+	border-bottom: 1px solid #CCCCCC 
+}
+
+.BorderInferiorNEGRO {
+	border-bottom: 1px solid #000000 
+}
+
+
+.BorderDerecho { 
+	border-right: 1px solid #CCCCCC 
+}
+
+.BorderIzquierdo {
+	border-left: 1px solid #CCCCCC
+}
+
+.BorderDerechoInferior {
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC 
+}
+
+.BorderIzquierdoInferior {
+	border-left: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC 
+}
+
+.BorderSuperiorIzquierdoInferior {
+	border-top: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC 
+}
+
+.BorderInferiorIzquierdoDerecho {
+    border-bottom: 1px solid #B3B3B3 ;
+    border-left: 1px solid #B3B3B3;
+	border-right: 1px solid #B3B3B3
+}
+
+.Border4SidesNEGRO {
+	border: 1px solid #000000 
+}
+
+.BorderIzquierdoDerecho {
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC
+}
+
+.BorderSuperior {
+	border-top: 1px solid #CCCCCC
+}
+
+.BorderSuperiorInferior {
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC 
+
+}
+
+
+
+ FORM 
+
+.INPUT {
+background-color: #DDE8FF;
+border: black 1px solid;
+color: black;
+font-family: arial, verdana, ms sans serif;
+font-size: 10pt;
+font-weight: normal
+} 
+
+.TEXTAREA {
+background-color: #EFEFEF;
+border: black 1px solid;
+color: black;
+font-family: arial, verdana, ms sans serif;
+font-size: 10pt;
+font-weight: normal
+} 
+
+.SELECTAREA {
+background-color: #FFFFFF;
+border: black 1px solid;
+color: black;
+font-family: arial, verdana, ms sans serif;
+font-size: 9pt;
+font-weight: normal;
+width: 195 px;
+overflow: scroll
+} 
+
+
+.altButtonFormat {
+	background-color: #CCCCCC;
+	font-family: verdana;
+	border: #999999 1px solid;
+	font-size: 10px;
+	color: #000000;
+	font-weight: bold;
+
+} 
+
+.altButtonFormat02 {
+	background-color: #003399;
+	font-family: verdana;
+	border: #999999 1px solid;
+	font-size: 10px;
+	color: #FFFFFF;
+	font-weight: bold
+
+} 
+
+.altTextField {
+background-color: #ececec;
+font-family: verdana;
+font-size: 10pt;
+color: #09c09c
+} 
+
+.radioStyle {
+background-color: #FF0000;
+border: #000000 solid 1px;
+font-family: verdana;
+font-size: 10px;
+color: #000000
+}
+
+.fuentesLink
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:11px
+}
+
+.fuentesLinkContPo
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:11px;
+	color: #FFFFFF;
+	font-weight: bold
+
+}
+
+
+.fuentesLinkPARATABLAS
+{
+    font-family: arial, verdana, ms sans serif;
+	font-size:11px;
+	color: #FFFFFF
+}

@@ -1,0 +1,399 @@
+<HTML xmlns:ie>
+
+<public:component tagName=Editor>
+	
+	<public:defaults style=cursor:default viewLinkContent/>
+	
+	<public:attach event='oncontentready' onevent='Init()' />
+	<public:attach event='ondocumentready' onevent='onEditorResize()' />
+	
+	<public:property name='contentSource' get='returnDS' put='setDS' />
+	
+</public:component>
+
+
+<STYLE>
+
+.clsToolbar
+{
+  display: block;
+  width: 100%;
+  margin: 1px; 
+  padding: 2px; 
+  border: 1 solid #AAAAAA;
+  overflow: visible;
+}
+
+.clsToolbarButton
+{
+  position: relative;
+  display: inline;
+  width:  23px;
+  height: 22px;
+  margin: 1px;
+  padding: 0px;
+  border: 1px solid #E1E1E1
+}
+
+.clsToolbarSeperator
+{
+  position: relative;
+  display: inline;
+  top: 1px;
+  width: 0px;
+	height: 18px;
+	font-size: 0px;
+  border-left: 1px solid #666666;
+	margin: 2px;
+}
+
+.clsEditor
+{
+  display: block;
+  width: 100%;
+  padding: 2px; 
+  border: 1px solid #dfdfdf; 
+  color: black;
+  background-color: white; 
+  font-family: Arial, Helvetica; 
+  font-size: small;
+  font-weight: normal;
+  overflow: scroll;
+}
+
+</style>
+
+<SCRIPT language=javascript>
+
+var szdocsource = "";
+
+
+function Init()
+{
+  element.document.execCommand("2D-Position");
+  element.document.execCommand("LiveResize");
+  element.document.execCommand("MultipleSelection");
+    
+  setDS(element.innerHTML);
+  
+  if (element.width != null)
+  {
+    element.style.width = element.width;
+  }
+  
+  if (element.height != null)
+  {
+    element.style.height = element.height;
+  }  
+  
+  onEditorResize();  
+
+  setFocusToDocument();
+
+  szColorTable = fnBuildColorTable('colorTable', 'document.callbackFnHideColorTable(event)');
+  
+  font_nameChange();
+  font_sizeChange();  
+}
+
+function onEditorResize()
+{
+  var new_size = (element.clientHeight - (4 + tbTools.offsetHeight + tbStyles.offsetHeight));
+  
+  if (new_size <= 64)
+    new_size = 64;
+
+  editBox.style.height = new_size + "px";
+}
+
+function font_nameChange()
+{
+  document.execCommand("FontName", false, fontBox[fontBox.selectedIndex].value);
+ 	editBox.content = false;
+	editBox.focus();
+}
+
+function font_sizeChange()
+{
+  document.execCommand("FontSize", false, sizeBox[sizeBox.selectedIndex].value);
+  editBox.content = false;
+	editBox.focus();
+}
+
+function setFocusToDocument()
+{
+	editBox.content = false;
+	editBox.focus();
+}
+
+
+function returnDS()
+{
+	szdocsource = editBox.innerHTML;
+	return szdocsource;
+}
+
+function setDS(szSrc)
+{
+  szdocsource = szSrc;
+	editBox.innerHTML = szdocsource;
+}
+
+var activeateCount = 0;
+
+
+function editorKeyPress()
+{
+	editBox.content = true;
+}
+
+function editorActive()
+{
+	editBox.content = false;
+}
+
+function setDocumentProperties(szIdentifier, szColor)
+{
+	switch (szIdentifier)
+	{
+		case "Bold":
+			rVal = document.execCommand("Bold");
+			break;
+		case "Italic":
+			rVal = document.execCommand("Italic");
+			break;
+		case "Underline":
+			rVal = document.execCommand("Underline");
+			break;
+		case "StrikeThrough":
+			rVal = document.execCommand("StrikeThrough");
+			break;
+
+		case "JustifyLeft":
+			rVal = document.execCommand("JustifyLeft");
+			break;
+
+		case "JustifyCenter":
+			rVal = document.execCommand("JustifyCenter");
+			break;
+			
+		case "JustifyRight":
+			rVal = document.execCommand("JustifyRight");
+			break;
+
+		case "InsertUnorderedList":
+			rVal = document.execCommand("InsertUnorderedList");
+			break;
+
+		case "InsertOrderedList":
+			rVal = document.execCommand("InsertOrderedList");
+			break;
+
+		case "Outdent":
+			rVal = document.execCommand("Outdent");
+			break;
+
+		case "Indent":
+			rVal = document.execCommand("Indent");
+			break;
+		
+		case "Cut":
+			rVal = document.execCommand("Cut");
+			break;
+
+		case "Copy":
+			rVal = document.execCommand("Copy");
+			break;
+
+		case "Paste":
+			rVal = document.execCommand("Paste");
+			break;
+
+		case "SubScript":
+			rVal = document.execCommand("SubScript");
+			break;
+
+		case "SuperScript":
+			rVal = document.execCommand("SuperScript");
+			break;
+
+		case "InsertHorizontalRule":
+			rVal = document.execCommand("InsertHorizontalRule");
+			break;
+
+		case "FontColor":
+			rVal = document.execCommand("ForeColor",false, szColor);
+			break;
+
+		case "BackColor":
+			rVal = document.execCommand("BackColor",false, szColor);
+			break;
+
+	}
+	
+	setFocusToDocument();
+	
+}
+
+function button_mouse_over()
+{
+	src = event.srcElement;
+	
+	src.style.border = "1px solid #666666";
+
+	event.cancelBubble = true;
+	event.returnValue = true;
+}
+
+function button_mouse_out()
+{
+	src = event.srcElement;
+	
+	src.style.border = "1px solid #E1E1E1";
+
+	event.cancelBubble = true;
+	event.returnValue = true;
+}
+
+function button_down()
+{
+	src = event.srcElement;
+	
+	src.style.border = "2px inset #E1E1E1";
+	
+	event.cancelBubble = true;
+	event.returnValue = true;
+}
+
+//Color popup
+
+var szColorTable = null;
+var popColorTable = null;
+var eleColorTable;
+
+function fnShowColorTable()
+{
+	popColorTable = window.createPopup();
+	
+	popColorTable.document.body.innerHTML = szColorTable;
+	
+	with(popColorTable.document.body.style)
+	{
+	  width = "200px";
+	  height = "140px";
+	  border = "1px outset gray";
+	}
+		
+	var ct = popColorTable.document.body.all['colorTable'];
+		
+	var iWidth = parseInt(popColorTable.document.body.style.width);
+	var iHeight = parseInt(popColorTable.document.body.style.height);
+	var ix = parseInt(event.srcElement.offsetLeft);
+	var iy = parseInt(event.srcElement.parentElement.offsetHeight);
+	
+	popColorTable.show(ix, iy, iWidth, iHeight, event.srcElement.parentElement);
+	
+	popColorTable.document.callbackFnHideColorTable = fnHideColorTable;
+	eleColorTable = event.srcElement;
+}
+
+function fnHideColorTable(evt)
+{
+	popColorTable.hide();
+
+  setDocumentProperties(eleColorTable.oper, evt.srcElement.bgColor);
+
+	popColorTable = null;
+	eleColorTable = null;
+}
+
+function fnBuildColorTable(sID, szClick) 
+{
+  var sz;
+  var cPick = new Array("00","33","66","99","CC","FF");
+  var iCnt=2;
+  var iColors = cPick.length;
+  var szColor = "";
+
+  sz ="<TABLE CELLSPACING=0 CELLPADDING=0 width='100%' height='100%'><TR><TD VALIGN=middle style='width: 20px; margine: 2px; border: 1px solid gray;' ID=\"" + sID + "Current\">&nbsp;</TD><TD>"
+        + "<TABLE ONMOUSEOUT=\"document.all." + sID + "Current.style.backgroundColor = ''\" ONMOUSEOVER=\"document.all." + sID + "Current.style.backgroundColor = event.srcElement.bgColor\" style='width: 100%; height: 100%; border: 1px solid gray;' CELLSPACING=0 CELLPADDING=0 ID=\"" + sID + "\">"
+
+  for (var r=0;r<iColors;r++)
+  {
+    sz += "<TR style='font-size: 0px;'>";
+    for (var g=iColors-1;g>=0;g--)
+    {
+      for (var b=iColors-1;b>=0;b--)
+      {
+        szColor = cPick[r] + cPick[g] + cPick[b];
+        sz += "<TD style='cursor: hand' "
+        + " BGCOLOR=\"#" + szColor + "\""
+        + "_item=\"" + szColor + "\" "
+        + "TITLE=\"#" + szColor + "\" "
+        + (szClick ? "ONCLICK=\"" + szClick + "\" " : "")
+        + ">&nbsp;</TD>";
+      }
+    }
+    sz += "</TR>";
+  }
+  
+  sz += "</TABLE></TD></TR></TABLE>";
+  return sz
+}
+
+
+
+</SCRIPT>
+
+<BODY style="overflow: hidden;" bgcolor="#EEEEEE" onresize="onEditorResize()"
+    ><div id="tbTools" align=left class='clsToolbar' unselectable='on' 
+ 	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('Cut')"                  onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/tool-cut.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('Copy')"                 onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-copy.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('Paste')"                onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/tool-paste.gif)" ></span
+	    ><span class='clsToolbarSeperator' unselectable='on' ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('Bold')"                 onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-bold.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('Italic')"               onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-italic.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('Underline')"            onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-under.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('StrikeThrough')"        onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-strike.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('SubScript')"            onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/tool_sub_script.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('SuperScript')"          onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/tool_super_script.gif)" ></span
+	    ><span class='clsToolbarSeperator' unselectable='on' ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('JustifyLeft')"          onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-justify_left.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('JustifyCenter')"        onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-justify_center.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('JustifyRight')"         onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-justify_right.gif)" ></span
+	    ><span class='clsToolbarSeperator' unselectable='on' ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('InsertUnorderedList')"  onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-bullist.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('InsertOrderedList')"    onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-numlist.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('Outdent')"              onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-deindent.gif)" ></span
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('Indent')"               onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/form-inindent.gif)" ></span
+  	></div
+    ><div id="tbStyles" align=left class='clsToolbar' unselectable='on' 
+	    ><span class='clsToolbarButton' unselectable='on' style="width: auto; top: -1px; "
+	      ><select id=fontBox size=1 unselectable='on' onchange='font_nameChange()' style="font-family: Arial, Helevetica; font-size: 11px;"
+	  	    ><option value="Arial">Arial</option
+	  			><option value="Courier">Courier</option
+	  			><option value="Garamond">Garamond</option
+	  			><option value="Tahoma">Tahoma</option
+	  			><option value="Times New Roman">Times New Roman</option
+	  			><option value="Verdana">Verdana</option
+	  		></select
+	  		><select id=sizeBox size=1 unselectable='on' onchange='font_sizeChange()' style="font-family: Arial, Helevetica; font-size: 11px;"
+	  		  ><option value=1>1</option
+	  			><option value=2>2</option
+	  			><option value=3 selected=true>3</option
+	  			><option value=4>4</option
+	  			><option value=5>5</option
+	  			><option value=6>6</option
+	  			><option value=7>7</option
+	  		></select
+	  	></span	  
+	    ><span class='clsToolbarSeperator' unselectable='on' ></span
+	  	><span unselectable='on' oper='FontColor' class='clsToolbarButton' onclick="fnShowColorTable();"                onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/tool_font_color.gif)"></span
+	  	><span unselectable='on' oper='BackColor' class='clsToolbarButton' onclick="fnShowColorTable();"                onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/tool_fill_color.gif)"></span
+	    ><span class='clsToolbarSeperator' unselectable='on' ></span                                                                                
+	    ><span class='clsToolbarButton' unselectable='on' onclick="setDocumentProperties('InsertHorizontalRule')" onmouseup='button_mouse_out()' onmousedown='button_down()' onmouseout='button_mouse_out()' onmouseover='button_mouse_over()' style="background: url(images/editor/tool_line.gif)" ></span
+	  ></div
+	  ><div id=editBox contenteditable  align=left class="clsEditor" onkeypress="editorKeyPress()" onactivate="editorActive()"></div	
+></BODY></HTML>
+
+

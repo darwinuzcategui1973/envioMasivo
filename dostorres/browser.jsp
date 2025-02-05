@@ -1,0 +1,1 @@
+<h1>Browser: <%=request.getHeader("User-Agent") %></h1>

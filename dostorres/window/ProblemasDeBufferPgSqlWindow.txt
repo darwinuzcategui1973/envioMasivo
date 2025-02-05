@@ -1,0 +1,56 @@
+TRADUCCION A TRAVES DE GOOGLE TRANSLATOR
+----------------------------------------
+
+Extraido de : http://archives.postgresql.org/pgsql-bugs/2009-09/msg00009.php
+
+Estoy usando postgres 8.4 y error de "No hay espacio de búfer disponible" cuando
+la conexión con la base de datos.
+
+Estoy usando la máquina que es superior a más de 100 de conexión de mi
+aplicación (iView-servidor syslog) a postgres. He actualizado la configuración
+para postgres en postgres.conf para la conexión máx. Pero también se está dando
+me el error como No hay espacio de búfer disponible. Y es que está ocurriendo con sólo
+base de datos llamada iviewdb. Otras bases de datos están trabajando muy bien. Después de
+la búsqueda en net i encuentran la limitación es del propio Windows. y he
+solucionado el problema con el registro siguiente truco. Pero, ¿tiene alguna postgres
+otra solución que es changeble de postgres a sí misma?
+
+Fix No hay espacio de búfer disponible
+
+Editar el registro no es para principiantes, si usted no sabe lo que está
+haciendo le sugiero que no intente esto, básicamente es utilizar a su propio riesgo.
+
+Cada vez que desee modificar el Registro, es una buena idea que una copia de seguridad en primer lugar.
+Para obtener información sobre cómo respaldar y restaurar el Registro en todas las versiones de
+Windows, haga clic aquí.
+
+Si está usando Windows 95/98/Me siga estos pasos:
+
+El primer paso es abrir el Editor del Registro. Para ello vaya a Inicio, Ejecutar y
+, escriba regedit. En el panel izquierdo para navegar
+HKEY_LOCAL_MACHINE \ System \ CurrentControlSet \ Services \ VxD \ MSTCP una vez allí,
+buscar una entrada llamada MaxConnections. Si existe destacar por
+haga clic en él y, a continuación, haga clic derecho y seleccionar modificar. Aumentar el valor
+(valor recomendado es el doble del valor actual).
+
+Si la entrada MaxConnections no existe, debe crearla. Para ello,
+haga clic derecho en el panel derecho y seleccione Nuevo en el menú y seleccionar String
+Valor. Darle el nombre MaxConnections. Luego haga clic derecho y seleccione
+modificar y escriba un valor de 200.
+
+Reinicie el equipo, si todo va bien, entonces el problema se solucione, si no,
+revertir los cambios al restaurar el registro. (Puede que tenga que reiniciar el equipo para
+modo seguro para hacer esto).
+
+Si está ejecutando Windows NT/2000/XP siga estos pasos: El primer paso es
+iniciar el Editor del Registro. Para ello vaya a Inicio, Ejecutar y escriba regedit. En
+el panel izquierdo para navegar
+HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters una vez
+allí, se debe crear la entrada TcpNumConnections. Para ello, haga clic derecho
+En el panel derecho y seleccione Nuevo en el menú y seleccione Valor DWORD. Dar
+el nombre TcpNumConnections. Luego haga clic derecho y seleccionar modificar y
+introducir un valor de 200.
+
+Reinicie el equipo, si todo va bien, entonces el problema se solucione, si no,
+revertir los cambios al restaurar el registro. (Puede que tenga que reiniciar el equipo para
+modo seguro para hacer esto). 

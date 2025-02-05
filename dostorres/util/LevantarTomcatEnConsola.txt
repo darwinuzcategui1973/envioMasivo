@@ -1,0 +1,17 @@
+En window
+
+	tomcat5 //TS//Tomcat5 --Classpath="%JAVA_HOME%\lib\tools.jar";"%CATALINA_HOME%\bin\bootstrap.jar";"%OOOLIBPATH%\classes\juh.jar";"%OOOLIBPATH%\classes\\unoil.jar"
+
+
+en linux entrar en 
+
+setclasspath.sh y colocar
+
+	CLASSPATH=/opt/openoffice.org2.3/program/classes/juh.jar:/opt/openoffice.org2.3/program/classes/unoil.jar:/opt/openoffice.org2.3/program/classes/ridl.jar:/opt/openoffice.org2.3/program/classes/jurt.jar
+
+despues de
+
+	# Set standard CLASSPATH
+	if [ "$1" = "debug" -o "$1" = "javac" ] ; then
+	  CLASSPATH="$JAVA_HOME"/lib/tools.jar
+	fi

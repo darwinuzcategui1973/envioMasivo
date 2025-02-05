@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+" codebase="http://localhost:8085/ServerOnDemand/" href="ClienteOnDemand.jnlp"> 
+    <information> 
+        <title>QWebDocuments OnDemand</title> 
+        <vendor>www.focus.com.ve</vendor> 
+        <homepage href="index.jsp"/> 
+        <description>QWebDocuments OnDemand</description> 
+        <description kind="short">QWebDocuments OnDemand</description> 
+    </information> 
+    <resources> 
+        <j2se version="1.5+"/>
+        <j2se version="1.6+"/>
+        <jar href="QWDsOnDemand.jar"/> 
+    </resources> 
+    <application-desc main-class="com.focus.qwds.ondemand.cliente.utils.Iniciar"/> 
+</jnlp> 

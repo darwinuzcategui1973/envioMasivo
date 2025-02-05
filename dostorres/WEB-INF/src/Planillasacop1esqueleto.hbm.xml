@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.sacop.forms.Plantilla1BDesqueleto" table="tbl_planillasacop1esqueleto">
+		<id name="idplanillasacop1" type="java.lang.Long" column="idplanillasacop1">
+			<generator class="assigned"/>
+		</id>
+
+                <property name="sacopnum">
+                   <column name="sacopnum"/>
+                </property>           
+                
+                <property name="emisor">
+                   <column name="emisor"/>
+                </property>
+
+                <property name="respblearea" type="long">
+                          <column name="respblearea"/>
+                </property>
+
+                <property name="usernotificado">
+                          <column name="usernotificado"/>
+                </property>
+
+                <property name="estado">
+                          <column name="estado"/>
+                </property>
+
+                <property name="origensacop">
+                          <column name="origensacop"/>
+                </property>
+
+                <property name="fechaemision"  type="timestamp">
+                          <column name="fechaemision"/>
+                </property>
+
+                <property name="requisitosaplicable">
+                          <column name="requisitosaplicable"/>
+                </property>
+                <property name="procesosafectados">
+                          <column name="procesosafectados"/>
+                </property>
+                <property name="solicitudinforma">
+                          <column name="solicitudinforma"/>
+                </property>
+                <property name="descripcion">
+                          <column name="descripcion"/>
+                </property>
+                <property name="causasnoconformidad">
+                          <column name="causasnoconformidad"/>
+                </property>
+                <property name="accionesrecomendadas">
+                          <column name="accionesrecomendadas"/>
+                </property>
+
+                <property name="correcpreven">
+                          <column name="correcpreven"/>
+                </property>
+
+                <property name="rechazoapruebo">
+                          <column name="rechazoapruebo"/>
+                </property>
+
+                <property name="noaceptada">
+                          <column name="noaceptada"/>
+                </property>
+
+                <property name="accionobservacion">
+                          <column name="accionobservacion"/>
+                </property>
+
+                <property name="fechaEstimada">
+                          <column name="fechaEstimada"/>
+                </property>
+
+                <property name="fechaReal">
+                          <column name="fechareal"/>
+                </property>
+
+                <property name="accionesEstablecidas">
+                          <column name="accionesEstablecidas"/>
+                </property>
+
+                <property name="accionesEstablecidastxt">
+                          <column name="accionesEstablecidastxt"/>
+                </property>
+
+                <property name="eliminarcausaraiz">
+                          <column name="eliminarcausaraiz"/>
+                </property>
+
+                <property name="eliminarcausaraiztxt">
+                          <column name="eliminarcausaraiztxt"/>
+                </property>
+
+                <property name="data" type="blob" />
+          
+                <property name="nameFile">
+                          <column name="nameFile"/>
+                </property>
+
+                <property name="contentType">
+                          <column name="contentType"/>
+                </property>
+
+                <property name="comntresponsablecerrar" >
+                          <column name="comntresponsablecerrar"/>
+                </property> 
+
+
+                <property name="sacop_relacionadas" >
+                          <column name="sacop_relacionadas"/>
+                </property> 
+
+                <property name="noconformidades">
+                          <column name="noconformidades"/>
+                </property> 
+
+                <property name="noconformidadesref" >
+                          <column name="noconformidadesref"/>
+                </property> 
+
+               
+    
+
+                <property name="active">
+                          <column name="active"/>
+                </property>
+	</class>
+
+      
+
+	<query name="Plantilla1BDesqueleto.alls"><![CDATA[ FROM Plantilla1BDesqueleto Order by idplanillasacop1]]></query>
+</hibernate-mapping>
+

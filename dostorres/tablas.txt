@@ -1,0 +1,43 @@
+alter table seguridaduser add  toImpresion int
+update seguridaduser  set toImpresion =0
+
+alter table seguridadgrupo add  toImpresion int
+update seguridadgrupo  set toImpresion =0
+
+alter table location add  checkvijenToprint bit
+update location  set checkvijenToprint = 0
+
+
+
+
+alter table location add vijenToprint int
+update location  set vijenToprint = 0
+
+
+CREATE TABLE tbl_solicitudimpresion (
+	numsolicitud bigint NULL ,
+	datesolicitud datetime NULL ,
+	solicitante bigint NULL ,
+	autorizante bigint NULL ,
+	statusautorizante int NULL ,
+	statusimpresion int NULL ,
+	numgen bigint NULL ,
+	numVer bigint null,
+	copias varchar(1000),
+        destinatarios varchar(1000),
+        comments       varchar(1000),
+        active bit)
+
+
+INSERT Dual_Seqgen (NAME,NEXT_SEQ,LUTS) VALUES('numsolicitud',1,0)
+
+
+alter table workflows add  toImpresion int
+update workflows   set toImpresion =0
+
+
+alter table struct add  toImpresion int
+update struct   set toImpresion =0
+
+ALTER TABLE TypeDocuments ALTER COLUMN TypeDoc NVARCHAR(1000) 
+

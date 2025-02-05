@@ -1,0 +1,599 @@
+<html>
+<head>
+<script language="JavaScript">
+function ChangeIfUtf8(Utf8InCookies)
+{
+var URL = document.location.href;
+var strUtf8 = "utf8=";
+var index = URL.indexOf(strUtf8);
+var inCookie = Utf8InCookies;
+if(index>0)
+{	
+var indexValue = index + strUtf8.length;
+if (indexValue+1 < URL.length)
+{
+if (URL.charAt(index-1) == "?")
+URL = URL.substring(0,index) + URL.substring(indexValue+2);
+else
+URL = URL.substring(0,index-1) + URL.substring(indexValue+1);
+}
+else
+{				
+URL = URL.substring(0,index-1);
+}
+}
+var IsFirst = URL.indexOf("?");
+if (IsFirst>0)
+strUtf8 = "&" + strUtf8;
+else
+strUtf8 = "?" + strUtf8;
+if (inCookie=="0" && document.charset=="utf-8")
+{
+URL = URL + strUtf8 + "1";
+if (URL != document.location.href)
+{
+window.location.replace(URL);
+var wHnd = window.open("", "", "height=1,width=1,menubar=no,resizable=no,titlebar=no,scrollbars=no,status=no,toolbar=no,menubar=no,location=no");
+wHnd.close();
+}
+}
+else if (inCookie=="1" && document.charset!="utf-8")
+{
+URL = URL + strUtf8 + "0";
+if (URL != document.location.href)
+{
+window.location.replace(URL);
+var wHnd = window.open("", "", "height=1,width=1,menubar=no,resizable=no,titlebar=no,scrollbars=no,status=no,toolbar=no,menubar=no,location=no");
+wHnd.close();
+}		
+}
+}
+ChangeIfUtf8("0");
+</script>
+<title>MSN Hotmail - Compose</title>
+<link rel="stylesheet" href="/cgi-bin/dasp/EN/hotmail___9070000036.css">
+<script language="JavaScript" src="/cgi-bin/dasp/EN/helppane___9070000043F.js"></script>
+<script language="JavaScript" src="/cgi-bin/dasp/EN/hotmail___9070050024.js"></script>
+</head>
+<body style="background-color:#336699;" onLoad="DOL();">
+<a name="top"></a>
+<table border=0 cellpadding=0 cellspacing=0 bgcolor=#336699>
+<tr valign=top>
+<td width="100%" style="padding-top:3px;">
+<table border=0 cellpadding=0 cellspacing=0><tr>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2090??PS=8318" class="tab" style="font:bold">Página principal </a>&#160;&#160;&#160;</td>
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<font color="white"><b>Hotmail</b></font>&#160;&#160;&#160;</td>
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2093??PS=8318" class="tab" style="font:bold">Buscar</a>&#160;&#160;&#160;</td>	
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2094??PS=8318" class="tab" style="font:bold">Grupos y Chat</a>&#160;&#160;&#160;</td>	
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2095??PS=8318" class="tab" style="font:bold">Ciudad Futura</a>&#160;&#160;&#160;</td>
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2096??PS=8318" class="tab" style="font:bold">Messenger</a>&#160;&#160;&#160;</td>
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2097??PS=8318" class="tab" style="font:bold">Ayuda</a>&#160;&#160;&#160;</td>
+
+</tr></table>
+<table cellpadding=1 cellspacing=0 width="100%" border="0">
+<tr valign="middle">
+<td>
+<a href="http://g.msn.com/1HM8EN/141??PS=8318" target="_top"><img src="http://64.4.46.24/lgo_msn_118x40.gif" width=118 height=40 border=0 alt="go to MSN"></a>
+</td><td valign="bottom" width="100%">
+</td>
+</tr></table>
+</td>
+<td rowspan="2" style="padding-left:4px" valign="top" width="160">
+<a href="http://by9fd.bay9.hotmail.msn.com/cgi-bin/logout?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786&t=1061989023&loru=&id=2&fs=1&cb=_lang%3dEN%26country%3dVE&ct=1061989023">
+<img border=0 src="http://64.4.46.24/crs_918.gif" alt="Sign out of .NET Passport sites" width="66" height="19">
+</a><P>
+<table border="0" cellspacing="0" cellpadding="0" width="156">
+<tr><td><font class="sb" color=#FFCC66><label for="q">Search the Web</label></font></td></tr>
+<form method="GET" name="websearch" action="http://search.msn.com/results.asp" style="margin-bottom:0px;margin-bottom:0px;">
+<input type="Hidden" name="RS" value="CHECKED">
+<input type="Hidden" name="Form" value="HM">
+<input type="Hidden" name="cp" value="1252">
+<input type="Hidden" name="v" value=1>
+<tr>
+<td height=25 valign=top>
+<div style="position:absolute">
+<input type="text" id="q" name="q" size=20 accesskey="S" style="width:120px;"><input type="image" vspace=0 hspace=0 src="http://64.4.46.24/searchgo.gif" border=0 alt="Begin your Web search" style="position:absolute;left:90;top:-2">
+</div>
+</td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+<tr style="padding-top:6px">
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width=129 valign=top><img src="http://64.4.46.24/lgo_0hm_129x36.off.gif" align="top"></td>
+<td nowrap background="http://64.4.46.24/menu0.off.bg.gif"><a href="/cgi-bin/hmhome?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786" class="menu" tabindex="120"><font class="menu">Home</font></a>&nbsp;</td>
+<td><img src="http://64.4.46.24/menu0.off.off.separator.gif"></td>
+<td nowrap background="http://64.4.46.24/menu0.off.bg.gif"><a href="/cgi-bin/HoTMaiL?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786" class="menu" tabindex="121"><font class="menu">Inbox</font></a>&nbsp;</td>
+<td><img src="http://64.4.46.24/menu0.off.on.separator.gif"></td>
+<td nowrap background="http://64.4.46.24/menu0.on.bg.gif"><a href="/cgi-bin/compose?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786" class="menu" tabindex="122"><font class="menu">Compose</font></a>&nbsp;</td>
+<td><img src="http://64.4.46.24/menu0.on.off.separator.gif"></td>
+<td nowrap background="http://64.4.46.24/menu0.off.bg.gif"><a href="/cgi-bin/addresses?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786" class="menu" tabindex="123"><font class="menu">Contacts</font></a>&nbsp;</td>
+<td><img src="http://64.4.46.24/menu0.off.end.gif"></td>
+<td nowrap bgcolor="#336699" background="http://64.4.46.24/menu0.end.bg.gif" align=center>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/cgi-bin/options?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786" class="swb" color="#ffffff" tabindex="124"><font class="swb" color="#ffffff">Options</font></a></td>
+<td nowrap bgcolor="#336699" background="http://64.4.46.24/menu0.end.bg.gif" align=center>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:CallPaneHelp('frm_CreateMsg.htm','');" class="swb" color="#ffffff" tabindex="125"><font class="swb" color="#ffffff">Help</font></a></td>
+<td nowrap bgcolor="#336699" width="100%" align="right" background="http://64.4.46.24/menu0.end.bg.gif">&nbsp;</td>
+</tr>
+</table>
+</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0"><tr>
+<td bgcolor=#93BEE2><img src='http://64.4.46.24/spacer.gif' width="612" height="1"></td>
+<td width="160" bgcolor="#336699" valign="top" rowspan=2 bgcolor=red>
+<table border=0 cellpadding=2 cellspacing=0 width=130 align=center>
+<tr>
+<td style="border-top:solid 1px #8C84A5" bgcolor="#104A7B"><font class="sb" color=#FFCE00>Hotmail Services</font></td>
+</tr>
+<tr>
+<td valign=top>
+<a href="http://g.msn.com/1HM8EN/2946??PS=8318" target="_top"><font class="sw" color="#ffffff">Free Newsletters</font></a><br>
+<a href="/cgi-bin/find?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786" class="sw" color="#ffffff"><font class="sw" color="#ffffff">Find Message</font></a><br>
+<a href="/cgi-bin/dasp/directories.asp?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786" class="sw" color="#ffffff"><font class="sw" color="#ffffff">Directories</font></a>
+</td>
+</tr>
+</table><p>
+<table border="0" cellpadding="2" cellspacing="0" width="130" align="center">
+<tr><td><font class="sb" color=#FFCC66>MSN Worldwide</font></td></tr>
+<tr><td><img src='http://64.4.46.24/format.horizontal.separator.gif' height=2 width='110'></td></tr>
+<tr bgcolor="#336699"><td valign='top'>
+<a href="http://g.msn.com/8HMXEN/2132??PS=8318" class="sw">MSN France</a><br>
+<a href="http://g.msn.com/8HMXEN/2133??PS=8318" class="sw">MSN Germany</a><br>
+<a href="http://g.msn.com/8HMXEN/2134??PS=8318" class="sw">MSN India</a><br>
+<a href="http://g.msn.com/8HMXEN/2135??PS=8318" class="sw">MSN Italy</a><br>
+<a href="http://g.msn.com/8HMXEN/2136??PS=8318" class="sw">MSN Japan</a><br>
+<a href="http://g.msn.com/8HMXEN/2137??PS=8318" class="sw">MSN Korea</a><br>
+<a href="http://g.msn.com/8HMXEN/2138??PS=8318" class="sw">T1MSN</a><br>
+<a href="http://g.msn.com/8HMXEN/2139??PS=8318" class="sw">MSN UK</a><br>
+<a href="http://g.msn.com/8HMXEN/2140??PS=8318" class="sw">YupiMSN</a><br>
+<a href="http://g.msn.com/8HMXEN/2142??PS=8318" class="sw">More MSN Int'l Sites...</a><br>
+</td></tr>
+</table>
+<img src="http://64.4.46.24/spacer.gif" width="160" height="1">
+</td>
+</tr><tr valign=top><td width="100%" valign=top bgcolor="#93BEE2">
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+<tr bgcolor=#93BEE2 align="center">
+<td align="left" valign="middle">&nbsp;&nbsp;<font class="sBL2b">leyenda@hotmail.com</font></td>
+<td width=100% align="right" valign="middle" style="padding-top:3px;">
+&nbsp;
+<a href="http://g.msn.com/1HM8EN/2946??PS=8318" target="_top"><font class="s" style="white-space:nowrap;">Free Newsletters</font></a>
+</td>
+<td nowrap><font class="title"></font>&nbsp;</td>
+</tr>
+<tr bgcolor=#93BEE2 align="center"><td colspan="3"><img src="http://64.4.46.24/spacer.gif" width="1" height="5"></td></tr>
+</table><script language="javascript">
+function GAW(w)
+{
+if ("undefined" != typeof(GAWO))
+{
+GAWO(w);
+}
+}
+function EAW(richTextFlag)
+{
+if ("undefined" != typeof(EAWO))
+{
+EAWO(richTextFlag);
+}
+}
+</script>
+<table cellpadding=0 cellspacing=0 bgcolor="#93BEE2" width=100% style="border-left:4px solid #93BEE2;">
+<iframe name="XformFrame" style="position:absolute;visibility:hidden" WIDTH=0 HEIGHT=0></iframe>
+<form name="hiddentext"><input type="hidden" name="sigtext" value=""><input type="hidden" name="replytext" value=""><input type="hidden" name="drafttext" value=""></form>
+<form name="composeform" method="POST" action="http://by9fd.bay9.hotmail.msn.com/cgi-bin/premail/9023">
+<input type="hidden" name="curmbox" value="F000000001">
+<input type="hidden" name="HrsTest" value="">
+
+<input type="hidden" name="_HMaction">
+<input type="hidden" name="FinalDest" value="">
+<input type="hidden" name="subaction">
+<input type="hidden" name="plaintext">	
+<input type="hidden" name="login" value="leyenda">
+<input type="hidden" name="wcid" value="">	
+<input type="hidden" name="soid" value="">	
+<input type="hidden" name="msg" value="">
+<input type="hidden" name="start" value="">
+<input type="hidden" name="len" value="">
+<input type="hidden" name="attfile" value="">
+<input type="hidden" name="type" value="">
+<input type="hidden" name="src" value="">
+<input type="hidden" name="ref" value="">
+<input type="hidden" name="ru" value="">
+<input type="hidden" name="wysiwyg" value="">
+<input type="hidden" name="msghdrid" value="479244097b6a720aa0c4fc252fc08db8_1061989023">
+<input type="hidden" name="RTEbgcolor" value="">
+<input type="hidden" name="sigflag" value="">
+<input type="hidden" name="newmail" value="new">
+<tr><td>
+<table width=598 cellspacing=0 cellpadding=2>
+<tr>
+<td align=right nowrap><b>
+<a href="Javascript:GAW('all')"><font class="s">To</font></a> 
+:&nbsp;</b></td>
+<td width=100%><input type="text" name="to" value="" onFocus="setIt('to')" size=30 maxlength=1000 style="width:377px;" tabindex="1" title="To"></td>
+<td valign=top rowspan=5 style="border-bottom:1px solid #769DB5;">
+<table cellpadding= cellspacing=0 width=115>
+<tr bgcolor="#104A7B">
+<td nowrap colspan=2 height=20 align="center"><font class="s" color=#FFCE00><b>Quick Address List</b></font></td>
+</tr>		
+<tr>
+<td width=13 style="cursor: hand;"><img src="http://64.4.46.24/insert.gif" onclick="MIT('$Eduardo');" width="16" height="15" border="0"></td>
+<td align="left" nowrap><span onclick="MIT('$Eduardo');" style="cursor: hand;"><font class="sb" color="#000099">Eduardo</font></span><input type="hidden" name="$Eduardo" value="angelzed@hotmail.com"></td>
+<tr>
+<td width=13 style="cursor: hand;"><img src="http://64.4.46.24/insert.gif" onclick="MIT('$Jesus');" width="16" height="15" border="0"></td>
+<td align="left" nowrap><span onclick="MIT('$Jesus');" style="cursor: hand;"><font class="sb" color="#000099">Jesus</font></span><input type="hidden" name="$Jesus" value="storm_mega@hotmail.com"></td>
+<tr>
+<td width=13 style="cursor: hand;"><img src="http://64.4.46.24/insert.gif" onclick="MIT('$JJ');" width="16" height="15" border="0"></td>
+<td align="left" nowrap><span onclick="MIT('$JJ');" style="cursor: hand;"><font class="sb" color="#000099">JJ</font></span><input type="hidden" name="$JJ" value="jose_dasilva_1@ucab.edu.ve"></td>
+<tr>
+<td width=13 style="cursor: hand;"><img src="http://64.4.46.24/insert.gif" onclick="MIT('$Louise');" width="16" height="15" border="0"></td>
+<td align="left" nowrap><span onclick="MIT('$Louise');" style="cursor: hand;"><font class="sb" color="#000099">Louise</font></span><input type="hidden" name="$Louise" value="thriel@yahoo.com"></td>
+<tr>
+<td width=13 style="cursor: hand;"><img src="http://64.4.46.24/insert.gif" onclick="MIT('$Luigi');" width="16" height="15" border="0"></td>
+<td align="left" nowrap><span onclick="MIT('$Luigi');" style="cursor: hand;"><font class="sb" color="#000099">Luigi</font></span><input type="hidden" name="$Luigi" value="lpenap@cantv.net"></td>
+<tr>
+<td colspan=2 nowrap>
+<input type="button" name="Quick.x" value="Show All" onclick="javascript:GAW('all');" class="sbttn" tabindex="6" Title="Show All Addresses">
+<input type="button" name="COMPOSE_X" value="Edit List" class="sbttn" onClick="EAW(1); ">									
+</td>
+</tr>									
+</table>
+</td>
+</tr>
+<tr>
+<td align=right nowrap><b>
+<a href="Javascript:GAW('all')"><font class="s">Cc</font></a> 
+:&nbsp;</b></td>
+<td><input type="text" name="cc" value="" onFocus="setIt('cc');" size=30 maxlength=1000 style="width:377px;"  tabindex="2" title="Cc"></td>
+</tr>
+<tr>
+<td align=right nowrap><b>
+<a href="Javascript:GAW('all')"><font class="s">Bcc</font></a>
+:&nbsp;</b></td>
+<td><input type="text" name="bcc" value="" onFocus="setIt('bcc');" size=30 maxlength=1000 style="width:377px;" tabindex="3" title="Bcc"></td>
+</tr>
+<tr>
+<td align=right nowrap><b><font class="s" color="#104A7B"><label for="subject">Subject</label></font> :&nbsp;</b></td>
+<td><input type="text" id="subject" name="subject" value="" size=30 maxlength=80 style="width:377px;" tabindex="4"></td>
+</tr>		
+<tr>
+<td align=right valign=top nowrap><b><font class="s" color="#104A7B">Attachments </font> :&nbsp;</b></td>			
+<td style="border-bottom:1px solid #769DB5;padding-bottom:5px;">
+<font class="s">  </font> 
+<input type="submit" name="Attach.x" value="Add/Edit Attachments" onclick="return onSubmitCompose(1,this)"; class="sbttn" tabindex="5">
+</td>
+</tr>
+</table>
+<table cellpadding=0 cellspacing=0 width="100%"  style="padding-top:5px">
+<tr valign="middle">
+<td align=center>
+<select name="tools" class="drpdwn" onChange="DT(this[selectedIndex].value)" title="Tools for composing messages">
+<option value="">Tools
+<option value="SpellChk">Spell Check
+<option value="Dictionary">Dictionary
+<option value="Thesaurus">Thesaurus
+<option value="RTE">Rich-Text Editor OFF
+</select>
+&nbsp;</td>
+<td>
+<input type="checkbox" name="outgoing" value="on"> <font class="s">Copy Message to Sent Folder</font>
+</td>
+<td align=right>
+<input type="submit" name="Send.x" value="  Send  " id="send" class="sbttn" onclick="return onSubmitCompose(1,this);" tabindex="8">
+<input type="submit" name="Save.x" value="Save Draft" onclick="return onSubmitCompose(2,this);" class="sbttn" tabindex="9">
+<input type="submit" name="Cancel.x" value="Cancel"  class="sbttn" tabindex="10">
+</td>
+</tr>
+</table>
+<table cellpadding=0 cellspacing=0>
+<tr>
+<td colspan=2 align="center">
+<div id="cdiv" style='position:relative; left:0px; top:0px; height:314px; width:603px;border:solid 1px #9C9C9C;'>
+<textarea name="body" wrap="soft" style='visibility:visible; z-index:100; position:absolute; left:0px; top:0px; height=100%; width=100%'>
+
+
+
+           ________              __
+          /  _____/  ___________|  | _______
+         /   \  ___ /  _ \_   _ \  |/ /\__  \
+         \    \_\  (  (_) )  | \/    &lt;  / __ \_
+          \______  /\__  /|__|  |__|_ \(____  /
+      _________  \/    \/            \/     \/
+     /   _____/__ __ __ ___________ __  ____
+     \_____  \|__|  |  / __ \_  __ \__|/  _ \
+     /        \  |    (  ___/|  | \/  (  (_) )
+    /_______  /__|\___/\__  )|__|  |__|\__  /
+            \/            \/              \/
+
+E-Mail:  leyenda@hotmail.com
+WebSite: http://www.gorka.org
+Celular: (0412) 957-57-16
+
+
+</textarea>
+<IFRAME SRC="/cgi-bin/dasp/EN/rte.asp" id='richedit' style='visibility: hidden; position: absolute; left: 0px; top: 0px; height=100%; width=100%'></IFRAME>
+</div>
+</td>
+</tr>
+</table>
+<table cellpadding=0 cellspacing=0 width=100%>
+<tr valign=right style="padding:2px; padding-right:0px;">
+<td align=right>
+<input type="submit" name="Send.x" value="  Send  " class="sbttn" onclick="return onSubmitCompose(1,this);">
+<input type="submit" name="Save.x" value="Save Draft" onclick="return onSubmitCompose(1,this);" class="sbttn">
+<input type="submit" name="Cancel.x" value="Cancel"  class="sbttn">
+</td>
+</tr>
+</table>
+</td>
+<td width=100%>&nbsp;</td>
+</tr>
+</form>
+</table>	
+<script language="JavaScript">
+var frm = document.composeform;
+function CT()
+{
+if ( (frm.to.value=="") && (frm.cc.value=="") && (frm.bcc.value=="") )
+{
+HMError("A","Please+type+an+address+in+the+To+text+box%2e","","");
+frm.to.focus();
+return false;
+}
+}
+function DT(a){
+if (a=="AddOrigonalText")
+AOT();
+else if (a=="SpellChk"){
+onSubmitCompose(1,frm.tools);
+frm._HMaction.value='SpellChk';
+frm.submit();
+}else if (a=="Dictionary"){
+onSubmitCompose(1,frm.tools);
+frm._HMaction.value='Dictionary';
+frm.submit();
+}else if (a=="Thesaurus"){
+onSubmitCompose(1,frm.tools);
+frm._HMaction.value='Thesaurus';
+frm.submit();
+}else if (a=="RTE"){
+if(HMError("C","Changing+the+formatting+of+this+message+from+Rich+Text+to+plain+text+requires+removing+all+the+current+formatting%2e%5cnAre+you+sure+you+want+to+do+this%3f","",""))
+{
+frm._HMaction.value='RTEOFF';
+onSubmitCompose(0,frm.tools);
+frm.submit();
+}
+else
+{
+frm.tools.selectedIndex=0;
+}
+}
+}
+function DoSaveMSG(Furl)
+{
+onSubmitCompose(1,frm.tools);
+frm.FinalDestvalue=Furl?Furl:rv.url;
+frm._HMaction.value='upsell';
+frm.submit();
+}
+function DOL() {
+frm.sigflag.value = '';
+document.hiddentext.sigtext.value = '';
+}
+function SIG()
+{
+if (frm.sigflag.value && document.hiddentext.sigtext.value.length > 0)
+{
+if (document.hiddentext.sigtext.value.match(/<html>/)!=null)
+{
+var _frame = XformFrame.document;
+_frame.designMode="on";
+_frame.open("text/html","replace");
+_frame.write(document.hiddentext.sigtext.value);
+_frame.close();
+frm.body.value += '\r\n\r\n';
+frm.body.value += _frame.body.innerText;
+_frame.body.innerHTML="";
+}
+else
+{
+frm.body.value = '\r\n\r\n'+document.hiddentext.sigtext.value+'\r\n\r\n'+frm.body.value;
+}
+}
+}
+function DRFT()
+{
+if (document.hiddentext.drafttext.value.match(/<html>/)!=null)
+{
+var _frame = document.XformFrame.document;
+_frame.designMode="on";
+_frame.open("text/html","replace");
+_frame.write(document.hiddentext.drafttext.value);
+_frame.close();
+frm.body.value += _frame.body.innerText;
+_frame.body.innerHTML="";
+}
+else
+{
+frm.body.value += document.hiddentext.drafttext.value;
+}
+}
+function FTF() 
+{
+iCount = 0;
+if (document.activeElement != frm.to) 
+{
+if (iCount >= 0 && iCount < 10) 
+{
+frm.to.focus();
+iCount++;
+}
+setTimeout("FTF()",0)
+}
+}
+function window.document.composeform.to.onkeydown() 
+{
+return SetFocus();
+}
+function window.document.composeform.cc.onkeydown() 
+{
+return SetFocus();
+}
+function window.document.composeform.bcc.onkeydown() 
+{
+return SetFocus();
+}
+function window.document.composeform.subject.onkeydown() 
+{
+return SetFocus();
+}
+function window.document.composeform.outgoing.onkeydown() 
+{
+return SetFocus();
+}		
+function SetFocus() 
+{
+if (window.event.keyCode == "13")
+return false;
+}
+function onSubmitCompose(c,el) 
+{
+if (el.name.indexOf("Send")==0)
+{
+if (CT()==false)
+return false;
+}
+if (c==1||c==2) 
+{	
+if (window.richedit.getBGColor() != "")
+document.composeform.RTEbgcolor.value = window.richedit.getBGColor();
+else if (document.composeform.RTEbgcolor.value  != "")
+window.richedit.setBGColor(document.composeform.RTEbgcolor.value)
+if (c==1)
+{
+frm.body.value = "<html>"
++ "<div style='background-color:"  + window.richedit.getBGColor() + "'>"
++ window.richedit.getHTML()
++ "</div></html>"			
+}
+else
+frm.body.value = "<html>" + window.richedit.getHTML() + "</html>"	
+}
+else
+frm.body.value = window.richedit.getText();
+frm.plaintext.value = window.richedit.getText();
+}
+function RTELoaded(w) {	
+w.setToolbar("tbmode",false)
+w.setToolbar("tbimage",false)
+w.setToolbar("tbtable",false)		
+w.setSkin("#idToolbar {border: 1px black solid; background:#EEEEEE}")
+if (frm.RTEbgcolor.value != "") 
+{
+w.setBGColor(frm.RTEbgcolor.value);
+}
+Ued();
+FTF();
+if (document.composeform && document.composeform.RTEbgcolor.value  != "")
+window.richedit.setBGColor(document.composeform.RTEbgcolor.value);
+}
+function Ued() {
+plaintext =   frm.body.value;
+if (plaintext.search(/<html>/) == 0) 
+window.richedit.setHTML("<DIV>" + plaintext + "</DIV>");
+else 
+window.richedit.setHTML("<DIV>" + plaintext.replace(/\n/g, "</DIV>"));
+frm.body.style.visibility='hidden';
+document.all.richedit.style.visibility = 'visible';	
+window.richedit.setFocus()
+}
+var qF = "to";
+function setIt(H){qF=H;}
+function MIT(qaName){
+var qL = frm.elements[qaName].value;
+if (frm.elements[qF].value.length == 0 || frm.elements[qF].value.indexOf(qL) == -1) 
+{
+if (frm.elements[qF].value.length != 0 && frm.elements[qF].value.charAt(frm.elements[qF].value.length - 1) != ",")
+frm.elements[qF].value += ",";
+frm.elements[qF].value += qL;
+}
+}
+function GAWO(toccbcc){
+var url = "/cgi-bin/quiklist?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786&fromcompose=1&where=all";
+url += "&to="+escape(frm.to.value)+"&cc="+escape(frm.cc.value)+"&bcc="+escape(frm.bcc.value);
+var hWnd = window.open(url,"","width=475,height=345,resizable=yes,status=yes,scrollbars=yes");
+if ((document.window != null) && (!hWnd.opener))
+hWnd.opener = document.window;
+}
+function EAWO(richTextFlag){
+onSubmitCompose(1,frm.tools);
+var url = "/cgi-bin/quiklist?curmbox=F000000001&a=56184797f7a9c182f68431e94a293786&from=compose&richtextyes="+richTextFlag+"&wcid=&soid=";
+var qWnd = window.open(url,"","width=475,height=250,resizable=yes,status=yes,scrollbars=yes");
+if ((document.window != null) && (!qWnd.opener))
+qWnd.opener = document.window;
+qWnd.focus();
+}
+</script>
+</td>
+</tr></table>
+<table border=0 cellpadding=0 cellspacing=0 width=100% bgcolor=#336699>
+<tr>
+<td height="5"><spacer type="block" height="5" width="5"></td>
+</tr>
+<tr valign=top>
+<td height="20">
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://g.msn.com/1HM8EN/141??PS=8318" class="tagline">MSN - More Useful Everyday</a>			
+</td>
+<td rowspan="99"><img src="http://64.4.46.24/spacer.gif" width="160" height="1"></td>
+</tr>
+<tr height="22" valign="top">
+<td>		
+<table border=0 cellpadding=0 cellspacing=0><tr>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2090??PS=8318" class="tab" style="font:bold">Página principal </a>&#160;&#160;&#160;</td>
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<font color="white"><b>Hotmail</b></font>&#160;&#160;&#160;</td>
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2093??PS=8318" class="tab" style="font:bold">Buscar</a>&#160;&#160;&#160;</td>	
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2094??PS=8318" class="tab" style="font:bold">Grupos y Chat</a>&#160;&#160;&#160;</td>	
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2095??PS=8318" class="tab" style="font:bold">Ciudad Futura</a>&#160;&#160;&#160;</td>
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2096??PS=8318" class="tab" style="font:bold">Messenger</a>&#160;&#160;&#160;</td>
+<td><font class='msnNav'>|</font></td>
+<td nowrap>&#160;&#160;&#160;<a href="http://g.msn.com/8HMXENVE/2097??PS=8318" class="tab" style="font:bold">Ayuda</a>&#160;&#160;&#160;</td>
+
+</tr></table>
+</td>
+</tr>
+<tr>
+<td>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td bgcolor="d6e7ef" height="1"><spacer type="block" height="1" width="1"><td>
+</tr>
+<tr>
+<td height="20" style="padding-left:10px" nowrap>
+&nbsp;<font class="msnNav">&copy; 2003 Microsoft Corporation. All rights reserved.</font> <a href="http://g.msn.com/1HM8EN/147??PS=8318" target="_top" class="msnNav">TERMS OF USE</a>
+&nbsp;&nbsp;<a href="http://g.msn.com/1HM8EN/146??PS=8318" target="_top" class="msnNav">Privacy Statement</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<IMG SRC="http://h.msn.com/c.gif?RF=http%3a%2f%2fby9fd%2ebay9%2ehotmail%2emsn%2ecom%2fcgi%2dbin%2fcompose%3fcurmbox%3dF000000001%26a%3dc7eaa14e8fdd33a925be4ca6d0ddd53e&PI=44366&DI=1063&PS=8318" width=1 height=1>
+</body>
+</html>
+<!-- H: bay9-f7.bay9.hotmail.com -->
+<!-- V: WIN2K 09.07.50.0038 i -->
+<!-- D: Aug 11 2003 10:00:32-->
+<!-- S: 0-->

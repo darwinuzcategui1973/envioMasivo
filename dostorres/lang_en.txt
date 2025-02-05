@@ -1,0 +1,155 @@
+# English language file for Unlimited FTP
+LABEL.LOCALFILESYSTEM=Local File System
+LABEL.NOHOST=No Host
+LABEL.STATUS=Status
+LABEL.FILESSELECTEDFORUPLOAD=archivo(s)
+LABEL.MYCOMP=Browse and select files below.
+LABEL.SELECTIONPREVIEW=Selection preview
+LABEL.UPLOADLIST=Subir Archivos
+LABEL.USEMACBIN=Use MacBinary encoding
+LABEL.INSTRUCTIONS=Select files/folders from the left side pane and add them to the right side pane using the arrow buttons.\nItems listed on the right side pane will be submitted when the upload button is pressed.
+
+BUTTON.HELP=Help
+BUTTON.SYNC=Sync
+BUTTON.PUT=Subir
+BUTTON.GET=Download
+BUTTON.CONNECT=Connect
+BUTTON.DISCONNECT=Disconnect
+BUTTON.ABOUT=About
+BUTTON.DELETE=Delete
+BUTTON.VIEW=Open
+BUTTON.DIRINFO=DirInfo
+BUTTON.REFRESH=Refresh
+BUTTON.RENAME=Rename
+BUTTON.CHANGEDIR=ChangeDir
+BUTTON.MAKEDIR=MakeDir
+BUTTON.SITE=Site
+BUTTON.BROWSE=Browse...
+BUTTON.SEND=Send
+BUTTON.ADD=Add
+BUTTON.REMOVE=Remove
+BUTTON.STARTUPLOAD=Upload
+BUTTON.STOPUPLOAD=Cancel
+
+DIALOG.OK=Aceptar
+DIALOG.YES=Si
+DIALOG.YESALL=Si a Todo
+DIALOG.NO=No
+DIALOG.NOALL=No a Todo
+DIALOG.CANCEL=Cancelar
+DIALOG.OPEN=Abrir
+
+MESSAGE.TRANSFERCOMPLETE=Transferencia Completada
+MESSAGE.TRANSFERRING=Transfiriendo
+MESSAGE.TRANSFERRED=Transferido
+MESSAGE.DISCONNECTING=Desconectando
+MESSAGE.DISCONNECTED=Disconnected
+MESSAGE.CONNECTING=Conectando
+MESSAGE.ERROR=Error occured
+MESSAGE.IDLE=Idle
+
+HEADER.FILENAME=Filename
+HEADER.DATE=Date
+HEADER.SIZE=Size
+MESSAGE.BROWSING.LIMIT=Browsing limited to
+
+FILEDIALOG.TITLE=Select file(s) or directory(s) to upload
+FILEDIALOG.FILENAME=Filename
+FILEDIALOG.FILETYPE=Files of type
+
+DIALOG.RESUME.TITLE=Resume Transfer?
+DIALOG.RESUME.MESSAGE=is partially transferred.  Would you like to resume this transfer?
+
+DIALOG.OVERWRITE.TITLE=Overwrite?
+DIALOG.OVERWRITE.MESSAGE=exists, overwrite?
+
+DIALOG.RENAME.LOCAL.TITLE=Rename Local File
+DIALOG.RENAME.REMOTE.TITLE=Rename Remote File
+DIALOG.RENAME.MESSAGE=Enter new name:
+DIALOG.RENAME.ERROR=The file could not be renamed.
+DIALOG.RENAME.SUCCESS=The file was renamed successfully.
+
+DIALOG.DELETE.TITLE=Confirm Delete
+DIALOG.DELETE.MESSAGE=Are you sure you want to delete the selected file(s)?
+DIALOG.DELETE.ERROR=One or more files could not be deleted
+
+DIALOG.CHANGEDIR.LOCAL.TITLE=Change Local Directory
+DIALOG.CHANGEDIR.REMOTE.TITLE=Change Remote Directory
+DIALOG.CHANGEDIR.MESSAGE=Enter directory to change to:
+DIALOG.CHANGEDIR.ERROR=Can not change to directory
+
+DIALOG.MAKEDIR.LOCAL.TITLE=Make Local Directory
+DIALOG.MAKEDIR.REMOTE.TITLE=Make Remote Directory
+DIALOG.MAKEDIR.MESSAGE=Enter new directory name:
+DIALOG.MAKEDIR.ERROR=The directory could not be created
+DIALOG.MAKEDIR.SUCCESS=The directory was created successfully
+
+DIALOG.DIRINFO.LOCAL.TITLE=Local Directory Info
+DIALOG.DIRINFO.REMOTE.TITLE=Remote Directory Info
+DIALOG.DIRINFO.ERROR=Error displaying directory info.
+
+DIALOG.VIEW.ERROR=Could not open file for viewing
+
+DIALOG.SITE.TITLE=Site command
+DIALOG.SITE.MESSAGE=Enter a site command:
+DIALOG.SITE.ERROR=The server doesn't understand SITE commands.
+
+DIALOG.PASSWORD.TITLE=Password Required
+DIALOG.PASSWORD.MESSAGE=Enter your password:
+
+DIALOG.ABOUT.TITLE=About
+
+DIALOG.INSTRUCTIONS.TITLE=Instructions
+
+DIALOG.BUSY.TITLE=Please wait...
+DIALOG.BUSY.CONNECTING=Connecting to
+DIALOG.BUSY.CREATINGZIP=Creating Zip Archive
+DIALOG.BUSY.PUT=Preparing to Upload files...
+DIALOG.BUSY.GET=Preparing to Download files...
+DIALOG.BUSY.SYNC=Preparing to Synchronize files...
+DIALOG.BUSY.DELETING=Deleting files...
+DIALOG.BUSY.CANCELLING=Cancelling transfer...
+DIALOG.BUSY.CHMOD=Setting permissions on files...
+DIALOG.BUSY.ADDING=Adding files to Upload cart...
+
+DIALOG.NEWVOLUME.TITLE=New volume has been detected
+DIALOG.NEWVOLUME.MESSAGE=Do you want to display the contents of the new volume?
+
+DIALOG.SUCCESS.TITLE=Success
+
+DIALOG.ERROR.TITLE=Error
+DIALOG.ERROR.ENTERUSER=You must enter a username
+DIALOG.ERROR.ENTERPASSWORD=You must enter a passowrd
+DIALOG.ERROR.ENTERHOST=You must enter a valid host
+DIALOG.ERROR.ENTERPORT=You must enter a valid port
+DIALOG.ERROR.LOGONERROR=Username or password incorrect
+DIALOG.ERROR.CONNECTERROR=Could not connect to
+DIALOG.ERROR.FILENOTEXIST=One or more of the specified files does not exist
+DIALOG.ERROR.CONFIG=Configuration error, contact this sites administrator
+DIALOG.ERROR.TRANSFER=One or more files could not be transfered
+DIALOG.ERROR.SELECT=You must select file(s) to perform this action
+DIALOG.ERROR.DRIVE=No Disk in drive, or drive not ready
+DIALOG.ERROR.MAXFILES=Maximum number of files for a single upload is limited to
+DIALOG.ERROR.MAXSIZE=The file you selected is too large and was not added.
+DIALOG.ERROR.CARTEMPTY=The Upload Cart is empty
+
+DIALOG.RECONNECT.TITLE=Reconnect?
+DIALOG.RECONNECT.MESSAGE=You have been disconnected, reconnect now?
+
+LABEL.MYCOMPUTER=My Computer
+LABEL.FINDER=Finder
+LABEL.DESKTOP=Desktop
+LABEL.MYDOCS=My Documents
+LABEL.HOME=Home
+
+TOOLTIP.CDUP=Up one folder
+TOOLTIP.ADD=Add selected file(s) to Upload cart
+TOOLTIP.ADDALL=Add all files in current folder to Upload cart
+TOOLTIP.REMOVE=Remove selected file(s) from Upload cart
+TOOLTIP.REMOVEALL=Remove all files from Upload cart
+TOOLTIP.HELP=Display usage instructions
+
+POPUP.OPTIONS=Options
+POPUP.EXPLORE=Explore
+POPUP.PROPERTIES=Properties
+POPUP.SELECTALL=Select All

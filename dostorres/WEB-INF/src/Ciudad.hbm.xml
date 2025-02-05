@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.city.forms.BaseCityForm" table="Ciudad">
+		<id name="id" type="java.lang.String" column="IdCiudad">
+			<generator class="assigned"/>
+		</id>
+		<property name="name">
+			<column name="Nombre"/>
+		</property>
+	</class>
+	<query name="city.alls"><![CDATA[ FROM BaseCityForm Order by lower(name)]]></query>
+	<query name="city.byName"><![CDATA[ FROM BaseCityForm WHERE name = ?]]></query>
+	<query name="city.byNameAndID"><![CDATA[ FROM BaseCityForm WHERE name = ? AND id <> ? ]]></query>
+</hibernate-mapping>

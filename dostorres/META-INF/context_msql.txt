@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+ <Resource
+    auth="Container"
+    description="DataSource"
+    name="jdbc/WebDocs"
+    type="javax.sql.DataSource"
+    maxActive="1000"
+    maxIdle="2"
+    username="qwebdocuments"
+    maxWait="5000"
+    driverClassName="net.sourceforge.jtds.jdbc.Driver"
+    validationQuery="select * from parameters"
+    password="Qwebdocuments123*"
+    url="jdbc:jtds:sqlserver://localhost:1433/qwebdocuments"/>
+</Context>

@@ -1,0 +1,81 @@
+/*
+	Creado por Oscar Alcalá (Bio) para Diseñamos
+	http://www.obstinated.net
+*/
+
+body { /*Elementos generales del documento*/
+	font-family: "Trebuchet MS", Verdana, Arial, Serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+ul {
+	width: 100%;
+	list-style: none; /*Eliminamos el estilo de lista*/
+	padding: 0; /*Evita la indentación que aparece en algunos navegadores*/
+	margin: 0;
+	display: inline; /*Nos permite integrar con los elementos li y evitar problemas -*/
+	float: left;	  /*en algunos navegadores*/
+	border-bottom: 1px Solid Black;
+}
+
+ul li {
+	width: 100px;
+	display: block;
+	float: left; /*Flota los elementos de la lista*/
+	text-align: center;
+	margin-right: 10px;
+	position: relative; /*Hacemos el ajuste de 1 pixel para simular la integración -*/
+	top: 1px;           /*con la capa de contenido*/
+}
+
+ul li a {
+	width: 100px; /*Fijamos el ancho para que el enlace sea toda la pestaña y no solo el texto*/
+	display: block;
+	background: #5095f0;
+	border: 1px Solid #000;
+	text-decoration: none;
+}
+
+ul li a:link, ul li a:visited, ul li a:active {
+	color: #000;
+}
+
+ul li a:hover {
+	color: #CEE59F;
+}
+
+/*Clase especial que resaltará dependiendo de la sección*/
+a.actual {
+	width: 100px;
+	display: block;
+	background: #ffffff;
+	border-top: 1px Solid #000;
+	border-bottom: 1px Solid #ffffff;
+	text-decoration: none;
+}
+
+a.actual:link, a.actual:visited, a.actual:active {
+	color: #000;
+}
+
+a.actual:hover {
+	color: #000;
+}
+
+#contenido {
+	width: 750px;
+	background: #ffffff;
+	float: left;
+	margin: 0;
+	border-left: 1px Solid #000;
+	border-bottom: 1px Solid #000;
+	border-right: 1px Solid #000;
+	font-weight: normal;
+}
+
+#contenido p {
+	margin: 15px 20px;
+}
+
+

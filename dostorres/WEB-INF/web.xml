@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://JAVA.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0" metadata-complete="true">
+	<!-- ini webservices -->
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
+ 
+	 <filter>
+	  <filter-name>CorsFilter</filter-name>
+	  <filter-class>com.focus.filter.CORSFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+	  <filter-name>CorsFilter</filter-name>
+	  <url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<context-param>  
+	   <param-name>log4jConfiguration</param-name>  
+	   <param-value>/WEB-INF/classes/log4j2.xml</param-value>  
+	</context-param>
+ 
+	<!--  deshabilitado por el nuevo log   
+    <servlet>
+        <servlet-name>log4j-init</servlet-name>
+        <servlet-class>
+            com.desige.webDocuments.utils.servlets.LogServlet
+        </servlet-class>
+        <init-param>
+            <param-name>log4j-init-file</param-name>
+            <param-value>/WEB-INF/classes/log4j.properties</param-value>
+        </init-param>
+        <init-param>
+            <param-name>log-directory</param-name>
+            <param-value>/logs</param-value>
+        </init-param>
+        <init-param>
+            <param-name>watch</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>time-watch</param-name>
+            <param-value>10000</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>-->
+    
+    <servlet>
+        <servlet-name>ServicioDocumentoWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>12</load-on-startup>
+    </servlet>
+    <!-- fin webservices -->
+    
+	<servlet>
+		<servlet-name>verifysecurityservlet</servlet-name>
+		<servlet-class>
+			com.desige.webDocuments.document.servlet.VerifySecurityServlet
+		</servlet-class>
+		<init-param>
+			<param-name>revisar</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>servletloaddocuments</servlet-name>
+		<servlet-class>
+			com.desige.webDocuments.document.servlet.ServletLoadDocuments
+		</servlet-class>
+		<init-param>
+			<param-name>licenseII</param-name>
+			<param-value>
+				150-149-28-209-243-179-175-79-48-241-20-130-113-172-86-187
+			</param-value>
+		</init-param>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>servletVersionDocuments</servlet-name>
+		<servlet-class>
+			com.desige.webDocuments.document.servlet.ServletVersionDocuments
+		</servlet-class>
+		<load-on-startup>4</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>srShowDoc</servlet-name>
+		<servlet-class>
+			com.desige.webDocuments.document.servlet.ServletShowDoc
+		</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>srShowFiles</servlet-name>
+		<servlet-class>
+			com.desige.webDocuments.document.servlet.ServletShowFiles
+		</servlet-class>
+		<load-on-startup>6</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>support</servlet-name>
+		<servlet-class>
+			com.desige.webDocuments.document.servlet.SupportServlet
+		</servlet-class>
+		<load-on-startup>7</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>export</servlet-name>
+		<servlet-class>
+			com.desige.webDocuments.document.servlet.ExportServlet
+		</servlet-class>
+		<load-on-startup>8</load-on-startup>
+	</servlet>
+	
+	<!-- <servlet>
+        <servlet-name>updateExtraFields</servlet-name>
+        <servlet-class>
+            com.desige.webDocuments.document.servlet.UpdateExtraFieldsServlet
+        </servlet-class>
+        <load-on-startup>9</load-on-startup>
+    </servlet> -->
+	
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>application</param-name>
+			<param-value>LoginBundle</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	
+	<!-- 
+	<servlet>
+        <servlet-name>delsurinitservlet</servlet-name>
+        <servlet-class>
+            com.focus.custom.delsur.DelSurInitServlet
+        </servlet-class>
+        <init-param>
+            <param-name>revisar</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>11</load-on-startup>
+    </servlet>
+     -->
+     
+	<servlet-mapping>
+		<servlet-name>srShowDoc</servlet-name>
+		<url-pattern>/srShowDoc</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>srShowFiles</servlet-name>
+		<url-pattern>/srShowFiles</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>support</servlet-name>
+		<url-pattern>/support</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>export</servlet-name>
+		<url-pattern>/export</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+        <servlet-name>ServicioDocumentoWS</servlet-name>
+        <url-pattern>/ServicioDocumentoWS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>verifysecurityservlet</servlet-name>
+		<url-pattern>/verifysecurityservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletloaddocuments</servlet-name>
+		<url-pattern>/servletloaddocuments</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletVersionDocuments</servlet-name>
+		<url-pattern>/servletVersionDocuments</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>20</session-timeout><!--180-->
+	</session-config>
+	
+	<!-- mimetype para office -->
+	<mime-mapping>
+		<extension>doc</extension>
+		<mime-type>application/msword</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>dot</extension>
+		<mime-type>application/msword</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>docx</extension>
+		<mime-type>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>dotx</extension>
+		<mime-type>application/vnd.openxmlformats-officedocument.wordprocessingml.template</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>docm</extension>
+		<mime-type>application/vnd.ms-word.document.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>dotm</extension>
+		<mime-type>application/vnd.ms-word.template.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>wbk</extension>
+		<mime-type>application/msword</mime-type>
+	</mime-mapping>
+	
+	<mime-mapping>
+		<extension>xls</extension>
+		<mime-type>application/vnd.ms-excel</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xlt</extension>
+		<mime-type>application/vnd.ms-excel</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xla</extension>
+		<mime-type>application/vnd.ms-excel</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xlsx</extension>
+		<mime-type>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xltx</extension>
+		<mime-type>application/vnd.openxmlformats-officedocument.spreadsheetml.template</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xlsm</extension>
+		<mime-type>application/vnd.ms-excel.sheet.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xltm</extension>
+		<mime-type>application/vnd.ms-excel.template.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xlam</extension>
+		<mime-type>application/vnd.ms-excel.addin.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xlsb</extension>
+		<mime-type>application/vnd.ms-excel.sheet.binary.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>ppt</extension>
+		<mime-type>application/vnd.ms-powerpoint</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>pot</extension>
+		<mime-type>application/vnd.ms-powerpoint</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>pps</extension>
+		<mime-type>application/vnd.ms-powerpoint</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>ppa</extension>
+		<mime-type>application/vnd.ms-powerpoint</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>pptx</extension>
+		<mime-type>application/vnd.openxmlformats-officedocument.presentationml.presentation</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>potx</extension>
+		<mime-type>application/vnd.openxmlformats-officedocument.presentationml.template</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>ppsx</extension>
+		<mime-type>application/vnd.openxmlformats-officedocument.presentationml.slideshow</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>ppam</extension>
+		<mime-type>application/vnd.ms-powerpoint.addin.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>pptm</extension>
+		<mime-type>application/vnd.ms-powerpoint.presentation.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>potm</extension>
+		<mime-type>application/vnd.ms-powerpoint.presentation.macroEnabled.12</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>ppsm</extension>
+		<mime-type>application/vnd.ms-powerpoint.slideshow.macroEnabled.12</mime-type>
+	</mime-mapping>	
+
+	<!-- fin mimetype para office-->
+	
+	<!-- mimetypes para openoffice -->
+	<mime-mapping>
+		<extension>odt</extension>
+		<mime-type>application/vnd.oasis.opendocument.text</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>ott</extension>
+		<mime-type>application/vnd.oasis.opendocument.text-template</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>oth</extension>
+		<mime-type>application/vnd.oasis.opendocument.text-web</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>odm</extension>
+		<mime-type>application/vnd.oasis.opendocument.text-master</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>odg</extension>
+		<mime-type>application/vnd.oasis.opendocument.graphics</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>otg</extension>
+		<mime-type>application/vnd.oasis.opendocument.graphics-template</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>odp</extension>
+		<mime-type>application/vnd.oasis.opendocument.presentation</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>otp</extension>
+		<mime-type>application/vnd.oasis.opendocument.presentation-template</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>ods</extension>
+		<mime-type>application/vnd.oasis.opendocument.spreadsheet</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>ots</extension>
+		<mime-type>application/vnd.oasis.opendocument.spreadsheet-template</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>odc</extension>
+		<mime-type>application/vnd.oasis.opendocument.chart</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>odf</extension>
+		<mime-type>application/vnd.oasis.opendocument.formula</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>odb</extension>
+		<mime-type>pplication/vnd.oasis.opendocument.database</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>odi</extension>
+		<mime-type>application/vnd.oasis.opendocument.image</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>oxt</extension>
+		<mime-type>application/vnd.openofficeorg.extension</mime-type>
+	</mime-mapping>
+	<!-- fin mimetypes para openoffice -->
+	
+	<mime-mapping>
+		<extension>vsd</extension>
+		<mime-type>application/vnd.ms-visio.viewer</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jnlp</extension>
+		<mime-type>application/x-java-jnlp-file</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>cdr</extension>
+		<mime-type>application/coreldraw</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>coreldraw</extension>
+		<mime-type>application/coreldraw</mime-type>
+	</mime-mapping> 
+
+    <mime-mapping>
+		<extension>x-cdr</extension>
+		<mime-type>application/x-cdr</mime-type>
+	</mime-mapping> 
+
+    <mime-mapping>
+		<extension>x-coreldraw</extension>
+		<mime-type>application/x-coreldraw</mime-type>
+	</mime-mapping> 
+    <mime-mapping>
+		<extension>cdr</extension>
+		<mime-type>image/cdr</mime-type>
+	</mime-mapping> 
+    <mime-mapping>
+		<extension>x-cdr</extension>
+		<mime-type>image/x-cdr</mime-type>
+	</mime-mapping> 
+    <mime-mapping>
+		<extension>ai</extension>
+		<mime-type>application/PDF</mime-type>
+	</mime-mapping> 
+	
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <resource-ref>
+        <description>DataSource</description>
+        <res-ref-name>jdbc/WebDocs</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+</web-app>

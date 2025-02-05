@@ -1,0 +1,154 @@
+<html>
+<head>
+<!-- special style sheet for printing -->
+<style media="print">
+.noprint     { display: none }
+</style>
+
+<script defer>
+function setInstallStyles(fOK) {
+	document.getElementById("installFailure").runtimeStyle.display = fOK ? "none" : "block";
+	document.getElementById("installOK").runtimeStyle.display = fOK ? "block" : "none";
+}
+function okInstall() {
+	setInstallStyles(true);
+}
+function noInstall() {
+	setInstallStyles(false);
+}
+
+function viewinit() {
+  if (!secmgr.object) {
+  	noInstall();
+  	return;
+  } else {
+  okInstall();
+  factory.printing.header = "MeadCo's ScriptX Advanced printing example"
+  factory.printing.footer = "The de facto standard for advanced web-based printing"
+  factory.printing.SetMarginMeasure(2) // margins in inches
+  factory.printing.leftMargin = 0.75
+  factory.printing.topMargin = 1.5
+  factory.printing.rightMargin = 0.75
+  factory.printing.bottomMargin = 1.5
+  factory.printing.printBackground = true;
+  factory.printing.disableUI = true; // disable IE native printing UI
+
+  // enable control buttons
+  var templateSupported = factory.printing.IsTemplateSupported();
+  var controls = idControls.all.tags("input");
+  for (var i = 0; i < controls.length; i++ ) {
+    controls[i].disabled = false;
+    if ( templateSupported && controls[i].className == "ie55" )
+      controls[i].style.display = "inline";
+    }
+  }
+
+//  idPreviewFrame.disabled = true;
+}
+
+function SpoolStatus(start) {
+  // provide some visual feedback on spooling status
+  window.status = start?
+    "Please wait for spooling to complete ..." :
+    "Spooling is complete";
+}
+
+function Print(Prompt, frame) {
+  if ( factory.printing.Print(Prompt, frame) ) {
+    SpoolStatus(true);
+    factory.printing.WaitForSpoolingComplete();
+    SpoolStatus(false);
+  }
+}
+
+function PrintHTML(url) {
+  SpoolStatus(true);
+  factory.printing.PrintHTML(url);
+  factory.printing.WaitForSpoolingComplete();
+  SpoolStatus(false);
+}
+
+function newTemplate(s) {
+	alert("Changing the template to: " + ("MeadCo://" + s.options[s.selectedIndex].value));
+	factory.printing.templateURL = "MeadCo://" + s.options[s.selectedIndex].value;
+	idPreviewFrame.disabled = s.selectedIndex != 2;
+}
+
+</script>
+
+</head>
+<body  onload="viewinit()">
+<body scroll="auto" onload="viewinit()">
+
+<!-- MeadCo Security Manager -->
+<object id="secmgr" style="display:none" viewastext classid="clsid:5445BE81-B796-11D2-B931-002018654E2E" codebase="http://wks-ccs-des1:8085/qwebds4/smsx.cab#Version=6,3,435,20">
+<param name="GUID" value="{232E61C9-1E90-4657-AEDB-6F02F3B2EE37}">
+<param name="Path" value="http://www.meadroid.com/scriptx/sxlic.mlf">
+<param name="Revision" value="0">
+<param name="PerUser" value="true">
+</object>
+<!--
+<object id="secmgr" style="display:none" viewastext classid="clsid:5445BE81-B796-11D2-B931-002018654E2E" codebase="http://www.meadroid.com/scriptx/smsx.cab#Version=6,3,435,20">
+<param name="GUID" value="{232E61C9-1E90-4657-AEDB-6F02F3B2EE37}">
+<param name="Path" value="http://www.meadroid.com/scriptx/sxlic.mlf">
+<param name="Revision" value="0">
+<param name="PerUser" value="true">
+</object>
+-->
+
+<!-- MeadCo ScriptX Control                                   clsid:1663ed61-23eb-11d2-b92f-008048fdd814 -->
+<object id="factory" style="display:none" viewastext classid="clsid:1663ED61-23EB-11D2-B92F-008048FDD814">
+<param name="template" value="MeadCo://IE7" />
+</object>
+
+<div id="installFailure">
+	<h2>It appears ScriptX is unavailable or has failed to install.</h2>
+	<p><b>Has the Infobar appeared?</b></p>
+	<p>If you are using Internet Explorer 6 or later on Windows XP SP2 or later then the Explorer Information bar may appear while trying to install ScriptX, it looks like this:</p>
+	<p style="padding: 4px"><img src="..\infobar.png"></p>
+	<p>If the bar has appeared, follow the instructions: click on the bar and then select <i>Install ActiveX Control...</i></p>
+	<p><b>Are you an administrator?</b></p>
+	<p>ScriptX is code that requires you have administrator rights on your machine in order to install it successfully.</p>
+	<p>If you are not an administrator, please contact your administrator and ask them to install ScriptX for you.</p>
+</div>
+
+
+<div id="installOK">
+<h2>MeadCo's ScriptX: Advanced printing example</h2>
+</div>
+
+<div id=idControls class="noprint">
+ <b>Click one of the following buttons:</b>
+
+ <div id="idBtn">
+ <p><input disabled type="button" value="Print the page"
+ onclick="Print(false, top)">
+ <input disabled type="button" value="Print the IFRAME"
+ onclick="Print(false, idFrame)">
+ <input disabled type="button" value="PrintHTML('info.htm')"
+ onclick="PrintHTML('info.htm')">
+ <p>
+ <input disabled type="button" value="Page Setup..."
+ onclick="factory.printing.PageSetup()">
+ <input disabled type="button" value="Print Setup..."
+ onclick="factory.printing.PrintSetup()">
+ <input class=ie55 disabled type="button" value="Preview the page"
+ onclick="factory.printing.Preview()">
+ <input id="idPreviewFrame" class=ie55 disabled type="button" value="Preview the IFRAME"
+ onclick="factory.printing.Preview(idFrame)">
+ </p>
+ </div>
+
+ <p><b>Select the template type to use: </b><select onchange="newTemplate(this)" size="1"><option value="default">Default</option><option value="IE55">IE 5.5/6</option><option selected value="IE7">IE 7</option></select></p>
+ <p>The default template type is for IE 5.5/6 behaviour for IE 5.5/6 browser versions and IE 7 type behaviour for the IE 7 browser. This sample has specifically requested the IE 7 style template is used.</p>
+
+<hr size="1" color="dimgray">
+
+</div>
+
+
+	<input type="button" value="Imprimir" onclick="window.print()" />
+	<br/>
+	<h1>PRUEBA DE IMPRESION<h1>
+</body>
+</html>

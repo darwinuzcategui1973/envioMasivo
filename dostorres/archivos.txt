@@ -1,0 +1,21 @@
+EditDocumentAction.java
+ShowDataDocument.java
+ShowDocsPublishedAction.java
+BaseDocumentForm.java
+nuevo paquete focus
+ToolsHTML.java
+activefactory.hbm.xml
+hibernate.cfg.xml
+LoginBundle_en.properties
+struts-config.xml
+activefactory.jsp
+activeFactoryMostrarLista.jsp
+activefactoryRelacionarPublicar.jsp
+administracion.jsp
+editDataDocument.jsp
+showDataDocument.jsp
+topDocument.jsp
+/img/wonderware.gif
+
+39135,38047
+39135,39982

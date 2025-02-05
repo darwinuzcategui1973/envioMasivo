@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.focus.wonderware.forms.ActiveFactory_frm" table="tbl_ActiveFactory">
+		<id name="idactivefactorydocument" type="java.lang.Long" column="idactivefactorydocument">
+			<generator class="assigned"/>
+		</id>
+
+
+                <property name="numgen">
+                   <column name="numgen"/>
+                </property> 
+
+                <property name="descripcion">
+                   <column name="descripcion"/>
+                </property>           
+                
+                <property name="url">
+                   <column name="url"/>
+                </property>
+
+                <property name="active">
+                          <column name="active"/>
+                </property>
+	</class>
+	<query name="ActiveFactory_frm.alls"><![CDATA[ FROM ActiveFactory_frm Order by lower(descripcion)]]></query>
+</hibernate-mapping>
+

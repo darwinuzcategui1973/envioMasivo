@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.datasource">
+		java:comp/env/jdbc/WebDocs
+	</property>
+	<property name="show_sql">false</property>
+	
+	<!--<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>-->
+	<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+	
+	<property name="use_outer_join">false</property>
+	<property name="hibernate.cglib.use_reflection_optimizer">false</property>
+	<!--        <property name="transaction.factory_class">net.sf.hibernate.transaction.JDBCTransactionFactory</property>-->
+	<!-- Mapping files -->
+	<property name="default_batch_fetch_size">0</property>
+	<mapping resource="Activity.hbm.xml" />
+	<mapping resource="SubActivity.hbm.xml" />
+	<mapping resource="Ciudad.hbm.xml" />
+	<mapping resource="Pais.hbm.xml" />
+	<mapping resource="ProcesosSacop.hbm.xml" />
+	<mapping resource="Planillasacop1.hbm.xml" />
+	<mapping resource="Planillasacop1esqueleto.hbm.xml" />
+	<mapping resource="Planillasacopaccion.hbm.xml" />
+	<mapping resource="TitulosPlanillasSacop.hbm.xml" />
+	<mapping resource="ClasificacionPlanillasSacop.hbm.xml" />
+	<mapping resource="area.hbm.xml" />
+	<mapping resource="DeleteSacop.hbm.xml" />
+	<mapping resource="cargo.hbm.xml" />
+	<mapping resource="Person.hbm.xml" />
+	<mapping resource="activefactory.hbm.xml" />
+	<mapping resource="sacop_intouch_hijo.hbm.xml" />
+	<mapping resource="sacop_intouch_padre.hbm.xml" />
+	<mapping resource="Sacop_Intouch_Conftagname.hbm.xml" />
+	<mapping resource="tagname.hbm.xml" />
+</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,100 @@
+body {
+	font-family:Arial;
+}
+.table-head td {
+	border-collapse: collapse;
+	border:2px solid #cdcdcd;
+	font-family:Arial;
+	padding:10px;
+}
+.table-head-related td {
+	border-collapse: collapse;
+	border:2px solid #cdcdcd;
+	font-family:Arial;
+	font-size:12px;
+	padding:5px;
+}
+
+.clsTableTitle {
+    font-family: Sans-serif, Helvetica, Arial, Verdana ;
+    font-size: 11px;
+    font-weight:bold;
+    background-image: url(../img/barraTitle.gif);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 20px;
+    text-decoration: none;
+}
+
+.td_title_bc, .td_title_bc:hover{
+    font-family: Sans-serif, Helvetica, Arial, Verdana ;
+    font-size: 14px;
+    font-weight:bold;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.clsMessageViewI {
+  background: white;
+  color: black;
+  border: 1px solid #FFFFFF;
+  padding: 2;
+  font-size: 12px;
+  font-family: Geneva, Verdana, Arial, Helvetica;
+  font-weight: normal;
+  width: 100%;
+  overflow: visible;
+  text-align: justify;
+}
+
+.titleLeft{
+	background: url(../img/fondoTitle.gif); 
+	background-repeat: repeat-x;
+	font-size: 14px;
+	font-weight: bold;
+	width: 26%;
+	min-width: 26%;
+	height: 26px;
+	vertical-align: middle;
+}
+
+.titleLeftFont{
+    margin-left: 20px;
+}
+
+.ahref_b {
+    font-family: Sans-serif, Helvetica, Arial, Verdana ;
+    font-size: 8pt;
+    font-style: normal;
+    color: #000000;
+    text-decoration : underline;
+    cursor : pointer;
+}
+.ahref_b:hover {
+    font-family: Sans-serif, Helvetica, Arial, Verdana ;
+    font-size: 8pt;
+    color: #FF9900;
+    text-decoration : underline;
+    cursor : pointer;
+}
+
+.alignRight{
+	text-align: right;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.sacopButton{
+	color:white;
+	font-size:14px;
+	font-weight: bolder;
+	background-color:#036;
+	opacity: 1.0;
+}
+
+.infoTD {
+	padding-left: 20px;
+	text-align: justify;
+}
+

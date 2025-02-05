@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.activities.forms.UserxActivity" table="Act_User">
+		<composite-id>
+        		<key-property name="number" column="Act_Number" type="long"/>
+        		<key-property name="idPerson" column="idPerson" type="long"/>
+		</composite-id>
+	</class>
+	<query name="act.byUser"><![CDATA[ FROM Act_User u,SubActivities sa,Activity a WHERE u.Act_Number = sa.sAct_number AND a.Act_Number = sa.Act_Number AND a.Act_Active = '1' AND sa.sAct_Active = '1' AND u.idPerson = ?]]></query>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+  <Resource
+    auth="Container"
+    description="DataSource"
+    name="jdbc/WebDocs"
+    type="javax.sql.DataSource"
+    maxActive="1000"
+    maxIdle="2"
+    username="qwebdocuments"
+    maxWait="5000"
+    validationQuery="select * from parameters"
+    driverClassName="org.postgresql.Driver"
+    password="qwebdocuments"
+    url="jdbc:postgresql://localhost:5432/qwebdocuments"/>
+</Context>

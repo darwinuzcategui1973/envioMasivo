@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.area.forms.Area"
+		table="tbl_area">
+		<id name="idarea" type="java.lang.Long" column="idarea">
+			<generator class="assigned" />
+		</id>
+		<property name="area">
+			<column name="area" />
+		</property>
+		<property name="prefijo">
+			<column name="prefijo" />
+		</property>
+		<property name="active">
+			<column name="activea"/>
+		</property>
+		<!-- <sql-insert></sql-insert>	 -->
+		<!-- <sql-update></sql-update>	 -->
+		<!-- <sql-delete></sql-delete>	 -->
+	</class>
+	<query name="area.alls">
+		<![CDATA[ FROM Area Order by lower(area)]]>
+	</query>
+</hibernate-mapping>

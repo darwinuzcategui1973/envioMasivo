@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.documentos.server.ondemand.qwds.focus.com/" xmlns:tns="http://ws.documentos.server.ondemand.qwds.focus.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ErrorDeAplicaqcion" type="tns:ErrorDeAplicaqcion"/>
+
+  <xs:element name="LoginInvalidoException" type="tns:LoginInvalidoException"/>
+
+  <xs:element name="guardarDocumento" type="tns:guardarDocumento"/>
+
+  <xs:element name="guardarDocumentoResponse" type="tns:guardarDocumentoResponse"/>
+
+  <xs:element name="guardarVersionDocumento" type="tns:guardarVersionDocumento"/>
+
+  <xs:element name="guardarVersionDocumentoResponse" type="tns:guardarVersionDocumentoResponse"/>
+
+  <xs:element name="obtenerDocumento" type="tns:obtenerDocumento"/>
+
+  <xs:element name="obtenerDocumentoDeVersion" type="tns:obtenerDocumentoDeVersion"/>
+
+  <xs:element name="obtenerDocumentoDeVersionResponse" type="tns:obtenerDocumentoDeVersionResponse"/>
+
+  <xs:element name="obtenerDocumentoResponse" type="tns:obtenerDocumentoResponse"/>
+
+  <xs:element name="obtenerDocumentosBloqueados" type="tns:obtenerDocumentosBloqueados"/>
+
+  <xs:element name="obtenerDocumentosBloqueadosResponse" type="tns:obtenerDocumentosBloqueadosResponse"/>
+
+  <xs:element name="obtenerUltimoDocumentoCreado" type="tns:obtenerUltimoDocumentoCreado"/>
+
+  <xs:element name="obtenerUltimoDocumentoCreadoResponse" type="tns:obtenerUltimoDocumentoCreadoResponse"/>
+
+  <xs:element name="obtenerUsuario" type="tns:obtenerUsuario"/>
+
+  <xs:element name="obtenerUsuarioResponse" type="tns:obtenerUsuarioResponse"/>
+
+  <xs:element name="subirDocumentoDigitalizado" type="tns:subirDocumentoDigitalizado"/>
+
+  <xs:element name="subirDocumentoDigitalizadoResponse" type="tns:subirDocumentoDigitalizadoResponse"/>
+
+  <xs:complexType name="obtenerDocumentosBloqueados">
+    <xs:sequence>
+      <xs:element name="u" type="tns:usuario" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+      <xs:element name="clave" type="xs:string" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="nombreUsuario" type="xs:string" minOccurs="0"/>
+      <xs:element name="nombres" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerDocumentosBloqueadosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:documento" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="documento">
+    <xs:sequence>
+      <xs:element name="bytes" type="xs:base64Binary" minOccurs="0"/>
+      <xs:element name="fechaCheckOut" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="idCheckOut" type="xs:int"/>
+      <xs:element name="idDocument" type="xs:int"/>
+      <xs:element name="idVersion" type="xs:int"/>
+      <xs:element name="mimeType" type="xs:string" minOccurs="0"/>
+      <xs:element name="nombre" type="xs:string" minOccurs="0"/>
+      <xs:element name="nombreArchivo" type="xs:string" minOccurs="0"/>
+      <xs:element name="numero" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ErrorDeAplicaqcion">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerDocumentoDeVersion">
+    <xs:sequence>
+      <xs:element name="idVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerDocumentoDeVersionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="guardarDocumento">
+    <xs:sequence>
+      <xs:element name="archivo" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+      <xs:element name="idCheckOut" type="xs:int"/>
+      <xs:element name="isFileView" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="guardarDocumentoResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="guardarVersionDocumento">
+    <xs:sequence>
+      <xs:element name="archivo" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+      <xs:element name="idVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="guardarVersionDocumentoResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerUltimoDocumentoCreado">
+    <xs:sequence>
+      <xs:element name="u" type="tns:usuario" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerUltimoDocumentoCreadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:documento" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subirDocumentoDigitalizado">
+    <xs:sequence>
+      <xs:element name="archivo" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+      <xs:element name="nameFile" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subirDocumentoDigitalizadoResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerDocumento">
+    <xs:sequence>
+      <xs:element name="idCheckOut" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerDocumentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerUsuario">
+    <xs:sequence>
+      <xs:element name="clave" type="xs:string" minOccurs="0"/>
+      <xs:element name="usuario" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:usuario" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LoginInvalidoException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

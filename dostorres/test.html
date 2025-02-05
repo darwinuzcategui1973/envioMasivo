@@ -1,0 +1,62 @@
+<html>
+<head>
+<script languaje="javascript">
+
+  function abrirFich(){
+     fichero = "http://localhost:7001/WebDocuments/tmp/pendientes.doc";
+     wdApp = new ActiveXObject("Word.Application");  //abrimos la aplicación Word
+     top.doc = wdApp.Documents.Open(fichero,null,false,null);    //Abrimos el documentos seleccionado
+     wdApp.Application.Visible = false;
+     top.doc.saveAs("c:\\epale.doc");
+     wdApp.Application.Visible = true;
+     //doc.close();
+     //try {
+     /*   while (wdApp.Status != 2) {
+           checkFile();
+        }
+     } catch(oErr) {
+        alert("Error: " + oErr);
+     }*/
+  }
+
+  function checkFile() {
+      if (wdApp.Status != 2) {
+          setTimeout("checkFile()",1000);
+      }
+  }
+
+</script>
+</head>
+<body>
+<!--
+<select name="SearchFormat" Style="border-color:red; ">
+	<option  value="CD" >CD</option>
+</select>
+<select name="SearchFormat" Style="border: 2px solid red; ">
+
+<option  value="Cassette" Style="color: red; border-top : 2px solid red; border-left : 2px solid red;border-right : 2px solid red;">Cassette</option>
+<option  value="CD" Style="border-left : 2px solid red;border-right : 2px solid red;">CD</option>
+<option  value="CD-R" Style="border-left : 2px solid red;border-right : 2px solid red;">CD-R</option>
+<option  value="DualDisc" Style="border-left : 2px solid red;border-right : 2px solid red;">DualDisc</option>
+<option  value="DVD" Style="border-left : 2px solid red;border-right : 2px solid red;">DVD</option>
+<option  value="DVD-R" Style="border-left : 2px solid red;border-right : 2px solid red;">DVD-R</option>
+<option  value="LP" Style="border-left : 2px solid red;border-right : 2px solid red;">LP</option>
+<option  value="VCD" Style="border-left : 2px solid red;border-right : 2px solid red;">VCD</option>
+<option  value="VHS" Style="border-left : 2px solid red;border-right : 2px solid red;">VHS</option>
+<option  value="45" Style="border-left : 2px solid red;border-right : 2px solid red;">45</option>
+<option  value="78" Style="border-bottom : 2px solid red; border-left : 2px solid red;border-right : 2px solid red;">78</option>
+</select>
+
+<br>
+<iframe  src="http://docs.google.com/gview?url=http://www.cnmv.es/docPortal/Legislacion/ModelosNormalizados/SGIIC/ManualSGIIC.doc&embedded=true" 
+style="width:100%;height:600px;"></iframe>
+    
+<iframe  src="http://docs.google.com/gview?url=http://serviciosdaewoo.com.mx/archivos/productos/manual/relacionmanulaes-modelos.xlsx&embedded=true" 
+style="width:100%;height:600px;"></iframe>
+-->
+<iframe  src="http://docs.google.com/gview?url=http://www.apuesta07.com/manual.doc&embedded=true" 
+style="width:100%;height:600px;"></iframe>
+
+    
+</body>
+</html>

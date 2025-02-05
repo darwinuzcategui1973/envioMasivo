@@ -1,0 +1,663 @@
+-- tabla security
+insert into security (keygen) values('16-171-151-56-196-97-64-7');
+
+-- tabla person 
+INSERT INTO person (idPerson,nameUser,clave,idGrupo,Nombres,Apellidos,cargo,email,Direccion,Ciudad,Estado,CodPais,CodigoPostal,Tlf,IdLanguage,numRecordPages,accountActive,primeravez,idarea,dateLastPass,EditDocumentCheckOut,dateLastPassEdit,edit) VALUES ('6','admin','4QrcOUm6Wau+VuBX8g+IPg==','2','del Sistema','Administrador','3','','','1','1','12','','','02','10','1','1','6','2008-01-10 16:05:42.407',null,null,'0');
+
+-- tabla ciudad
+insert into ciudad (IdCiudad,Nombre) values(1,'Caracas');
+
+-- tabla state
+insert into state (Id,Nombre) values(1,'Distrito Capital');
+
+-- tabla pais
+insert into pais (CodPais,Nombre,Codigo) values('12','Venezuela','ES');
+
+-- tabla idiomas
+insert into Idiomas (id,description,codigo,country) values('01','Inglés','en','US');
+insert into Idiomas (id,description,codigo,country) values('02','Español','es','VE');
+insert into Idiomas (id,description,codigo,country) values('03','Portugués','po','BR');
+
+-- tabla tbl_cargo
+insert into tbl_cargo (idcargo,cargo,idarea,activec) values('3','Administrador del Sistema','6','1');
+
+-- tabla tbl_area
+insert into tbl_area (idarea,area,activea) values('6','Administrador','1');
+
+-- tabla tbl_tipo
+insert into tbl_tipo (idtipo,tipo,activea,prefijo) values('1','Correctiva','1','SAC');
+insert into tbl_tipo (idtipo,tipo,activea,prefijo) values('2','Preventiva','1','SAP');
+insert into tbl_tipo (idtipo,tipo,activea,prefijo) values('3','Correctora','1','SCR');
+insert into tbl_tipo (idtipo,tipo,activea,prefijo) values('4','Gestion Oportunidad de Mejora','1','GOM');
+insert into tbl_tipo (idtipo,tipo,activea,prefijo) values('5','Gestion de Riego','1','GDR');
+insert into tbl_tipo (idtipo,tipo,activea,prefijo) values('6','Gestion de Obrar de Auditoria','1','GOA');
+insert into tbl_tipo (idtipo,tipo,activea,prefijo) values('7','Gestion de Quejas','1','GDQ');
+insert into tbl_tipo (idtipo,tipo,activea,prefijo) values('8','Gestion de Reclamo','1','GRC');
+
+
+-- tabla parameters
+INSERT INTO parameters
+(lengthPass,allowDuplicatePass,expirePass,notifyEmail,smtpMail,qualitySystem,versionCom,logDoc,allowWF,docNumber,lengthDocNumber,resetDocNumber,daysEndPass,expireDoc,monthExpireDoc,unitTimeExpire,msgWFExpires,endsession,typePrefix,msgDocExpirado,msgWFCancelados,msgWFAprobados,msgWFRevision,msgWFBorrador,expireDrafts,monthsExpireDrafts,unitTimeExpireDrafts,numByLocation,typeNumByLocation,cargosacop,typeOrden,idioma,validateEmail,printOwnerAdmin,completeFTP,msgWFCompletados,viewReaders,reasigneUserFTP,downloadLastVer,impNameCharge,headImp1,headImp2,headImp3,validNavigator,fileNotOpenSave,fileDoubleVersion,mailAccount,openoffice,endSessionEdit,domainEmail, documentReject, viewCreator, vigencia_flujos_cancelados, piePaginaWaterMark, msgSacopAccionesVencidas)
+values 
+('5', '1', '0',	'1', '', '0', '0', '0', '0', '1', '4', '1', '30', '0', '1', 'A', 'Este es el mensaje configurado para Flujos de Trabajos Expirados.', '10', '0', 'Este es el mensaje configurado para Documentos ya Expirados.',	'Este es el mensaje configurado para Flujos de Trabajos Cancelados.', 'Este es el mensaje configurado para Flujos de Trabajos Aprobados.',	'Este es el mensaje configurado para Flujos de Trabajos Revisión.', 'Este es el mensaje configurado para Borradores ya Expirados.',	'0', '1', 'M', '1',	'0', '1', '1', '02', '0', '0', '1', 'Este es el mensaje configurado para Flujos Completados.', '1', '0', '0', '0', 'PRUEBA DE IMPRESION QWEBDOCUMENTS',	'',	'',	null, '1', '.cdx,.cdi,.cdr', '', '0', '20', '', '0', '0', 15, '1', 'Este es el mensaje para las Acciones SACOP ya vencidas');
+
+
+-- tabla groupusers
+insert into groupusers (idGrupo,nombreGrupo,descripcionGrupo,accountActive) values('2','Administrador','Administrador','1');
+
+
+-- tabla module
+insert into module (IdNode,Description,Prefix,parentPrefix) values('1','Compañía','',null);
+
+-- tabla struct
+insert into struct (IdNode,Name,IdNodeParent,NameIcon,NodeType,DateCreation,Owner,Description,toImpresion,heredarPrefijo) VALUES('1','Focus Consulting','0','root_node.png','0','2004-09-07 00:00:00.0','admin','Compañía','0','0');
+
+-- tabla typeDocuments
+insert into typedocuments (idTypeDoc,TypeDoc,type_Formato) values('1','Documento','0');
+insert into typedocuments (idTypeDoc,TypeDoc,type_Formato) values('5','Tipo Registro','0');
+insert into typedocuments (idTypeDoc,TypeDoc,type_Formato) values('7','Formulario (Tipo Formato)','2');
+insert into typedocuments (idTypeDoc,TypeDoc,type_Formato) values('1001','(Tipo Impresión)','0');
+insert into typedocuments (idTypeDoc,TypeDoc,type_Formato) values('1002','Registro (Tipo Registro)','0');
+
+-- tabla seguridaduser
+INSERT INTO seguridaduser (idPerson,nameUser,estructura,flujos,administracion,perfil,mensajes,active,toImpresion,search,sacop,record,digital) VALUES('6','admin','0','0','0','0','0','1','0','0','0','0','0');
+
+
+-- tabla dual_seqgen
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('Activity',	'1', '0', 'Activity', 'Act_Number');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('BackUp', '1', '0', 'BackUpFiles', 'IDBackup');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('ChangesWF', '1', '0', 'ChangesWF',	'idMovement');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('city',	'2', '0', 'Ciudad', 'idCiudad');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('deleteSacop', '1',	'0', 'tbl_deleteSacop', 'id');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('docCheckOut', '1',	'0', 'DocCheckOut', 'idCheckOut');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('docs',	'1', '0', 'Documents', 'numGen');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('FlexFlow',	'1', '0', 'FlexWorkFlow', 'idWorkFlow');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('FlexFlowHistory', '1',	'0', 'FlexFlowHistory', 'idHistory');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('grupo', '3', '0', 'GroupUsers', 'idGrupo');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('HistoryDocs', '1',	'0', 'HistoryDocs', 'idHistory');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('HistoryStruct', '1', '0', 'HistoryStruct', 'idHistory');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('HistoryWF', '1', '0', 'HistoryWF', 'idHistory');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idactivefactorydocument', '1',	'0', 'tbl_ActiveFactory', 'idactivefactorydocument');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idarea', '7', '0', 'tbl_area', 'idarea');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idcargo', '4',	'0', 'tbl_cargo', 'idcargo');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('IDFlexFlow', '1', '0',	'',	'');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idplanillasacop1',	'1', '0', 'tbl_planillasacop1', 'idplanillasacop1');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idplanillasacop1esqueleto', '1', '0', 'tbl_planillasacop1esqueleto', 'idplanillasacop1');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idplanillasacopaccion', '1', '0', 'tbl_planillasacopaccion', 'idplanillasacopaccion');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idsacopintouchpadre', '1',	'0', 'tbl_sacop_intouch_padre', 'idsacopintouchpadre');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idtagname', '1', '0', 'tbl_conftagname', 'idtagname');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idtagname2', '1', '0', 'tbl_tagname', 'idtagname2');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('idtagnameconf', '1', '0', '', '');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('Links', '1', '0', 'Enlaces', 'IdUrl');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('messages', '1', '0', 'Messages', 'idMessage');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('messagesxUser', '1', '0', 'MessageXUser', 'id');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('norms', '50', '0', 'Norms', 'idNorm');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('numDocs', '1', '0', 'documents', 'number');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('numerosacop', '1', '1', '', '');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('numerosacopintouch', '1', '0', '', '');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('numproceso', '1', '0', 'tbl_procesosacop', 'numproceso');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('numsolicitud', '1', '0', 'tbl_solicitudimpresion', 'numsolicitud');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('numtitulosplanillas', '1', '0', 'tbl_titulosplanillassacop', 'numtitulosplanillas');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('pais', '13', '0', 'Pais', 'CodPais');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('state', '2', '0', 'state', 'id');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('StatusUserMov', '1', '0', 'StatusUserMov', 'IdStatu');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('struct', '2', '0', 'Struct', 'IdNode');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('SubActivity', '1',	'0', 'SubActivities', 'sAct_number');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('TypeDocuments', '8', '0', 'TypeDocuments', 'idTypeDoc');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('User_FlexWorkFlows', '1', '0',	'User_FlexWorkFlows',	'idFlexWF');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('userWFs', '1', '0', 'User_WorkFlows', 'row');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('usuario', '7',	'0', 'Person', 'idPerson');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('VersionDoc', '1', '0',	'VersionDoc', 'numVer');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('workFlows', '1', '0', 'WorkFlows', 'idWorkFlow');
+insert into dual_Seqgen (name,next_seq,luts,tabla,campo) values('expediente',1,0,'expediente','f1');
+insert into dual_Seqgen (name,next_seq,luts,tabla,campo) values('HistoryFiles',1,0,'HistoryFiles','idHistory');
+insert into dual_Seqgen (name,next_seq,luts,tabla,campo) values('Digital',1,0,'Digital','idDigital');
+insert into dual_Seqgen (name,next_seq,luts,tabla,campo) values('clasificacion',1,0,'tbl_clasificacionplanillassacop','id');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('possiblecause', '11', '0', 'possiblecause', 'idPossibleCause');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('actionrecommended', '16', '0', 'actionrecommended', 'idActionRecommended');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('planaudit', '1', '0', 'planaudit', 'idPlanAudit');
+insert into dual_seqgen (name,next_seq,luts,tabla,campo) values('programaudit', '1', '0', 'programaudit', 'idProgramAudit');
+
+
+-- tabla norms
+-- NORMAS 9001.2015-V52 
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2000,'0  SISTEMA DE GESTION DE LA CALIDAD ISO 9001:2015','0  SISTEMA DE GESTION DE LA CALIDAD ISO 9001:2015','  ISO 9001:2015','0',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2001,'1 OBJETO Y CAMPO DE APLICACIÓN','1 OBJETO Y CAMPO DE APLICACIÓN','  ISO 9001:2015','1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2002,'2 REFERENCIAS NORMATIVAS','2 REFERENCIAS NORMATIVAS','  ISO 9001:2015','2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2003,'3 TÉRMINOS Y DEFINICIONES','3 TÉRMINOS Y DEFINICIONES','  ISO 9001:2015','3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2004,'4 CONTEXTO DE LA ORGANIZACIÓN','4 CONTEXTO DE LA ORGANIZACIÓN','  ISO 9001:2015','4',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2005,'4.1 Compresión de la Organización y su Contexto','4.1 Compresión de la Organización y su Contexto','  ISO 9001:2015','4.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2006,'4.2 Comprensión de las Necesidades y Expectativas de las Partes Interesadas','4.2 Comprensión de las Necesidades y Expectativas de las Partes Interesadas','  ISO 9001:2015','4.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2007,'4.3 Determinación del Alcance del Sistema de Gestion de la Calidad','4.3 Determinación del Alcance del Sistema de Gestion de la Calidad','  ISO 9001:2015','4.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2008,'4.4 Sistema de Gestión de la Calidad y sus Procesos','4.4 Sistema de Gestión de la Calidad y sus Procesos','  ISO 9001:2015','4.4',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2009,'4.4.1 Debe Establecer, Implementar, Mantener y Mejorar Continuamente','4.4.1 Debe Establecer, Implementar, Mantener y Mejorar Continuamente','  ISO 9001:2015','4.4.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2010,'4.4.2 Mantener y Conservar Información Documentada para apoyar la operación de los Procesos','4.4.2 Mantener y Conservar Información Documentada para apoyar la operación de los Procesos','  ISO 9001:2015','4.4.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2011,'5 LIDERAZGO','5 LIDERAZGO','  ISO 9001:2015','5',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2012,'5.1 Liderazgo y Compromiso','5.1 Liderazgo y Compromiso','  ISO 9001:2015','5.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2013,'5.1.1 Generalidades','5.1.1 Generalidades','  ISO 9001:2015','5.1.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2014,'5.1.2 Enfoque al Cliente','5.1.2 Enfoque al Cliente','  ISO 9001:2015','5.1.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2015,'5.2 Política','5.2 Política','  ISO 9001:2015','5.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2016,'5.2.1 Establecimiento de la Política de la Calidad','5.2.1 Establecimiento de la Política de la Calidad','  ISO 9001:2015','5.2.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2017,'5.2.2 Comunicación de la Política de la Calidad','5.2.2 Comunicación de la Política de la Calidad','  ISO 9001:2015','5.2.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2018,'5.3 Roles, Responsabilidades y Autoridades en la Organización','5.3 Roles, Responsabilidades y Autoridades en la Organización','  ISO 9001:2015','5.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2019,'6 PLANIFICACIÓN','6 PLANIFICACIÓN','  ISO 9001:2015','6',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2020,'6.1 Acciones para Abordar Riesgos y Oportunidades','6.1 Acciones para Abordar Riesgos y Oportunidades','  ISO 9001:2015','6.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2021,'6.1.1 Considerar las Cuestiones en el apartado 4.1 y 4.2','6.1.1 Considerar las Cuestiones en el apartado 4.1 y 4.2','  ISO 9001:2015','6.1.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2022,'6.1.2 Acciones para Abordar Riesgos y Evaluar la Eficacia de las Acciones','6.1.2 Acciones para Abordar Riesgos y Evaluar la Eficacia de las Acciones','  ISO 9001:2015','6.1.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2023,'6.2 Objetivos de la Calidad y Planificación para Lograrlos','6.2 Objetivos de la Calidad y Planificación para Lograrlos','  ISO 9001:2015','6.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2024,'6.2.1 Establecer Objetivos de la Calidad','6.2.1 Establecer Objetivos de la Calidad','  ISO 9001:2015','6.2.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2025,'6.2.2 Determinar: Que, Recursos, Quien, Cuando y Como se evaluan los Resultados','6.2.2 Determinar: Que, Recursos, Quien, Cuando y Como se evaluan los Resultados','  ISO 9001:2015','6.2.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2026,'6.3 Planificación de los Cambios','6.3 Planificación de los Cambios','  ISO 9001:2015','6.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2027,'7 APOYO','7 APOYO','  ISO 9001:2015','7',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2028,'7.1 Generalidades','7.1 Generalidades','  ISO 9001:2015','7.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2029,'7.1.1 Determinar y Proporcionar los Recursos para: Establer, Implementar, Mantener y mejora Continua','7.1.1 Determinar y Proporcionar los Recursos para: Establer, Implementar, Mantener y mejora Continua','  ISO 9001:2015','7.1.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2030,'7.1.2. Personas','7.1.2. Personas','  ISO 9001:2015','7.1.2.',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2031,'7.1.3 Infraestructura','7.1.3 Infraestructura','  ISO 9001:2015','7.1.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2032,'7.1.4 Ambiente para la Operación de los Procesos','7.1.4 Ambiente para la Operación de los Procesos','  ISO 9001:2015','7.1.4',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2033,'7.1.5 Recursos de Seguimiento y Medición','7.1.5 Recursos de Seguimiento y Medición','  ISO 9001:2015','7.1.5',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2034,'7.1.5.1 Generalidades','7.1.5.1 Generalidades','  ISO 9001:2015','7.1.5.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2035,'7.1.5.2 Trazabilidad de las Mediciones','7.1.5.2 Trazabilidad de las Mediciones','  ISO 9001:2015','7.1.5.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2036,'7.1.6 Conocimiento de la Organización','7.1.6 Conocimiento de la Organización','  ISO 9001:2015','7.1.6',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2037,'7.2 Competencia','7.2 Competencia','  ISO 9001:2015','7.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2038,'7.3 Toma de Conciencia','7.3 Toma de Conciencia','  ISO 9001:2015','7.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2039,'7.4 Comunicación','7.4 Comunicación','  ISO 9001:2015','7.4',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2040,'7.5 Información Documentada','7.5 Información Documentada','  ISO 9001:2015','7.5',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2041,'7.5.1 Generalidades','7.5.1 Generalidades','  ISO 9001:2015','7.5.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2042,'7.5.2 Creación y Actualización','7.5.2 Creación y Actualización','  ISO 9001:2015','7.5.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2043,'7.5.3 Control de la Información Documentada','7.5.3 Control de la Información Documentada','  ISO 9001:2015','7.5.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2044,'7.5.3.1 Controlar para asegurarse de que: este disponible e idonea para su uso y este protegida','7.5.3.1 Controlar para asegurarse de que: este disponible e idonea para su uso y este protegida','  ISO 9001:2015','7.5.3.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2045,'7.5.3.2 Abordar la: Distribucion acceso, recuperación y uso. Almacenamiento y Preservación, Control de cambios','7.5.3.2 Abordar la: Distribucion acceso, recuperación y uso. Almacenamiento y Preservación, Control de cambios','  ISO 9001:2015','7.5.3.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2046,'8.1 Planificación y Control Operacional','8.1 Planificación y Control Operacional','  ISO 9001:2015','8.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2047,'8.2 Requisitos para los Productos y Servicios','8.2 Requisitos para los Productos y Servicios','  ISO 9001:2015','8.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2048,'8.2.1 Comunicación con el Cliente','8.2.1 Comunicación con el Cliente','  ISO 9001:2015','8.2.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2049,'8.2.2 Determinación de los Requisitos para los Productos y Servicios','8.2.2 Determinación de los Requisitos para los Productos y Servicios','  ISO 9001:2015','8.2.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2050,'8.2.3 Revisión de los Requisitos para los Productos y Servicios','8.2.3 Revisión de los Requisitos para los Productos y Servicios','  ISO 9001:2015','8.2.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2051,'8.2.3.1 Capacidad de cumplir los requisitos para los productos y servicios','8.2.3.1 Capacidad de cumplir los requisitos para los productos y servicios','  ISO 9001:2015','8.2.3.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2052,'8.2.3.2 Conservar la información documentada sobre revisiones y cualquier nuevo requisito','8.2.3.2 Conservar la información documentada sobre revisiones y cualquier nuevo requisito','  ISO 9001:2015','8.2.3.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2053,'8.2.4 Cambios en los Requisitos para los Productos y Servicios','8.2.4 Cambios en los Requisitos para los Productos y Servicios','  ISO 9001:2015','8.2.4',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2054,'8.3 Diseño y Desarrollo de los Productos y Servicios','8.3 Diseño y Desarrollo de los Productos y Servicios','  ISO 9001:2015','8.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2055,'8.3.1 Generalidades','8.3.1 Generalidades','  ISO 9001:2015','8.3.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2056,'8.3.2 Planificación del Diseño y Desarrollo','8.3.2 Planificación del Diseño y Desarrollo','  ISO 9001:2015','8.3.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2057,'8.3.3 Entradas para el Diseño y Desarrollo','8.3.3 Entradas para el Diseño y Desarrollo','  ISO 9001:2015','8.3.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2058,'8.3.4 Controles del Diseño y Desarrollo','8.3.4 Controles del Diseño y Desarrollo','  ISO 9001:2015','8.3.4',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2059,'8.3.5 Salidas del Diseño y Desarrollo','8.3.5 Salidas del Diseño y Desarrollo','  ISO 9001:2015','8.3.5',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2060,'8.3.6 Cambios del Diseño y Desarrollo','8.3.6 Cambios del Diseño y Desarrollo','  ISO 9001:2015','8.3.6',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2061,'8.4 Control de los Procesos, Productos y Servicios Suministrados Externamente','8.4 Control de los Procesos, Productos y Servicios Suministrados Externamente','  ISO 9001:2015','8.4',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2062,'8.4.1 Generalidades','8.4.1 Generalidades','  ISO 9001:2015','8.4.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2063,'8.4.2 Tipo y Alcance del Control','8.4.2 Tipo y Alcance del Control','  ISO 9001:2015','8.4.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2064,'8.4.3 Información para los Proveedores Externos','8.4.3 Información para los Proveedores Externos','  ISO 9001:2015','8.4.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2065,'8.5 Producción y Provisión del Servicio','8.5 Producción y Provisión del Servicio','  ISO 9001:2015','8.5',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2066,'8.5.1 Control de la Producción y de la Provisión del Servicio','8.5.1 Control de la Producción y de la Provisión del Servicio','  ISO 9001:2015','8.5.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2067,'8.5.2 Identificación y Trazabilidad','8.5.2 Identificación y Trazabilidad','  ISO 9001:2015','8.5.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2068,'8.5.3 Propiedad Perteneciente a los Clientes o Proveedores Externos','8.5.3 Propiedad Perteneciente a los Clientes o Proveedores Externos','  ISO 9001:2015','8.5.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2069,'8.5.4 Preservación','8.5.4 Preservación','  ISO 9001:2015','8.5.4',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2070,'8.5.5 Actividades Posteriores a la Entrega','8.5.5 Actividades Posteriores a la Entrega','  ISO 9001:2015','8.5.5',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2071,'8.5.6 Control de los Cambios','8.5.6 Control de los Cambios','  ISO 9001:2015','8.5.6',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2072,'8.6 Liberación de los Productos y Servicios','8.6 Liberación de los Productos y Servicios','  ISO 9001:2015','8.6',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2073,'8.7 Control de las Salidas No Conformes','8.7 Control de las Salidas No Conformes','  ISO 9001:2015','8.7',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2074,'8.7.1 Asegurarse de que las salidas no conformes, se identifiquen y se controlen','8.7.1 Asegurarse de que las salidas no conformes, se identifiquen y se controlen','  ISO 9001:2015','8.7.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2075,'8.7.2 Conservar la informacion documentada que: describa la No Conformidad, Acciones, Concesiones e identifique la autoridad','8.7.2 Conservar la informacion documentada que: describa la No Conformidad, Acciones, Concesiones e identifique la autoridad','  ISO 9001:2015','8.7.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2076,'9 EVALUACIÓN DEL DESEMPEÑO','9 EVALUACIÓN DEL DESEMPEÑO','  ISO 9001:2015','9',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2077,'9.1 Seguimiento, Medición, Análisis y Evaluación','9.1 Seguimiento, Medición, Análisis y Evaluación','  ISO 9001:2015','9.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2078,'9.1.1 Generalidades','9.1.1 Generalidades','  ISO 9001:2015','9.1.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2079,'9.1.2 Satisfacción del Cliente','9.1.2 Satisfacción del Cliente','  ISO 9001:2015','9.1.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2080,'9.1.3 Análisis y Evaluación','9.1.3 Análisis y Evaluación','  ISO 9001:2015','9.1.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2081,'9.2 Auditoría Interna','9.2 Auditoría Interna','  ISO 9001:2015','9.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2082,'9.2.1 Llevar a cabo auditorías internas a intervalos Planificados','9.2.1 Llevar a cabo auditorías internas a intervalos Planificados','  ISO 9001:2015','9.2.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2083,'9.2.2 Planificar, establecer, implementar y mantener uno o varios programas de auditorías','9.2.2 Planificar, establecer, implementar y mantener uno o varios programas de auditorías','  ISO 9001:2015','9.2.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2084,'9.3 Revisión por la Dirección','9.3 Revisión por la Dirección','  ISO 9001:2015','9.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2085,'9.3.1 Generalidades','9.3.1 Generalidades','  ISO 9001:2015','9.3.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2086,'9.3.2 Entradas de la Revisión por la Dirección','9.3.2 Entradas de la Revisión por la Dirección','  ISO 9001:2015','9.3.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2087,'9.3.3 Salidas de la Revisión por la Dirección','9.3.3 Salidas de la Revisión por la Dirección','  ISO 9001:2015','9.3.3',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2088,'10 MEJORA','10 MEJORA','  ISO 9001:2015','10',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2089,'10.1 Generalidades','10.1 Generalidades','  ISO 9001:2015','10.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2090,'10.2 No Conformidad y Acción Correctiva','10.2 No Conformidad y Acción Correctiva','  ISO 9001:2015','10.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2091,'10.2.1 Reaccionar ante cualquier no Conformidad, evaluar acciones e implementar ','10.2.1 Reaccionar ante cualquier no Conformidad, evaluar acciones e implementar ','  ISO 9001:2015','10.2.1',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2092,'10.2.2 Conservar información documentada como evidencia de la No Conformidad y resultados de acciones','10.2.2 Conservar información documentada como evidencia de la No Conformidad y resultados de acciones','  ISO 9001:2015','10.2.2',1,1);
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice, active, documentrequired)  VALUES(2093,'10.3 Mejora Continua','10.3 Mejora Continua','  ISO 9001:2015','10.3',1,1);
+
+--  NORMAS ISO19011
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19001,'DIRECTRICES PARA LAS AUDITORIAS DE LOS SISTEMAS DE GESTION 0','DIRECTRICES PARA LAS AUDITORIAS DE LOS SISTEMAS DE GESTION 0','ISO19011:2011','0');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19002,'Objeto y Campo de Aplicación 1','Objeto y Campo de Aplicación 1','ISO19011:2011','1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19003,'Referencias Normativas 2','Referencias Normativas 2','ISO19011:2011','2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19004,'Términos y Definiciones 3','Términos y Definiciones 3','ISO19011:2011','3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19005,'Auditoría 3.1','Auditoría 3.1','ISO19011:2011','3.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19006,'Auditorías Internas: denominadas de primera parte 3.1.a','Auditorías Internas: denominadas de primera parte 3.1.a','ISO19011:2011','3.1.a');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19007,'Auditorías Externas: denominadas de segunda y tercera parte 3.1.b','Auditorías Externas: denominadas de segunda y tercera parte 3.1.b','ISO19011:2011','3.1.b');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19008,'Auditoías combinadas: auditoria de Sistemas de gestion diferentes 3.1.c','Auditoías combinadas: auditoria de Sistemas de gestion diferentes 3.1.c','ISO19011:2011','3.1.c');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19009,'Auditorías conjunta: auditoras cooperan para auditar a un único auditado 3.1.d','Auditorías conjunta: auditoras cooperan para auditar a un único auditado 3.1.d','ISO19011:2011','3.1.d');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19010,'Adaptado de la Norma ISO9000:2005 3.1.e','Adaptado de la Norma ISO9000:2005 3.1.e','ISO19011:2011','3.1.e');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19011,'Criterios de Auditoría: Políticas, procedimientos o requisitos usados 3.2','Criterios de Auditoría: Políticas, procedimientos o requisitos usados 3.2','ISO19011:2011','3.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19012,'Adaptado de la Norma ISO9000:2005 3.2.a','Adaptado de la Norma ISO9000:2005 3.2.a','ISO19011:2011','3.2.a');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19013,'Si son requisitos legales, cumple o no cumple se utilizan en los hallazgos 3.2.b','Si son requisitos legales, cumple o no cumple se utilizan en los hallazgos 3.2.b','ISO19011:2011','3.2.b');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19014,'Evidencia de la auditoría: Registros, declaraciones de hechos 3.3','Evidencia de la auditoría: Registros, declaraciones de hechos 3.3','ISO19011:2011','3.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19015,'La evidencia de la auditoría puede ser cualitativa o cuantitativa 3.3.a','La evidencia de la auditoría puede ser cualitativa o cuantitativa 3.3.a','ISO19011:2011','3.3.a');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19016,'Hallazgos de la Auditoría: resultados de la evaluación 3.4','Hallazgos de la Auditoría: resultados de la evaluación 3.4','ISO19011:2011','3.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19017,'Los hallazgos pueden indicar conformidad o no conformidad 3.4.a','Los hallazgos pueden indicar conformidad o no conformidad 3.4.a','ISO19011:2011','3.4.a');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19018,'Los hallazdos pueden conducir a la identificación de oportunidades 3.4.b','Los hallazdos pueden conducir a la identificación de oportunidades 3.4.b','ISO19011:2011','3.4.b');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19019,'El hallazgo de la auditoría se denominan cumplimiento o no cumplimiento 3.4.c','El hallazgo de la auditoría se denominan cumplimiento o no cumplimiento 3.4.c','ISO19011:2011','3.4.c');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19020,'Adaptado de la Norma ISO9000:2005 3.4.d','Adaptado de la Norma ISO9000:2005 3.4.d','ISO19011:2011','3.4.d');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19021,'Conclusiones de la auditoría: Resultados de una auditoría 3.5','Conclusiones de la auditoría: Resultados de una auditoría 3.5','ISO19011:2011','3.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19022,'Adaptado de la Norma ISO9000:2005 3.5.a','Adaptado de la Norma ISO9000:2005 3.5.a','ISO19011:2011','3.5.a');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19023,'Cliente de la Auditoría: Organización o persona que solicita una auditoría 3.6','Cliente de la Auditoría: Organización o persona que solicita una auditoría 3.6','ISO19011:2011','3.6');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19024,'En el caso de una auditoría interna el cliente puede ser el mismo auditado 3.6.a','En el caso de una auditoría interna el cliente puede ser el mismo auditado 3.6.a','ISO19011:2011','3.6.a');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19025,'Adaptado de la Norma ISO9000:2005 3.6.b','Adaptado de la Norma ISO9000:2005 3.6.b','ISO19011:2011','3.6.b');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19026,'Auditado: Organización que es auditada 3.7','Auditado: Organización que es auditada 3.7','ISO19011:2011','3.7');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19027,'Auditor: Persona que lleva a cabo una auditoría 3.8','Auditor: Persona que lleva a cabo una auditoría 3.8','ISO19011:2011','3.8');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19028,'Equipo auditor: uno o mas auditores que llevan a cabo una auditoría 3.9','Equipo auditor: uno o mas auditores que llevan a cabo una auditoría 3.9','ISO19011:2011','3.9');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19029,'Experto Técnico: Persona que aporta conocimientoes específicos 3.10','Experto Técnico: Persona que aporta conocimientoes específicos 3.10','ISO19011:2011','3.10');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19030,'Observador: Persona que acompaña al equipo auditor, pero no audita 3.11','Observador: Persona que acompaña al equipo auditor, pero no audita 3.11','ISO19011:2011','3.11');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19031,'Guia: Persona designada por el auditado para asistir al equipo auditor 3.12','Guia: Persona designada por el auditado para asistir al equipo auditor 3.12','ISO19011:2011','3.12');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19032,'Programa de Auditoría: Detalles acordados para un conjunto o mas auditorias 3.13','Programa de Auditoría: Detalles acordados para un conjunto o mas auditorias 3.13','ISO19011:2011','3.13');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19033,'Alcance de la Auditoría: Extensión y límites de una auditoría 3.14','Alcance de la Auditoría: Extensión y límites de una auditoría 3.14','ISO19011:2011','3.14');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19034,'Plan de Auditoría: Descripción de las actividades y detalles de la auditoría 3.15','Plan de Auditoría: Descripción de las actividades y detalles de la auditoría 3.15','ISO19011:2011','3.15');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19035,'Riesgo: Efecto de la incertidumbre sobre los objetivos 3.16','Riesgo: Efecto de la incertidumbre sobre los objetivos 3.16','ISO19011:2011','3.16');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19036,'Competencia: Capacidad para aplicar conocimientos y alcanzar resultados 3.17','Competencia: Capacidad para aplicar conocimientos y alcanzar resultados 3.17','ISO19011:2011','3.17');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19037,'Conformidad: Cumplimiento de un requisito 3.18','Conformidad: Cumplimiento de un requisito 3.18','ISO19011:2011','3.18');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19038,'No Conformidad: Incumplimiento de un requisito 3.19','No Conformidad: Incumplimiento de un requisito 3.19','ISO19011:2011','3.19');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19039,'Sistema de Gestión: Sistema para establecer las políticas y Objetivos 3.20','Sistema de Gestión: Sistema para establecer las políticas y Objetivos 3.20','ISO19011:2011','3.20');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19040,'Principios de Auditoría 4','Principios de Auditoría 4','ISO19011:2011','4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19041,'Integridad: el fundamento de la profesionalidad 4.a','Integridad: el fundamento de la profesionalidad 4.a','ISO19011:2011','4.a');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19042,'Presentación Imparcial 4.b','Presentación Imparcial 4.b','ISO19011:2011','4.b');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19043,'Debido cuidado profesional 4.c','Debido cuidado profesional 4.c','ISO19011:2011','4.c');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19044,'Confidencialidad 4.d','Confidencialidad 4.d','ISO19011:2011','4.d');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19045,'Independencia 4.e','Independencia 4.e','ISO19011:2011','4.e');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19046,'Enfoque basado en la evidencia 4.f','Enfoque basado en la evidencia 4.f','ISO19011:2011','4.f');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19047,'Gestión de un Programa de Auditoría 5','Gestión de un Programa de Auditoría 5','ISO19011:2011','5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19048,'Generalidades: Establecer programa que contribuya en la eficacia del SG 5.1','Generalidades: Establecer programa que contribuya en la eficacia del SG 5.1','ISO19011:2011','5.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19049,'Establecimiento de los Objetivos del Programa de Auditoría 5.2','Establecimiento de los Objetivos del Programa de Auditoría 5.2','ISO19011:2011','5.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19050,'Establecimiento del Programa de Auditoría 5.3','Establecimiento del Programa de Auditoría 5.3','ISO19011:2011','5.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19051,'Funciones y Responsabilidades de las personas responsables del Programa 5.3.1','Funciones y Responsabilidades de las personas responsables del Programa 5.3.1','ISO19011:2011','5.3.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19052,'Competencia de la personas Responsables del Programa 5.3.2','Competencia de la personas Responsables del Programa 5.3.2','ISO19011:2011','5.3.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19053,'Determinación del Alcance del Programa de Auditoría 5.3.3','Determinación del Alcance del Programa de Auditoría 5.3.3','ISO19011:2011','5.3.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19054,'Identificación y Evaluación de los Riesgos relacionados con el Programa 5.3.4','Identificación y Evaluación de los Riesgos relacionados con el Programa 5.3.4','ISO19011:2011','5.3.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19055,'Establecimiento de los Procedimientos del Programa de Auditoría 5.3.5','Establecimiento de los Procedimientos del Programa de Auditoría 5.3.5','ISO19011:2011','5.3.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19056,'Identificación de los Recursos del Programa de Auditoría 5.3.6','Identificación de los Recursos del Programa de Auditoría 5.3.6','ISO19011:2011','5.3.6');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19057,'Implementación del Programa de Auditoría 5.4','Implementación del Programa de Auditoría 5.4','ISO19011:2011','5.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19058,'Generalidades 5.4.1','Generalidades 5.4.1','ISO19011:2011','5.4.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19059,'Definición de los Objetivos, alcance y los criterios 5.4.2','Definición de los Objetivos, alcance y los criterios 5.4.2','ISO19011:2011','5.4.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19060,'Selección de los métodos de auditoría 5.4.3','Selección de los métodos de auditoría 5.4.3','ISO19011:2011','5.4.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19061,'Selección de los miembros del equipo auditor 5.4.4','Selección de los miembros del equipo auditor 5.4.4','ISO19011:2011','5.4.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19062,'Asignación de responsabilidades al lider del equipo auditor 5.4.5','Asignación de responsabilidades al lider del equipo auditor 5.4.5','ISO19011:2011','5.4.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19063,'Gestión del resultado del programa de auditoría 5.4.6','Gestión del resultado del programa de auditoría 5.4.6','ISO19011:2011','5.4.6');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19064,'Gestión y mantenimiento de los registros del programa de auditoría 5.4.7','Gestión y mantenimiento de los registros del programa de auditoría 5.4.7','ISO19011:2011','5.4.7');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19065,'Seguimiento del programa de auditoría 5.5','Seguimiento del programa de auditoría 5.5','ISO19011:2011','5.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19066,'Revisión y mejora del programa de auditoría 5.6','Revisión y mejora del programa de auditoría 5.6','ISO19011:2011','5.6');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19067,'Realización de una auditoría 6','Realización de una auditoría 6','ISO19011:2011','6');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19068,'Generalidades: Orientación sobre la preparación y realización de actividades 6.1','Generalidades: Orientación sobre la preparación y realización de actividades 6.1','ISO19011:2011','6.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19069,'Inicio de la auditoría 6.2','Inicio de la auditoría 6.2','ISO19011:2011','6.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19070,'Generalidades: corresponde al lider del equipo auditor 6.2.1','Generalidades: corresponde al lider del equipo auditor 6.2.1','ISO19011:2011','6.2.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19071,'Establecimiento del contacto inicial con el auditado 6.2.2','Establecimiento del contacto inicial con el auditado 6.2.2','ISO19011:2011','6.2.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19072,'Determinación de la vialidad de la auditoría 6.2.3','Determinación de la vialidad de la auditoría 6.2.3','ISO19011:2011','6.2.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19073,'Preparación de las actividades de la auditoría 6.3','Preparación de las actividades de la auditoría 6.3','ISO19011:2011','6.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19074,'Realización de la revisión de la documentación en la preparación de la auditoría 6.3.1','Realización de la revisión de la documentación en la preparación de la auditoría 6.3.1','ISO19011:2011','6.3.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19075,'Preparación del plan de auditoría 6.3.2','Preparación del plan de auditoría 6.3.2','ISO19011:2011','6.3.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19076,'Preparar el plan basado en el programa de auditoría 6.3.2.1','Preparar el plan basado en el programa de auditoría 6.3.2.1','ISO19011:2011','6.3.2.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19077,'Debe cubrir: Objetivo, alcance, criterios, ubicaciones,fechas,horarios entre otros 6.3.2.2','Debe cubrir: Objetivo, alcance, criterios, ubicaciones,fechas,horarios entre otros 6.3.2.2','ISO19011:2011','6.3.2.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19078,'Asignación de las tareas al equipo auditor 6.3.3','Asignación de las tareas al equipo auditor 6.3.3','ISO19011:2011','6.3.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19079,'Preparación de los documentos de Trabajo 6.3.4','Preparación de los documentos de Trabajo 6.3.4','ISO19011:2011','6.3.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19080,'Realización de las actividades de auditoría 6.4','Realización de las actividades de auditoría 6.4','ISO19011:2011','6.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19081,'Generalidades: Las actividades se realizan en una secuencia definida 6.4.1','Generalidades: Las actividades se realizan en una secuencia definida 6.4.1','ISO19011:2011','6.4.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19082,'Realización de la Reunión de apertura 6.4.2 ','Realización de la Reunión de apertura 6.4.2 ','ISO19011:2011','6.4.2 ');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19083,'Realización de la Revisión de la documentación durante la Auditoría 6.4.3','Realización de la Revisión de la documentación durante la Auditoría 6.4.3','ISO19011:2011','6.4.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19084,'Comunicación durante la Auditoría 6.4.4','Comunicación durante la Auditoría 6.4.4','ISO19011:2011','6.4.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19085,'Asignación de Funciones y Responsabilidades de los Guías y los Observadores 6.4.5','Asignación de Funciones y Responsabilidades de los Guías y los Observadores 6.4.5','ISO19011:2011','6.4.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19086,'Recopilación y Verificación de la Información 6.4.6','Recopilación y Verificación de la Información 6.4.6','ISO19011:2011','6.4.6');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19087,'Generación de Hallazgos de la Auditoría 6.4.7','Generación de Hallazgos de la Auditoría 6.4.7','ISO19011:2011','6.4.7');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19088,'Preparación de las Conclusiones de la Auditoría 6.4.8','Preparación de las Conclusiones de la Auditoría 6.4.8','ISO19011:2011','6.4.8');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19089,'Realización de la Reunión de Cierre 6.4.9','Realización de la Reunión de Cierre 6.4.9','ISO19011:2011','6.4.9');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19090,'Preparación y Distribución del Informe de Auditoría 6.5','Preparación y Distribución del Informe de Auditoría 6.5','ISO19011:2011','6.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19091,'Preparación del Informe de Auditoría 6.5.1','Preparación del Informe de Auditoría 6.5.1','ISO19011:2011','6.5.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19092,'Distribución del Informe de Auditoría 6.5.2','Distribución del Informe de Auditoría 6.5.2','ISO19011:2011','6.5.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19093,'Finalización de la Auditoría 6.6','Finalización de la Auditoría 6.6','ISO19011:2011','6.6');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19094,'Realización de la Actividades de Seguimiento de una Auditoría 6.7','Realización de la Actividades de Seguimiento de una Auditoría 6.7','ISO19011:2011','6.7');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19095,'Competencia y Evaluación de los Auditores 7','Competencia y Evaluación de los Auditores 7','ISO19011:2011','7');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19096,'Generalidades:Competencia de aquellos individuos que participen 7.1','Generalidades:Competencia de aquellos individuos que participen 7.1','ISO19011:2011','7.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19097,'Determinación de la Competencia del Auditor para Cumplir las necesidades del Programa de Auditoría 7.2','Determinación de la Competencia del Auditor para Cumplir las necesidades del Programa de Auditoría 7.2','ISO19011:2011','7.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19098,'Generalidades:Conocimientos y habilidades requeridos al Auditor 7.2.1','Generalidades:Conocimientos y habilidades requeridos al Auditor 7.2.1','ISO19011:2011','7.2.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19099,'Comportamiento Personal 7.2.2','Comportamiento Personal 7.2.2','ISO19011:2011','7.2.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19100,'Conocimientos y Habilidades 7.2.3','Conocimientos y Habilidades 7.2.3','ISO19011:2011','7.2.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19101,'Generalidades:Poseer los conocimientos y habilidades  7.2.3.1','Generalidades:Poseer los conocimientos y habilidades  7.2.3.1','ISO19011:2011','7.2.3.1');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19102,'Conocimientos y Habilidades genéricos de los Auditores del SG 7.2.3.2','Conocimientos y Habilidades genéricos de los Auditores del SG 7.2.3.2','ISO19011:2011','7.2.3.2');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19103,'Conocimientos y Habilidades Específicos de la Disciplina y del Sector de los Auditores del SG 7.2.3.3','Conocimientos y Habilidades Específicos de la Disciplina y del Sector de los Auditores del SG 7.2.3.3','ISO19011:2011','7.2.3.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19104,'Conocimientos y Habilidades Genéricos del Líder de un Equipo Auditor 7.2.3.4','Conocimientos y Habilidades Genéricos del Líder de un Equipo Auditor 7.2.3.4','ISO19011:2011','7.2.3.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19105,'Conocimientos y Habilidades para Auditar SG que tarten Multiples Disciplinas 7.2.3.5','Conocimientos y Habilidades para Auditar SG que tarten Multiples Disciplinas 7.2.3.5','ISO19011:2011','7.2.3.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19106,'Logro de la Competencia del Auditor 7.2.4','Logro de la Competencia del Auditor 7.2.4','ISO19011:2011','7.2.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19107,'Líderes de los Equipos Auditores 7.2.5','Líderes de los Equipos Auditores 7.2.5','ISO19011:2011','7.2.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19108,'Establecimiento de los Criterios de Evaluación del Auditor 7.3','Establecimiento de los Criterios de Evaluación del Auditor 7.3','ISO19011:2011','7.3');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19109,'Selección del Método Apropiado de Evaluación del Auditor 7.4','Selección del Método Apropiado de Evaluación del Auditor 7.4','ISO19011:2011','7.4');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19110,'Realización de Evaluación del Auditor 7.5','Realización de Evaluación del Auditor 7.5','ISO19011:2011','7.5');
+INSERT INTO  norms(idnorm,   titlenorm,   description,   sistema_gestion,  indice)  VALUES(19111,'Mantenimiento y Mejora de la Competencia del Auditor 7.6','Mantenimiento y Mejora de la Competencia del Auditor 7.6','ISO19011:2011','7.6');
+
+-- configuracion de expedientes
+insert into conf_expediente values('f1','Internal Id','Codigo Interno',2,11,'text','','',0,1,0,0,1,0);
+insert into conf_expediente values('f2','System Date','Fecha del Sistema',3,10,'text','','',0,1,0,0,2,0);
+insert into conf_expediente values('f3','Owner','Propietario',1,20,'text','','',0,1,0,0,3,1);
+
+-- equivalencias por defecto hoja excel
+insert into equivalencias values( 1,'Archivo en formato xls sugerido por Qwebdocuments','Número'                 ,1,'Número'                 ,'',0,1);
+insert into equivalencias values( 2,'Archivo en formato xls sugerido por Qwebdocuments','Nombre'                 ,2,'Nombre'                 ,'',0,1);
+insert into equivalencias values( 3,'Archivo en formato xls sugerido por Qwebdocuments','Carpeta Destino'        ,3,'Carpeta Destino'        ,'',0,1);
+insert into equivalencias values( 4,'Archivo en formato xls sugerido por Qwebdocuments','Carpeta Actual'         ,4,'Carpeta Actual'         ,'',0,1);
+insert into equivalencias values( 5,'Archivo en formato xls sugerido por Qwebdocuments','Publicado'              ,5,'Publicado'              ,'',0,1);
+insert into equivalencias values( 6,'Archivo en formato xls sugerido por Qwebdocuments','Propietario'            ,6,'Propietario'            ,'',0,1);
+insert into equivalencias values( 7,'Archivo en formato xls sugerido por Qwebdocuments','Tipo Documento'         ,7,'Tipo Documento'         ,'',0,1);
+insert into equivalencias values( 8,'Archivo en formato xls sugerido por Qwebdocuments','Norma'                  ,8,'Norma'                  ,'',0,1);
+insert into equivalencias values( 9,'Archivo en formato xls sugerido por Qwebdocuments','Palabras Claves'        ,9,'Palabras Claves'        ,'',0,1);
+insert into equivalencias values(10,'Archivo en formato xls sugerido por Qwebdocuments','URL'                    ,10,'URL'                    ,'',0,1);
+insert into equivalencias values(11,'Archivo en formato xls sugerido por Qwebdocuments','Descripción'            ,11,'Descripción'            ,'',0,1);
+insert into equivalencias values(12,'Archivo en formato xls sugerido por Qwebdocuments','Comentarios'            ,12,'Comentarios'            ,'',0,1);
+insert into equivalencias values(13,'Archivo en formato xls sugerido por Qwebdocuments','Nombre Fisico'          ,13,'Nombre Fisico'          ,'',0,1);
+insert into equivalencias values(14,'Archivo en formato xls sugerido por Qwebdocuments','Status'                 ,14,'Status'                 ,'',0,1);
+insert into equivalencias values(15,'Archivo en formato xls sugerido por Qwebdocuments','Creado'                 ,15,'Creado'                 ,'',0,1);
+insert into equivalencias values(16,'Archivo en formato xls sugerido por Qwebdocuments','Vencimiento'            ,16,'Vencimiento'            ,'',0,1);
+insert into equivalencias values(17,'Archivo en formato xls sugerido por Qwebdocuments','Versión Mayor'          ,17,'Versión Mayor'          ,'',0,1);
+insert into equivalencias values(18,'Archivo en formato xls sugerido por Qwebdocuments','Versión Menor'          ,18,'Versión Menor'          ,'',0,1);
+insert into equivalencias values(19,'Archivo en formato xls sugerido por Qwebdocuments','Documentos Relacionados',19,'Documentos Relacionados','',0,1);
+
+-- table statusDigital
+insert into statusdigital values(0,'Eliminado');
+insert into statusdigital values(1,'Nuevo');
+insert into statusdigital values(2,'Rechazado (por escanear)');
+insert into statusdigital values(3,'Rechazado (por digitar)');
+insert into statusdigital values(4,'Por Verificar');
+insert into statusdigital values(5,'Procesado');
+insert into statusdigital values(6,'Procesado/verificado');
+
+-- datos por defecto para usuarios viewer
+insert into tbl_area (idarea,area,activea) values('1','Area Viewer','1');
+insert into tbl_cargo (idcargo,cargo,idarea,activec) values('1','Cargo viewer','1','1');
+insert into groupusers (idGrupo,nombreGrupo,descripcionGrupo,accountActive) values('1','Viewer','Viewer','1');
+insert into seguridadgrupo(idgrupo, estructura, flujos, mensajes, administracion, perfil, active, toimpresion, search, sacop, record, files, digital) values (1, 1, 1, 0, 1, 0, cast(1 as bit), 1, cast(1 as bit), cast(1 as bit), cast(1 as bit), 1, 0);
+
+--Si no acepta los acentos modificar las descripciones o volver a ejecutar script de las tablas norms, idiomas, struct, module, parameters y TypeDocuments
+
+update parameters set editorondemand = 1;
+
+-- inserta las clases de registro
+
+insert into registerclass values(0,'Documento');
+insert into registerclass values(1,'Registro de Evidencia');
+insert into registerclass values(2,'Registro de No Conformidad');
+insert into registerclass values(3,'Registro de Oportunidades de Mejora');
+insert into registerclass values(4,'Registro de Identificacion de Riesgos');
+insert into registerclass values(5,'Registro de Observaciones');
+insert into registerclass values(6,'Registro de Quejas');
+insert into registerclass values(7,'Registro de Reclamos');
+-- 30/01/2021
+insert into registerclass values(8,'Registro de SACOP');
+
+
+-- inserta las causas
+
+insert into possiblecause values(1,'Mano de Obra');
+insert into possiblecause values(2,'Equipos');
+insert into possiblecause values(3,'Material');
+insert into possiblecause values(4,'Metodo');
+insert into possiblecause values(5,'Medio Ambiente');
+insert into possiblecause values(6,'Instalaciones');
+insert into possiblecause values(7,'Entorno');
+insert into possiblecause values(8,'Politica');
+insert into possiblecause values(9,'Normas y Leyes');
+insert into possiblecause values(10,'Capital de Trabajo');
+
+-- Inserta las acciones recomendadas
+insert into actionrecommended values(1,'Reproceso',2);
+insert into actionrecommended values(2,'Reparacion',2);
+insert into actionrecommended values(3,'Reclasificacion',2);
+insert into actionrecommended values(4,'Desecho',2);
+insert into actionrecommended values(5,'Permiso de desviacion',2);
+insert into actionrecommended values(6,'Mejora Continua',3);
+insert into actionrecommended values(7,'Cambio Abrupto',3);
+insert into actionrecommended values(8,'Innovacion',3);
+insert into actionrecommended values(9,'Reorganizacion',3);
+insert into actionrecommended values(10,'Evitar el Riesgo',4);
+insert into actionrecommended values(11,'Asumir el Riesgo',4);
+insert into actionrecommended values(12,'Eliminar la fuente del Riesgo',4);
+insert into actionrecommended values(13,'Cambiar la probabilidad o las Consecuencias del Riesgo',4);
+insert into actionrecommended values(14,'Compartir el Riesgo',4);
+insert into actionrecommended values(15,'Mantener el Riesgo',4);
+
+-- Inserta las trasaction_qweb
+-- Inserta las transaction_qweb
+INSERT INTO transaction_qweb VALUES (200,'Login',0,0,1,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (210,'Usuario no autorizado',0,0,1,'','No autorizado para ingresar','Comunicarse con el Admin','','soporte@focus.com.ve','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (220,'Usuario / clave errada',0,0,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (230,'Licencia vencida',1,0,1,'','Licencia expirada','Solicitar nueva licencia','','soporte@focus.com.ve','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (1000,'Perfil',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (5000,'Principal',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (10000,'EOC',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (10100,'Agregar Localidad',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10200,'Gestion de propiedades en los nodos',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10205,'Actualizacion de nombre',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10210,'Actualizacion de propietario',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10215,'Actualizacion de Version mayor',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10220,'Actualizacion de Historico de Obsoletos',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10225,'Actualizacion de Version menor',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10230,'Actualizacion modo de prefijos',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10235,'Actualizacion de la descripcion',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10240,'Actualizacion de la lista de Divulgacion',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10250,'Valor FT Deshabilitar opciones de cambio',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10251,'Valor Secuencial',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10252,'Valor Condicional',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10253,'Valor Notificacion Automatica',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10254,'Valor numero de dias para que expire un flujo de trabajo',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10255,'Valor mostrar cargo de usuarios',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10260,'Expirados: tiempo en dias en que un usuario sera notificado que el Documento vencio',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10261,'Expirados:  Notificar # dias antes de que expire el documento',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10270,'Impresion: Vigencia en dias para la impresion',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10280,'Borradores: Colocar Correlativo documentos borradores',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10300,'Permisos a Usuarios sobre los nodos',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10400,'Permisos a Grupos sobre los nodos',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10500,'Agregar Carpeta',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10600,'Agregar Proceso',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10700,'Mover carpetas',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (10800,'Eliminar Carpeta',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11000,'Agregar documento',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11050,'Crear Registro',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11100,'Gestion propiedades del documento',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11105,'Actualizar Normas',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11110,'Actualizar fecha de publicacion',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11115,'Actualizar Lote',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11120,'Actualizar URL:',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11125,'Actualizar Palabras Clave',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11130,'Actualizar Descripcion',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11135,'Actualizar Documentos Relacionados',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11150,'Eliminar documento',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11200,'Mover documento',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11250,'Bloquear documento',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11300,'Gestion de Flujo de Trabajo de Revision',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11350,'Gestion de Flujo de Trabajo de Aprobacion',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11400,'Gestion de Flujo de Trabajo Parametrico',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11450,'Gestion de Flujo de Trabajo : Solicitud de cambio',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11500,'Gestion de Flujo de Trabajo : Solicitud de eliminacion',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11550,'Gestion de SACOPs',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11600,'Permisos a usuarios sobre el documento',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11650,'Permisos a grupos sobre el documento',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11700,'Descargar documento aprobado',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (11750,'Descargar documento borrador',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (20000,'Flujos de Trabajo',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (30000,'Lista Maestra',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (40000,'SACOPs',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (40100,'Crear nueva SACOP',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (40200,'Emitir SACOP',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (40300,'Aceptar SACOP',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (40400,'Crear Acciones',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (40500,'Firmar acciones',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (40600,'Verificar SACOP',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (40700,'Cerrar SACOP',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (40800,'Eliminar SACOP',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (50000,'Buscar',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (60000,'Mensajes',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (70000,'Estadisticas',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (80000,'Digitalizar',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (90000,'Administracion',0,0,0,'','','','','','','','','',0,1);
+INSERT INTO transaction_qweb VALUES (90100,'Ver todas las cuentas de usuarios',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (90500,'Adicionar nueva cuenta de usuario',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (90900,'Adicionar nuevo grupo de usuario',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (91300,'Ver / Editar seguridad',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (91700,'Cambiar Contrase&ntilde;a del Usuario',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (92100,'Editar cuenta de Usuario',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (92115,'Cambio de Area',1,0,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (92130,'Cambio de Cargo',1,0,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (92145,'Sustitucion de Usuario',1,0,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (92160,'Eliminacion de Usuario',1,0,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (92500,'Editar Grupos',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (92900,'Sesi&oacute;n de Usuarios',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (93300,'Flujos de Trabajo Paramï¿½tricos',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (93700,'Configuraci&oacute;n de Expedientes',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (94100,'Campos Adicionales en documentos',0,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (95000,'Editar configuraci&oacute;n de Qwebdocuments',1,0,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (95100,'Inicio de Sesi&oacute;n',0,0,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (95105,'Vigencia de contrase&ntilde;a:',0,0,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95110,'M&iacute;nimo de caracteres para una contrase&ntilde;a:',0,0,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95115,'Tiempo de Expiraci&oacute;n de sesi&oacute;n:',0,0,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95120,'Tiempo de Expiraci&oacute;n para edici&oacute;n:',0,0,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95200,'SACOP',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (95205,'Tiempo en d&iacute;as con que serï¿½ notificado un usuario que alguna acci&oacute;n de la SACOP estï¿½ por vencer',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95210,'Cantidad de d&iacute;as de inactividad de la SACOP Emitida pero no respondida',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95215,'Cantidad de d&iacute;as de la SACOP aceptada pero sin el plan de accion',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95220,'Lista de Gestionadores SACOPs',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95225,'Vigencia de SACOPS cerradas:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95230,'Mes de Cierre anual',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95235,'Limite de Meses de antiguedad',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95240,'Mostrar cargo de los usuarios ï¿½SACOP',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95245,'Prefijo del Sistema',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95250,'Prefijo por &Aacute;rea',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95255,'A&ntilde;o',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95260,'Mes',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95265,'D&iacute;a',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95270,'Correlativo del Sistema',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95275,'Renumerar por Prefijo',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95276,'Renumerar por Prefijo + &Aacute;rea',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95277,'Renumerar por Prefijo + &Aacute;rea + A&ntilde;o',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95278,'Renumerar por Prefijo + &Aacute;rea + A&ntilde;o + Mes',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95279,'Renumerar por Prefijo + &Aacute;rea + A&ntilde;o + Mes + D&iacute;a',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95300,'Correo',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (95305,'Notificar por correo',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95310,'Validar formato de correo',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95315,'Habilitar debug de notificaciones',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95320,'Validar dominio de correo:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95325,'Servidor de correo SMTP/ESMTP:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95330,'Puerto del servidor de correo SMTP/ESMTP:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95335,'Cuenta de correo del remitente para notificaciones del sistema:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95340,'Clave de la cuenta de correo para notificaciones del sistema:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95345,'Indique el protocolo de autenticaci&oacute;n para las notificaciones:SSL',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95350,'Indique el protocolo de autenticaci&oacute;n para las notificaciones: TLS',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95355,'Sufijo para el asunto:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95400,'EOC',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (95405,'Comentarios de una nueva versi&oacute;n, Obligatorios:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95410,'Comentarios de una nueva versi&oacute;n, Obligatorios:No',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95415,'Permitir cambiar nombre y propietario a documentos en estado aprobado: SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95420,'Permitir cambiar nombre y propietario a documentos en estado aprobado:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95425,'Participaci&oacute;n del generador en los flujos de trabajo:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95430,'Participaci&oacute;n del generador en los flujos de trabajo:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95435,'Vigencia de Documentos:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95440,'Vigencia de Documentos:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95445,'Vigencia de Borradores:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95450,'Vigencia de Borradores: NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95455,'Fecha de Retenci&oacute;n:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95460,'Fecha de Retenci&oacute;n:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95500,'Flujos de Trabajo',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (95505,'Completar Flujo de Trabajo Paramï¿½trico:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95510,'Completar Flujo de Trabajo Paramï¿½trico:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95515,'Reasignar Usuario al Rechazar un Flujo de Trabajo Paramï¿½trico:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95520,'Reasignar Usuario al Rechazar un Flujo de Trabajo Paramï¿½trico:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95525,'Crear documento de soporte de rechazo en un Flujo de Trabajo Paramï¿½trico:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95530,'Crear documento de soporte de rechazo en un Flujo de Trabajo Paramï¿½trico:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95535,'Autenticaci&oacute;n requerida para firmar Flujos de Trabajo:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95540,'Autenticaci&oacute;n requerida para firmar Flujos de Trabajo:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95545,'Responsable Solicitudes de Cambio',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95550,'Responsable Solicitudes de Eliminaci&oacute;n',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95555,'Responsable Solicitudes de Impresi&oacute;n',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95600,'Impresi&oacute;n',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (95605,'Libre impresi&oacute;n para Admin y Propietario de Documentos:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95606,'Libre impresi&oacute;n para Admin y Propietario de Documentos:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95610,'Imprimir Elaborador',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95611,'Imprimir Elaborador',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95615,'Imprimir Editores',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95616,'Imprimir Editores',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95620,'Imprimir Revisores',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95621,'Imprimir Revisores',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95625,'Imprimir el n&uacute;mero sobre el documento',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95626,'Imprimir el n&uacute;mero sobre el documento',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95630,'Imprimir la versi&oacute;n sobre el documento',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95631,'Imprimir la versi&oacute;n sobre el documento',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95635,'Imprimir la fecha de aprobaci&oacute;n sobre el documento',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95636,'Imprimir la fecha de aprobaci&oacute;n sobre el documento',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95640,'Habilitar informaci&oacute;n en copias controladas y no controladas',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95641,'Habilitar informaci&oacute;n en copias controladas y no controladas',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95645,'Desactivar cache de documentos convertidos',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95646,'Desactivar cache de documentos convertidos',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95650,'Valores predeterminados para la impresi&oacute;n de Documentos:Mostrar nombre del usuario   ',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95651,'Valores predeterminados para la impresi&oacute;n de Documentos:Mostrar cargo del usuario   ',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95655,'Valores predeterminados para la impresi&oacute;n de Documentos:Mostrar nombre y cargo del usuario   ',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95656,'Encabezado de Hoja de Impresi&oacute;n',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95660,'Encabezado de Hoja de Impresi&oacute;n:T&iacute;tulo',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95661,'Encabezado de Hoja de Impresi&oacute;n:C&oacute;digo',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95665,'Encabezado de Hoja de Impresi&oacute;n:Otro',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95666,'Encabezado de Hoja de Impresi&oacute;n:Imagen (.gif)',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95700,'Operaci&oacute;n del Sistema',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (95705,'No permitir abrir y guardar documentos en IE6',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95706,'No permitir abrir y guardar documentos en IE6',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95710,'Visualizar documentos en PDF:SI',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95711,'Visualizar documentos en PDF:NO',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95715,'Visualizar documentos en PDF: SI:Docprint',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95716,'Visualizar documentos en PDF: SI:OpenOffice',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95720,'Dominio para Active Directory:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95721,'Url para Active Directory',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95725,'Extensiones manejadas con doble versi&oacute;n:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95726,'Extensiones de archivo no editables:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95730,'Nombre de la carpeta compartida:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95731,'Ruta del repositorio de archivos del sistema:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95735,'Vigencia (en dias) de los flujos cancelados en Principal',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95736,'Ruta del repositorio de anexos 1:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95740,'Ruta del repositorio de anexos 2:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95741,'Campo de enlace para los anexos:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95745,'Publicar el primer borrador:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95746,'Publicar el primer borrador:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95750,'Cambio de Campos adicionales:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95751,'Cambio de Campos adicionales:',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95755,'Norma de Auditoria',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95800,'Mensajes',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (95805,'Documentos Expirados',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95810,'Documentos Borradores ya Expirados',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95815,'Flujos de trabajo: Expirados',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95820,'Flujos de trabajo: En revisi&oacute;n',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95825,'Flujos de trabajo: Aprobados',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95830,'Flujos de trabajo: Cancelados',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95835,'SACOPS: Acciones Por Vencer',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (95840,'SACOPS: Acciones Vencidas',1,1,0,'','','','','','','','','',0,4);
+INSERT INTO transaction_qweb VALUES (96000,'Enviar mensaje del sistema a los usuarios',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (96400,'Visualizar Normas',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (96800,'Administrar Tipos de Documentos',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (97200,'&Aacute;reas',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (97600,'Cargos',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (98000,'Tipo de Gesti&oacute;n',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (98400,'Clasificaci&oacute;n SACOP',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (98800,'Migraci&oacute;n',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (99200,'Causas',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (99600,'Accion Recomendada',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (99800,'Programas de Auditoria',1,1,0,'','','','','','','','','',0,2);
+INSERT INTO transaction_qweb VALUES (99810,'Crear programa',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (99820,'Actualizar  programa',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (99830,'Crear Plan',1,1,0,'','','','','','','','','',0,3);
+INSERT INTO transaction_qweb VALUES (99840,'Actualizar Plan',1,1,0,'','','','','','','','','',0,3);
+
+UPDATE transaction_qweb SET tra_activate=1 WHERE id_transaction IN (10800,11200,11600,11650,11700,92115,92130,92145,92160,95000);
+
+update norms set titleNorm = replace(titleNorm,indice,'');
+
+-- 14/10/2020 
+update programaudit set status='B' where status='P';
+update programaudit set status='A' where status in ('H','V','A');
+-- alter table documents add idProgramAudit INT DEFAULT 0;
+-- alter table documents add idPlanAudit INT DEFAULT 0;
+-- 17/10/2020
+
+-- alter table norms add auditProcess INT NOT NULL DEFAULT 0;
+
+
+-- 25/10/2020
+-- alter table documents 	MODIFY dateCreation DATETIME default NOW();
+-- alter table versiondoc 	MODIFY  dateCreated DATETIME default NOW();

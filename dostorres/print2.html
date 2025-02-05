@@ -1,0 +1,107 @@
+
+
+<html>
+<head>
+<title>MeadCo's ScriptX: Basic printing</title>
+<link rel="stylesheet" type="text/css" href="sample.css" />
+
+<!-- special style sheet for printing -->
+<style media="print">
+.noprint     { display: none }
+</style>
+<script defer>
+function setInstallStyles(fOK) {
+	document.getElementById("installFailure").runtimeStyle.display = fOK ? "none" : "block";
+	document.getElementById("installOK").runtimeStyle.display = fOK ? "block" : "none";
+}
+function okInstall() {
+	setInstallStyles(true);
+}
+function noInstall() {
+	setInstallStyles(false);
+}
+
+function viewinit() {
+  if (!factory.object) {
+  	noInstall();
+  	return
+  } else {
+  okInstall();
+  factory.printing.header = "MeadCo's ScriptX: Basic printing example"
+  factory.printing.footer = "The de facto standard for advanced web-based printing"
+  factory.printing.portrait = false
+
+  // enable control buttons
+  var templateSupported = factory.printing.IsTemplateSupported();
+  var controls = idControls.all.tags("input");
+  for ( i = 0; i < controls.length; i++ ) {
+    controls[i].disabled = false;
+    if ( templateSupported && controls[i].className == "ie55" )
+      controls[i].style.display = "inline";
+    }
+  }
+}
+</script>
+
+</head>
+
+<body scroll="auto" onload="viewinit()">
+
+<!-- MeadCo ScriptX Control -->
+<object id="factory" style="display:none" viewastext classid="clsid:1663ED61-23EB-11D2-B92F-008048FDD814" codebase="http://wks-ccs-des1:8085/qwebds4/smsx.cab#Version=6,3,435,20">
+</object>
+
+<div id="installFailure">
+	<h2>It appears ScriptX is unavailable or has failed to install.</h2>
+	<p><b>Has the Infobar appeared?</b></p>
+	<p>If you are using Internet Explorer 6 or later on Windows XP SP2 or later then the Explorer Information bar may appear while trying to install ScriptX, it looks like this:</p>
+	<p style="padding: 4px"><img src="..\infobar.png"></p>
+	<p>If the bar has appeared, follow the instructions: click on the bar and then select <i>Install ActiveX Control...</i></p>
+	<p><b>Are you an administrator?</b></p>
+	<p>ScriptX is code that requires you have administrator rights on your machine in order to install it successfully.</p>
+	<p>If you are not an administrator, please contact your administrator and ask them to install ScriptX for you.</p>
+</div>
+
+
+<div id="installOK">
+<h2>MeadCo's ScriptX: Basic printing example</h2>
+
+<p>This page illustrates the Basic use of ScriptX.</p>
+
+<ul>
+ <li>The page sets a custom header and footer, and switches page orientation to
+  landscape on printout</li>
+ <li>The control buttons will not appear on the print-out</li>
+ <li>The user's default printing settings will be automatically restored upon leaving the document</li>
+</ul>
+
+<!--
+<p><b>Important note for users of IE 5.5 :</b> A major code defect in this version of Internet Explorer may result in unwanted behaviour if you invoke the Page Setup dialog too many times in any one browser session. This bug has been fixed in IE 6.0.</p>
+-->
+
+<hr size="1" color="dimgray">
+
+<div id=idControls class="noprint">
+ <b>Click one of the following buttons:</b>
+
+ <p><input disabled type="button" value="Direct Print"
+ onclick="factory.printing.Print(false)">
+ <p><input disabled type="button" value="Print the page"
+ onclick="factory.printing.Print(true)">
+ <input disabled type="button" value="Print the IFRAME"
+ onclick="factory.printing.Print(true, idFrame)">
+ <input disabled type="button" value="Page Setup..."
+ onclick="factory.printing.PageSetup()">
+ <input class=ie55 disabled type="button" value="Print Preview..."
+ onclick="factory.printing.Preview()">
+
+<hr size="1" color="dimgray">
+
+</div>
+
+<p><iframe name="idFrame" width="100%" height="60%" src="frame.htm">
+</iframe>
+</div>
+
+</body>
+</html>

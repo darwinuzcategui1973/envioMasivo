@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+var Excel = null;
+
+function imp() {
+
+		if(Excel == null) {
+        	Excel = new ActiveXObject("Excel.Application");
+        }
+        //fichero = "\\\\desige11\\tmp$\\Forecast Form - 2005.xls";
+        fichero = "http://wks-ccs-50:8085/qwebds4/download/libro.xls";
+        
+        if (Excel != null) {
+            Excel.Visible = false;
+            Book = Excel.Workbooks.Open(fichero,0,true);
+
+            Excel.UserControl = true;
+            Excel.Visible = true;
+
+            Book.PrintOut;
+            //Book.Close;
+
+			Excel.ActiveWorkbook.Close(true); // cierra el libro actual
+			Excel.Application.Quit();
+        }
+		//Excel = null;
+
+}
+</script>
+</head>
+<body>
+<input type="button" value="print" onclick="imp()"/>
+</body>
+</html>

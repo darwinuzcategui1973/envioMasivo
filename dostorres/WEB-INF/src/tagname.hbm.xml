@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.focus.wonderware.intocuh_sacop.forms.Tagname" table="tbl_tagname">
+		    <id name="idtagname2" type="java.lang.Long" column="idtagname2">
+			<generator class="assigned"/>
+		    </id>
+                <property name="tagname">
+                   <column name="tagname"/>
+                </property>
+
+                <property name="idtipo">
+                   <column name="idtipo"/>
+                </property>
+
+
+                <property name="active">
+                   <column name="active"/>
+                </property>
+    	</class>
+	<query name="Tagname.alls"><![CDATA[ FROM Tagname Order by lower(tagname)]]></query>
+</hibernate-mapping>
+

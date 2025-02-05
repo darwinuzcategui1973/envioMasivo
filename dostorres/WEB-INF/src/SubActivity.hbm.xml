@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.desige.webDocuments.activities.forms.SubActivities" table="SubActivities">
+		<id name="number" type="long" column="sAct_number">
+			<generator class="assigned"/>
+		</id>
+        	<property name="activityID">
+			<column name="Act_Number"/>
+		</property>
+		<property name="nameAct">
+			<column name="sAct_Name"/>
+		</property>
+		<property name="description">
+			<column name="sAct_Description"/>
+		</property>
+		<property name="active">
+			<column name="sAct_Active"/>
+		</property>
+		<property name="orden">
+			<column name="sAct_Order"/>
+		</property>
+
+        <set name="actUser" table="Act_User" lazy="true">
+            <key column="Act_Number" />
+            <many-to-many column="idPerson" class="com.desige.webDocuments.perfil.forms.PerfilActionForm" />
+        </set>
+<!--        <set name="nextUser" table="NextUserAct" lazy="true">-->
+<!--            <key column="Act_Number"/>-->
+<!--            <many-to-many column="idPerson" class="com.desige.webDocuments.perfil.forms.PerfilActionForm"/>-->
+<!--        </set>-->
+<!--        <set name="userForAct" table="StructActUser">-->
+<!--            <key column="Act_Number"/>-->
+<!--            <many-to-many column="idPerson" class="com.desige.webDocuments.perfil.forms.PerfilActionForm"/>-->
+<!--        </set>-->
+	</class>
+<!--	<query name="act.alls"><![CDATA[ FROM Activities WHERE Act_Active = '1' ORDER BY Act_Number]]></query>-->
+<!--    <query name="act.by.typeDoc"><![CDATA[ FROM Activities WHERE Act_Active = '1' AND idTypeDoc=? ORDER BY Act_Number]]></query>-->
+<!--	<sql-query name="AllActivitys">-->
+<!--		<return alias="a" class="com.desige.webDocuments.activities.forms.Activities"/>-->
+<!--            SELECT a.* FROM Activity a ORDER BY a.Act_Name-->
+<!--    </sql-query>-->
+<!--	<query name="act.byName"><![CDATA[ FROM SubActivities WHERE sAct_Name = ? AND activityID = ?]]></query> -->
+<!--	<query name="act.byNameAndID"><![CDATA[ FROM SubActivities WHERE sAct_Name = ? AND activityID = ? AND number <> ? AND active = '1' ]]></query> -->
+	<query name="act.byName"><![CDATA[ FROM SubActivities WHERE sAct_Name = ? AND Act_Number = ?]]></query>
+	<query name="act.byNameAndID"><![CDATA[ FROM SubActivities WHERE sAct_Name = ? AND Act_Number = ? AND sAct_number <> ? AND active = '1' ]]></query>
+	
+<!--	<query name="act.byUser"><![CDATA[ FROM Act_User u,SubActivities sa,Activity a WHERE u.Act_Number = sa.sAct_number AND a.Act_Number = sa.Act_Number AND a.Act_Active = '1' AND sa.sAct_Active = '1' AND u.idPerson = ?]]></query> -->
+</hibernate-mapping>

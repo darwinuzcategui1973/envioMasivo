@@ -1,0 +1,141 @@
+Primero vamos con el que se usa para acelerar la navegación, es un poco viejo pero igual de 
+efectivo, únicamente para los usuarios de banda ancha. Básicamente es usar la segmentación 
+interna para acelerar la carga de las páginas.
+
+Debemos ir a la configuración interna de Firefox, escribiendo about:config en la barra 
+de navegación. Para filtrar los resultados que nos interesan, escribiremos en el filtro 
+network.http, y cambiaremos las siguientes opciones lógicas:
+
+* network.http.pipelining: true
+* network.http.proxy.pipelining: true
+
+Para acabar, cambiamos la opción entera 
+* network.http.pipelining.maxrequests con un número oscilatorio a 30, generando así más 
+peticiones. Terminando, hacemos botón derecho en cualquier parámetro y creamos un nuevo entero, llamándolo 
+* nglayout.initialpaint.delay y configurándolo a 0.
+
+La mejoría puede ser significativa, en mi caso lo ha sido, y siempre es bueno tener la 
+máxima velocidad posible, ¿no?
+
+El otro truco consiste en limitar el uso de la memoria RAM, ya sea en primer como segundo 
+plano. Una vez más, vamos a about:config, y esta vez usamos el filtro browser.cache, 
+seleccionando 
+* browser.cache.disk.capacity y cambiando su capacidad a un valor más adaptado a nosotros, 
+como por ejemplo 15000 para los que tengan 512 o 1GB de RAM.
+
+Por último, especificaremos a Firefox que reduzca considerablemente la RAM en segundo plano. Para ello, no utilizamos ningún filtro, sino que sólamente creamos el valor lógico 
+* config.trim_on_minimize y le damos de valor true.
+
+Con esto se mejorará tanto la navegación como la usabilidad de Firefox.
+
+si quieren mas trucos aqui les dejo la web 
+
+
+
+
+1) Más espacio en pantalla: Haz tus iconos más pequeños. Ir a Ver - Barras de herramientas - Personalizar y marca la casilla "Usar iconos Pequeños."
+
+Más espacio en la pantalla!
+
+2) Uso inteligente de palabras clave: Puedes hacer tus búsquedas más rápidas personalizando la barra de Búsquedas de Firefox, por ejemplo si vas a Youtube o Wikipedia en el campo de búsqueda de alguno de estos, clic derecho y selecciona "Añadir una palabra clave a esta búsqueda", dale un nombre, palabra clave, y un atajo fácil de escribir y recordar (por ejemplo "Videos" o "Wiki" ) y sálvalo. Ahora, cuando hagas una búsqueda de alguno de esos términos, ve a la barra de direcciones de Firefox, escribe "Videos" o "Wiki" y el nombre del "Video" o "Wiki" que quieras y pulsa Enter. ¡Búsqueda instantánea!, ¿vez la productividad?
+
+3) Atajos del teclado: Aquí es donde te conviertes en un verdadero Jedi. En poco tiempo vas a aprenderlos, y cuando lo hagas, tu navegación será muy rápida y fluida. Aquí algunas de las más comunes (Y que uso diariamente)
+
+Navega cómodamente con el teclado
+
+    * Barra espaciadora : El scroll la página actual baja.
+    * Shift+Barra espaciadora : El scroll la página actual sube.
+    * Ctrl+F : Busca palabras en la página actual.
+    * Alt-N : Busca una siguiente palabra.
+    * Ctrl+D : Añadir a Favoritos o Marcadores.
+    * Ctrl+T : Abre una nueva pestaña.
+    * Ctrl+K : Enfoca la caja de búsqueda.
+    * Ctrl+L : Enfoca la barra de direcciones.
+    * Ctrl++ : Incrementa el tamaño texto.
+    * Ctrl+- : Reduce el tamaño texto.
+    * Ctrl-W : Cierra la pestaña actual.
+    * F5 : Actualiza o recarga la pagina actual.
+    * Alt+Inicio : Te dirige a tu pagina de inicio.
+
+4) Autocompletar: Otro atajo de teclado, te juro que es muy útil. Ve a la barra de direcciones (Control-L) y escribe el nombre de un sitio sin el "www" o el ".com". Por ejemplo "google". Luego pulsa Control+Enter, y automáticamente añadirá el "www" y el ".com" y te llevará ahí como por arte de magia. Para direcciones .net, pulsa Shift+Enter, y para direcciones .org, pulsa Control+Shift+Enter.
+
+5) Navegación en pestañas: En lugar de usar el ratón para seleccionar diferentes pestañas que tengas abiertas, si te gusta usar el teclado, estos son los atajos:
+
+    * Ctrl+Tab : Va a la siguiente pestaña. –>
+    * Ctrl+Shift+Tab : Va a la anterior pestaña. <–
+    * Ctrl+1-9 : Va al numero de pestaña que elijas.
+
+6) Atajos de ratón: A veces ya estás usando el ratón y es más fácil usar un atajo de ratón que volver al teclado. estos te interesaran:
+
+Atajos de ratón
+
+    * Clic con el botón central en un enlace : Abre una nueva pestaña.
+    * Shift+Rueda hacia abajo : Página anterior.
+    * Shift+Rueda hacia arriba : Siguiente página.
+    * Ctrl+Rueda hacia arriba : Reduce el tamaño texto.
+    * Ctrl+Rueda hacia abajo : Aumenta el tamaño texto.
+    * Clic con el botón central en una pestaña : Cierra la pestaña.
+
+7) Borrar elementos del historial de la barra de direcciones: En la barra de direcciones selecciona la página que quieras borrar y pulsar el botón Supr.
+
+8) User chrome: Si quieres personalizar tu Firefox más a fondo, tienes que crear un archivo UserChrome.css. No es muy fácil que digamos, pero hay un tutorial en ingles el tutorial.
+
+9) Crear un archivo user.js: Tendrás más velocidad en el navegador si creas el archivo user.js, por ejemplo, como este que podrás modificar con estos pasos.
+
+10) about:config: Es la configuración interna de Firefox, si sabes manejarlo harás de Firefox un navegador muy potente. ¿Quieres saber más sobre about:config?
+
+11) Añadir una palabra clave a los Favoritos/Marcadores: Clic derecho en el marcador / Propiedades / Pon una palabra clave corta / Guarda. Ya puedes escribir esa palabra clave en la barra de direcciones e irá directamente a la página del marcador.
+
+12) Acelera Firefox: Si tienes una conexión de banda ancha (dime a mi), puedes usar pipelining o segmentación para acelerar la carga de tus páginas, los pasos:
+
+    * Escribe "about:config" dentro de la barra de direcciones y pulsa Enter. Escribe "network.http" en el campo del filtro, y cambia las siguientes configuraciones (doble clic en ellas para cambiarlas):
+    * Configura "network.http.pipelining" a "true"
+    * Configura"network.http.proxy.pipelining" a "true"
+    * Configura"network.http.pipelining.maxrequests" a un número de aproximadamente 30. Esto te permitirá hacer 30 peticiones a la vez.
+    * También, botón derecho en cualquier sitio y selecciona Nuevo->Entero. Llámale "nglayout.initialpaint.delay" y configura su valor a "0". Este valor es la cantidad de tiempo que el navegador espera antes de actuar sobre la información recibida.
+
+Acelera Firefox a la velocidad de la luz
+
+13) Limita el uso de RAM: Si Firefox ocupa usa mucha memoria, puedes limitar la cantidad de RAM que usara. De nuevo, ve a about:config, filtro "browser.cache" y selecciona "browser.cache.disk.capacity". Está configurado a 50000, pero puedes reducirlo, dependiendo de la memoria que tengas. Prueba con 15000 si tienes entre 512 y 1 GB de ram.
+
+14) Reduce el uso de RAM cuando Firefox está minimizado: Quizá este sea el mejor truco de todos. Vamos a crear una entrada en about:config para que cuando minimicemos Firefox reduzca el uso de RAM.
+Entramos en about:config / Clic derecho / Nuevo / Lógico / "config.trim_on_minimize" / Valor "true"
+
+Memoria RAM
+
+15) Quitar o mover el botón cerrar de las pestañas: ¿Pulsas accidentalmente en el botón de cierre de la pestaña de Firefox? Puedes moverlos o eliminarlos, de nuevo a través de about:config. Edita la opción "browser.tabs.closeButtons". Aquí está el significado de cada valor:
+
+    * 0: Muestra un botón de cerrar sólo en la pestaña activa
+    * 1: (Por defecto) Muestra el botón de cerrar en todas las pestañas.
+    * 2: Quita el botón cerrar.
+    * 3: (Para los usuarios de Firefox 1.x), muestra el botón cerrar al final de la barra de pestañas.
+
+Nota: Espero que les haya gustado o servido este artículo, me he tardado mucho, pero creo que será de ayuda para todos, si conocen más trucos los comentan y agrego a la lista.
+
+Actualización: Algunos lectores Jedi, que han respondido en Menéame y en este post nos dan más atajos de teclado y trucos:
+
+   1. Presiona F11 y veras todo en pantalla completa. (merks - Menéame)
+   2. F3 en Windows XP, busca en la pagina actual. (jaz1 - De la casa)
+   3. Alt izquierda/derecha -> Funcionan como atrás/adelante del navegador.
+   4. Ctrl+F5 -> Actualizar borrando la caché. (la 3 y 4 por jAume)
+   5. Ctrl+Re Pag va a la siguiente pestaña.
+   6. Ctrl+Av Pag va a la anterior pestaña (la 5 y 6 por xkod ]
+   7. Ctrl+Shift+T abre la ultima pestaña cerrada, como un ctrl+z por si lo cerraste de casualidad, muy importante. (Gracias Loki)
+   8. F6 Una forma rápida de enfocar la barra de direcciones
+   9. CTRL+F4 Cierra la pestaña actual (la 8 y 9 por JUCA)
+
+Añadir Youtube (por ejemplo) como búsqueda:
+Al lado de la barra de direcciones está la barra de búsquedas rápidas, entra a www.youtube.com, ahora presiona el botón al lado de la barra de búsquedas, veras que sale casi al final del menú desplegable, la opción "Añadir Youtube Video Search", clic en esa opción y ya puedes buscar desde la barra en Youtube directamente. (Gracias xkod)
+
+Agrega Youtube Video Search
+
+Curiosidades:
+Para evitar que salgan las ranas de ImagesShack en algunos foros:
+1. Escribes en la barra de direcciones "about:config".
+2. Luego en el filtro escribes: "header"
+3. Salen pocos resultados, haces doble clic en "network.http.sendRefererHeader"
+4. En la ventana pones: "0", aceptas y ya, adiós ranas y demás. (Gracias Rush)
+5. En la siguiente dirección explico como Abrir Firefox dentro de Firefox rápidamente.
+6. ALT+TAB Cambia de ventana, sea Firefox o Aplicaciones en Windows (Gracias aop)
+
+Actualización 14/04/08: Para abrir una nueva pestaña, con la página de inicio cargada, debemos dar clic con el botón central, sobre el icono de la casita, al lado de nuestra barra de direcciones.

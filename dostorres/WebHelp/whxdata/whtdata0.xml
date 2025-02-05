@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<tocdata>
+<book name="BIENVENIDO A QWEBDOCUMENTS®" url="BIENVENIDO_A_QWEBDOCUMENTS_.htm" >
+  <item name="¿Qué es QWEBDOCUMENTS®?" url="_Qu_es_QWEBDOCUMENTS_.htm" />
+  <item name="¿Cómo obtener QWEBDOCUMENTS®?" url="_C_mo_obtener_QWEBDOCUMENTS_.htm" />
+  <item name="Requerimientos de Hardware y Software" url="Requerimientos_de_Hardware_y_Software.htm" />
+  <item name="Ambiente de Prueba QWEBDOCUMENTS®" url="Ambiente_de_Prueba_QWEBDOCUMENTS_.htm" />
+  <book name="Ambiente de Producción QWEBDOCUMENTS®" url="Ambiente_de_Producci_n_QWEBDOCUMENTS_.htm" >
+    <item name="Biblioteca de Objetos Ejecutables" url="Biblioteca_de_Objetos_Ejecutables.htm" />
+    <item name="Biblioteca de Datos de la Aplicación" url="Biblioteca_de_Datos_de_la_Aplicaci_n.htm" />
+    <item name="Biblioteca de Clases" url="Biblioteca_de_Clases.htm" />
+    <item name="Responsables" url="Responsables.htm" />
+  </book>
+</book>
+<item name="Ayuda" url="Ayuda.htm" />
+<book name="Principal" url="Principal.htm" >
+  <item name="Secciones de la ventana Principal" url="Secciones_de_la_ventana_Principal.htm" />
+  <book name="Menú Principal" url="Men_Principal.htm" >
+    <item name="Menú de Módulos" url="Men_de_M_dulos.htm" />
+    <item name="Menú de Opciones" url="Men_de_Opciones.htm" />
+  </book>
+</book>
+<book name="Estructura (EOC)" url="Estructura_EOC.htm" >
+  <book name="Visualización de Carpetas/Procesos y Documentos" url="Visualizaci_n_de_Carpetas_Procesos_y_Documentos.htm" >
+    <item name="Para imprimir la vista actual:" url="Para_imprimir_la_vista_actual.htm" />
+  </book>
+  <item name="Maximizando/Minimizando la estructura" url="Maximizando_Minimizando_la_estructura.htm" />
+  <item name="Roles de la Estructura (EOC)" url="Roles_de_la_Estructura_EOC.htm" />
+  <book name="Permisología Usuarios/Grupos por el Módulo de Estructura" url="Permisolog_a_Usuarios_Grupos_por_el_M_dulo_de_Estructura.htm" >
+    <item name="Permisos a Usuarios" url="Permisos_a_Usuarios.htm" />
+    <item name="Quitar Permisos a Usuarios" url="Quitar_Permisos_a_Usuarios.htm" />
+    <item name="Permisos a Grupos" url="Permisos_a_Grupos.htm" />
+    <item name="Quitar Permisos a Grupos" url="Quitar_Permisos_a_Grupos.htm" />
+  </book>
+  <book name="Detalles de la Compañía" url="Detalles_de_la_Compa_a.htm" >
+    <item name="Paneles de Control de Compañía" url="Paneles_de_Control_de_Compa_a.htm" />
+    <item name="Opciones de la Compañía" url="Opciones_de_la_Compa_a.htm" />
+  </book>
+  <book name="Editar Propiedades de la Compañía" url="Editar_Propiedades_de_la_Compa_a.htm" >
+    <item name="Campos de la Compañía" url="Campos_de_la_Compa_a.htm" />
+  </book>
+  <book name="Menú de Localidad/Carpeta/Proceso" url="Men_de_Localidad_Carpeta_Proceso.htm" >
+    <item name="AgregarLocalidad" url="AgregarLocalidad.htm" />
+    <item name="Campos de la Localidad" url="Campos_de_la_Localidad_en_Agregar_Carpeta_Proceso.htm" />
+    <item name="Propiedades" url="Propiedades.htm" />
+    <item name="Detalles de Localidad" url="Detalles_de_Localidad.htm" />
+    <book name="Opciones de la Localidad" url="Opciones_de_la_Localidad.htm" >
+      <item name="Propiedades" url="Propiedades2.htm" />
+      <item name="Permisos a Usuario/Permisos a Grupos" url="Permisos_a_Usuario_Permisos_a_Grupos.htm" />
+      <item name="Eliminar" url="Eliminar.htm" />
+      <item name="Agregar Carpeta/Proceso" url="Agregar_Carpeta_Proceso.htm" />
+      <item name="Campos de la Localidad en Agregar Carpeta/Proceso" url="Campos_de_la_Localidad_en_Agregar_Carpeta_Proceso.htm" />
+      <item name="Agregar Documento" url="_Agregar_Documento.htm" />
+    </book>
+  </book>
+  <book name="Menú de Documentos" url="Men_de_Documentos.htm" >
+    <item name="Propiedades" url="Propiedades2.htm" />
+    <item name="Mover" url="Mover.htm" />
+    <item name="Bloquear" url="Bloquear.htm" />
+    <item name="Deshacer Bloqueo" url="Deshacer_Bloqueo.htm" />
+    <item name="Modificar" url="Modificar.htm" />
+    <item name="Crear Registro" url="Crear_Registro.htm" />
+    <item name="Histórico" url="Hist_rico.htm" />
+  </book>
+  <item name="Ruta del Documento" url="Ruta_del_Documento.htm" />
+  <book name="Opción de Impresión de un Documento" url="Opci_n_de_Impresi_n_de_un_Documento.htm" >
+    <book name="Como Imprimir" url="Como_Imprimir.htm" >
+      <item name="Copias Controladas" url="Copias_Controladas.htm" />
+      <item name="Copias No Controladas" url="Copias_No_Controladas.htm" />
+    </book>
+  </book>
+</book>
+<book name="Flujos de Trabajo" url="Flujos_de_Trabajo.htm" >
+  <item name="Pasos a seguir para la activación de un Flujo de Trabajo de Revisión y Aprobación:" url="Pasos_a_seguir_para_la_activaci_n_de_un_Flujo_de_Trabajo_de.htm" />
+</book>
+<book name="Solicitud de Acciones Correctivas o Preventivas (SACOP´s)" url="Solicitud_de_Acciones_Correctivas_o_Preventivas_SACOP_s.htm" >
+  <item name="SACOP´s por el módulo Administración:" url="SACOP_s_por_el_m_dulo_Administraci_n.htm" />
+  <item name="Status de SACOP´s:" url="Status_de_SACOP_s.htm" />
+</book>
+<item name="Mensajes" url="Mensajes.htm" />
+<book name="Módulo Administración" url="M_dulo_Administraci_n.htm" >
+  <book name="Gerencia de Usuarios/Grupos:" url="M_dulo_Administraci_n.htm#Gerencia_de_Usuarios" >
+    <item name="Ver todas las cuentas de usuarios:" url="Ver_todas_las_cuentas_de_usuarios.htm" />
+    <item name="Adicionar nueva cuenta de usuario:" url="Adicionar_nueva_cuenta_de_usuario.htm" />
+    <item name="Adicionar nuevo grupo de usuario:" url="Adicionar_nuevo_grupo_de_usuario.htm" />
+    <item name="Ver / Editar Seguridad:" url="_Ver_Editar_Seguridad.htm" />
+    <item name="Cambiar la contraseña del usuario:" url="Cambiar_la_contrase_a_del_usuario.htm" />
+    <item name="Editar cuenta de usuario:" url="Editar_cuenta_de_usuario.htm" />
+    <item name="Editar Grupos:" url="Editar_Grupos.htm" />
+    <item name="Sesión de usuarios:" url="Sesi_n_de_usuarios.htm" />
+  </book>
+  <book name="Administración Del Sistema" url="Administraci_n_Del_Sistema.htm" >
+    <book name="Editar configuración de QWEBDOCUMENTS®:" url="Editar_configuraci_n_de_QWEBDOCUMENTS_.htm" >
+      <item name="Configuración Inicio de Sesión:" url="Configuraci_n_Inicio_de_Sesi_n.htm" />
+      <item name="Configuración SACOP:" url="Configuraci_n_SACOP.htm" />
+      <item name="Configuración de correo:" url="Configuraci_n_de_correo.htm" />
+      <item name="Configuración de estructura de trabajo:" url="Configuraci_n_de_estructura_de_trabajo.htm" />
+      <item name="Notificaciones emitidas por el sistema:" url="Notificaciones_emitidas_por_el_sistema.htm" />
+    </book>
+    <item name="Enviar mensaje del sistema a los usuarios:" url="Enviar_mensaje_del_sistema_a_los_usuarios.htm" />
+    <item name="Administrar Normas ISO:" url="Administrar_Normas_ISO.htm" />
+    <item name="Administrar Tipos de Documentos:" url="Administrar_Tipos_de_Documentos.htm" />
+    <item name="Áreas:" url="_reas.htm" />
+    <item name="Origen de la SACOP:" url="Origen_de_la_SACOP.htm" />
+    <book name="Configuración de Seguridad" url="Configuraci_n_de_Seguridad.htm" >
+      <item name="Para ver o modificar la seguridad definida a cada usuario o grupo:" url="Para_ver_o_modificar_la_seguridad_definida_a_cada_usuario_o.htm" />
+      <item name="Para visualizar una lista de todos los usuarios o Grupos que tienen asignada seguridad para el" url="Para_visualizar_una_lista_de_todos_los_usuarios_o_Grupos_que.htm" />
+      <item name="Para agregar más usuarios o grupos al elemento actual:" url="Para_agregar_m_s_usuarios_o_grupos_al_elemento_actual.htm" />
+      <item name="Heredar" url="Heredar.htm" />
+      <item name="Adicionar / Editar Permisos" url="Adicionar_Editar_Permisos.htm" />
+    </book>
+    <book name="Tipos de acceso de seguridad" url="Tipos_de_acceso_de_seguridad.htm" >
+      <item name="Acceso Completo" url="Acceso_Completo.htm" />
+      <item name="Sin acceso" url="Sin_acceso.htm" />
+      <item name="Hereda Seguridad" url="Hereda_Seguridad.htm" />
+      <item name="Predeterminado" url="Predeterminado.htm" />
+    </book>
+    <item name="Descripción efectiva de permisos" url="Descripci_n_efectiva_de_permisos.htm" />
+    <item name="Vistaefectiva de permisos" url="Vista_efectiva_de_permisos.htm" />
+  </book>
+</book>
+
+</tocdata>
