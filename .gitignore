@@ -1,10 +1,9 @@
-convertToPdfOpenOffice/bin/
-converttopdf/bin/
-clienteOnDemand/.classpath
-qweb/.classpath
+dostorres/.externalToolBuilders
+dostorres/.classpath
 .metadata/
 .vscode
 .vscode/settings.json
+dostorres/recibos
 dostorres/db/create/.vscode/
 dostorres/.settings/org.eclipse.ltk.core.refactoring.prefs
 dostorres/editorPorInternet/qpdf46.jnlp
