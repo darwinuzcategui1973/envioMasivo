@@ -1,9 +1,9 @@
-dostorres/.externalToolBuilders
+dostorres/.tomcatplugin
+dostorres/.project
 dostorres/.classpath
 .metadata/
 .vscode
 .vscode/settings.json
-dostorres/recibos
 dostorres/db/create/.vscode/
 dostorres/.settings/org.eclipse.ltk.core.refactoring.prefs
 dostorres/editorPorInternet/qpdf46.jnlp

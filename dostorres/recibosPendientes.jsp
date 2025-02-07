@@ -8,24 +8,16 @@
 <%@page import="org.apache.poi.util.SystemOutLogger"%>
 <%@page import="com.itextpdf.text.log.SysoCounter"%>
 <%@ page import="java.util.ResourceBundle,
-				 com.desige.webDocuments.files.forms.DocumentForm,
 				 java.util.ArrayList,
 				 java.util.List,
 				 java.util.Collection,
                  com.desige.webDocuments.utils.ToolsHTML,
-                 com.desige.webDocuments.persistent.managers.HandlerDocuments,
                  com.desige.webDocuments.persistent.managers.HandlerParameters,
                  com.desige.webDocuments.utils.beans.Users,
                  com.desige.webDocuments.utils.beans.SuperActionForm,
                  com.desige.webDocuments.utils.beans.PaginPage,
-                 com.desige.webDocuments.persistent.managers.HandlerBD,
-                 com.desige.webDocuments.persistent.managers.HandlerNorms,
                  com.desige.webDocuments.persistent.managers.HandlerDBUser,
-				 com.desige.webDocuments.document.forms.BaseDocumentForm,
 				 com.gestionEnvio.custon.dostorres.forms.BaseReciboForm,
-                 com.focus.request.PlanAuditRequest,
-                 com.focus.request.ProgramAuditRequest,
-                 com.focus.request.NormAuditRequest,
                  com.desige.webDocuments.utils.Constants"%>
 
 
