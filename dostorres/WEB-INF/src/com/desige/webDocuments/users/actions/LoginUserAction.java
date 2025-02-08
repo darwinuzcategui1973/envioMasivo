@@ -120,7 +120,7 @@ public class LoginUserAction extends SuperAction {
 				if (validUser) {
 					// registramos la session valida para el usuario
 					HandlerDBUser.userConnectSession.put(login.getUser(), request.getSession().getId());
-					request.getSession().setAttribute("documentosRegistrados",ToolsHTML.documentosRegistrados());
+					//request.getSession().setAttribute("documentosRegistrados",ToolsHTML.documentosRegistrados());
 					
 					HandlerDBUser.getLanguajeUser(usuario);
 					putObjectSession("usuario", usuario.getNamePerson());
@@ -132,10 +132,10 @@ public class LoginUserAction extends SuperAction {
 					if (getSessionObject("optionReturn") != null) {
 						ActionForward optionReturn = (ActionForward) getSessionObject("optionReturn");
 						if (optionReturn != null) {
-							BaseDocumentForm forma = (BaseDocumentForm) getSessionObject("showDocument");
-							if (forma != null) {
-								forma.setPrefix(ToolsHTML.getPrefixToDoc(getSession(), usuario, forma.getIdNode()));
-							}
+						//	BaseDocumentForm forma = (BaseDocumentForm) getSessionObject("showDocument");
+						//	if (forma != null) {
+						//		forma.setPrefix(ToolsHTML.getPrefixToDoc(getSession(), usuario, forma.getIdNode()));
+						//	}
 							removeObjectSession("optionReturn");
 							return optionReturn;
 						}
@@ -144,7 +144,8 @@ public class LoginUserAction extends SuperAction {
 					//Se elimina reporte de record de usuario si existe
 			        try{
 						String path = ToolsHTML.getPath();
-				        String nameFile = path.concat("reportes").concat(File.separator).concat(usuario.getIdPerson()+"Record.xls");
+						//despÃºes veo esto para eliminar recibos
+				        String nameFile = path.concat("recibos").concat(File.separator).concat(usuario.getIdPerson()+"Record.xls");
 				        File archivo = new File(nameFile);
 				        if(archivo.exists()){
 				        	archivo.delete();
@@ -163,7 +164,7 @@ public class LoginUserAction extends SuperAction {
 						//System.out.println("Reiniciamos en 0 edit para el usuario " + usuario.getUser());
 					}
 					
-					// Validación de la fecha de cambio de password
+					// Validaciï¿½n de la fecha de cambio de password
 					if (usuario.getLastDatePass() != null) {
 						log.info("Last Date Pass: " + usuario.getLastDatePass());
 						String[] values = new String[2];
@@ -173,7 +174,7 @@ public class LoginUserAction extends SuperAction {
 						values[1] = HandlerParameters.PARAMETROS.getDaysEndPass();
 
 						if (values != null) {
-							// si se desea manejar la expiración de Clave
+							// si se desea manejar la expiraciï¿½n de Clave
 							if ("0".equalsIgnoreCase(values[0].trim()) && ToolsHTML.isNumeric(values[1])) {
 
 								java.util.Calendar calendario = new java.util.GregorianCalendar();

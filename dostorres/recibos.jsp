@@ -86,9 +86,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
 %>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
 <title><%=rb.getString("principal.title")%></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <jsp:include page="meta.jsp" />
 <link href="estilo/estilo.css" rel="stylesheet" type="text/css">
 

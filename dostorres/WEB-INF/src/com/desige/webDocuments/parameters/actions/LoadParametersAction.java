@@ -46,7 +46,7 @@ public class LoadParametersAction extends SuperAction {
 			// necesitamos la lista de usuarios
 			Collection listUsers = HandlerDBUser.getListUserSelect();
 			putAtributte("listUserAddressee", listUsers);
-			putAtributte("normasPadre",HandlerNorms.getAllNormasPrincipales(null).values());
+			//putAtributte("normasPadre",HandlerNorms.getAllNormasPrincipales(null).values());
 			
 			return goSucces();
 		} catch (ApplicationExceptionChecked ae) {

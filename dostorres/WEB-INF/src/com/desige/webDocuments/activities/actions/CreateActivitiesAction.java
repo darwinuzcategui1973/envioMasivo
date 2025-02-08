@@ -49,7 +49,6 @@ public class CreateActivitiesAction extends SuperAction {
                 forma.setCmd(SuperActionForm.cmdInsert);
                 putObjectSession("activitiesForm",forma);
                 if (getSessionObject("typesDocuments")==null) {
-//                    Collection typesDocuments = HandlerWorkFlows.getAllTypesDocuments();
                     Collection typesDocuments = HandlerTypeDoc.getAllTypeDocs(null,false);
                     if (typesDocuments!=null) {
                         putObjectSession("typesDocuments",typesDocuments);
@@ -77,16 +76,16 @@ public class CreateActivitiesAction extends SuperAction {
 //                log.debug("" + search.getNumber());
 //                log.debug("" + search.getName());
 //            }
-            //Prueba de Actualización
+            //Prueba de Actualizaciï¿½n
 //            forma.setExecutant("14");
 //            Transaction tx = HibernateUtil.createTransaction();
 //            HibernateUtil.saveObject(forma);
 //            tx.commit();
-            //Prueba de Insertar de la Información
+            //Prueba de Insertar de la Informaciï¿½n
 //            activities formaII = new Activities();
 //            formaII.setNumber(3);
-//            formaII.setName("Aprobación");
-//            formaII.setDescription("Aprobación de Documentos de la Aplicación");
+//            formaII.setName("Aprobaciï¿½n");
+//            formaII.setDescription("Aprobaciï¿½n de Documentos de la Aplicaciï¿½n");
 //            formaII.setExecutant("1");
 //            formaII.setNextExecutant("2");
 //            Transaction tx = HibernateUtil.createTransaction();

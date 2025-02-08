@@ -82,6 +82,7 @@ public class LoadWorkFlowsAction extends SuperAction {
             
             log.debug("Usuario en el Sistema... " + usuario.getUser()
             		+ (userIsLikeAnAdmin ? "Podra observar los listados en modo administrador" : ""));
+            /*
             log.debug("Cargando Flujos Pendientes....");
             Collection<DataUserWorkFlowForm> wfPendings = HandlerWorkFlows.getAllWorkFlowsUserAndStatu(false, HandlerWorkFlows.pending,
                                                                                  usuario.getUser(), HandlerWorkFlows.wfuPending,
@@ -242,7 +243,7 @@ public class LoadWorkFlowsAction extends SuperAction {
             request.getSession().setAttribute("docVersionApproved", docVersionApproved);
             
             setRealListSizeIntoSession(request, "wfExpiresOwner", wfExpiresOwner);
-                  
+              */    
             log.debug("Retornando....");
             return goTo(request.getParameter("goTo"));// goSucces();
         } catch (ApplicationExceptionChecked ae) {

@@ -1,178 +1,135 @@
-<!--
-#################################################################################
-##
-## HTML Text Editing Component for hosting in Web Pages
-## Copyright (C) 2001  Ramesys (Contracting Services) Limited
-## 
-## This library is free software; you can redistribute it and/or
-## modify it under the terms of the GNU Lesser General Public
-## License as published by the Free Software Foundation; either
-## version 2.1 of the License, or (at your option) any later version.
-##
-## This library is distributed in the hope that it will be useful,
-## but WITHOUT ANY WARRANTY; without even the implied warranty of
-## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-## Lesser General Public License for more details.
-##
-## You should have received a copy of the GNU LesserGeneral Public License
-## along with this program; if not a copy can be obtained from 
-##
-##    http://www.gnu.org/copyleft/lesser.html
-##
-## or by writing to:
-##
-##    Free Software Foundation, Inc.
-##    59 Temple Place - Suite 330,
-##    Boston,
-##    MA  02111-1307,
-##    USA.
-## 
-## Original Developer:
-##
-##	Austin David France
-##	Ramesys (Contracting Services) Limited
-##	Mentor House
-##	Ainsworth Street
-##	Blackburn
-##	Lancashire
-##	BB1 6AY
-##	United Kingdom
-##  email: Austin.France@Ramesys.com
-##
-## Home Page:    http://richtext.sourceforge.net/
-## Support:      http://richtext.sourceforge.net/
-## 
-## BC	Bill Chalmers	bill_paula@btinternet.com
-##
-## History:
-##
-##	 BC		15-07-2002	
-##			Changed the font selection to web-safe palette 
-##			and removed the style on hover
-##
-##	BC		24-07-2002
-##			Small Enhancement to the look and feel
-#################################################################################
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name=vs_targetSchema content="HTML 4.0">
-<meta name="GENERATOR" content="Microsoft Visual Studio 7.0">
-<style type="text/css">
-TABLE.colorChooser { background-color: buttonface; border:0}
-.colorChooser TD { border: 1px inset buttonface; cursor: hand; }
-.colorChooserLabel TD { width: 100%; border: 0;
-	font-family: "MS Sans Serif"; font-size: xx-small; vertical-align: middle;
-}
-TD.colorNone { font-family: "MS Sans Serif"; font-size: xx-small; vertical-align: middle; 
-				text-align: center; border: 1px outset buttonface!important; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Chooser</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    table.colorChooser {
+      background-color: #f0f0f0;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+
+    .colorChooser td {
+      border: 1px solid #ccc;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: middle;
+      padding: 5px;
+    }
+
+    .colorChooser td img {
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin: 0 auto;
+    }
+
+    .colorChooserLabel {
+      font-size: 12px;
+      font-weight: bold;
+      background-color: #e0e0e0;
+      text-align: center;
+    }
+
+    .colorNone {
+      font-size: 12px;
+      text-align: right;
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+
+    #display {
+      width: 100%;
+      height: 50px;
+      background-color: #fff;
+      border: 1px solid #000;
+    }
+  </style>
 </head>
+<body onload="initialise()">
+  <table class="colorChooser" cellpadding="0" cellspacing="0">
+    <tr id="main" class="colorChooserLabel">
+      <td colspan="12">Standard Colors</td>
+    </tr>
+    <tr>
+      <!-- Standard Colors -->
+      <td style="background-color: #000000;" title="#000000"></td>
+      <td style="background-color: #333333;" title="#333333"></td>
+      <td style="background-color: #666666;" title="#666666"></td>
+      <td style="background-color: #999999;" title="#999999"></td>
+      <td style="background-color: #CCCCCC;" title="#CCCCCC"></td>
+      <td style="background-color: #FFFFFF;" title="#FFFFFF"></td>
+      <td style="background-color: #FF0000;" title="#FF0000"></td>
+      <td style="background-color: #00FF00;" title="#00FF00"></td>
+      <td style="background-color: #0000FF;" title="#0000FF"></td>
+      <td style="background-color: #FFFF00;" title="#FFFF00"></td>
+      <td style="background-color: #00FFFF;" title="#00FFFF"></td>
+      <td style="background-color: #FF00FF;" title="#FF00FF"></td>
+    </tr>
+    <tr class="colorChooserLabel">
+      <td colspan="12">Web Safe Colors</td>
+    </tr>
+    <tbody id="webSafeColors">
+      <!-- Web Safe Colors will be dynamically generated here -->
+    </tbody>
+    <tr>
+      <td colspan="12" class="colorNone" title="None" align="right">None</td>
+    </tr>
+  </table>
 
-<body topmargin="0" leftmargin="0" style="border: 0; margin: 0;" onload="initialise()">
-<script language="JavaScript">
-var public_description = new ColorMenu();
+  <script>
+    // Initialize the color chooser
+    function initialise() {
+      const webSafeColors = document.getElementById('webSafeColors');
+      const colors = ['00', '33', '66', '99', 'CC', 'FF'];
+      let rows = [];
 
-function ColorMenu() {
-}
+      // Generate web-safe colors
+      for (let c = 0; c < colors.length; c++) {
+        for (let a = 0; a < 3; a++) {
+          for (let b = 0; b < colors.length; b++) {
+            const color = colors[a] + colors[b] + colors[c];
+            rows.push(`<td style="background-color: #${color};" title="#${color}"></td>`);
 
-function initialise(){
-c=main.insertCell(); //insert cell & set porperties
-c.id ="display"; 
-c.rowSpan="3"; 
-c.colSpan="6";
-}
+            // Start a new row every 12 colors
+            if ((a === 2 && b === 5) || (a === 5 && b === 5)) {
+              rows.push('</tr><tr>');
+            }
+          }
+        }
+      }
 
-function hover(on) {
-	var el = window.event.srcElement;
-	var disp = document.getElementById("display"); //get display cell
-	if (el && el.nodeName == "IMG") {
-		if (on) {
-			disp.bgColor=el.parentElement.title; //set display cell bgcolor to hovered
-			// removed the style on hover as too slow
-				} 
-									}
-}
-function choose(on) {
-	var el = window.event.srcElement;
-	if (el && el.nodeName == "IMG") {
-		window.external.raiseEvent("onselect", el.parentElement.title);
-			}
-	if (el && el.nodeName == "TD") {
-		window.external.raiseEvent("onselect", null);
-	}
-}
+      // Append rows to the table
+      webSafeColors.innerHTML = `<tr>${rows.join('')}</tr>`;
+    }
 
-</script>
-<table class="colorChooser" cellpadding="0" cellspacing="0" onmouseover="hover(true)" onmouseout="hover(false)" onclick="choose()">
-<tr id="main" class="colorChooserLabel"> 
-    <td colspan="12">Standard Colors</td>
-  </tr>
-<tr>
-    <td bgcolor="#000000" title="#000000"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#333333" title="#333333"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#666666" title="#666666"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#999999" title="#999999"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#CCCCCC" title="#CCCCCC"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#FFFFFF" title="#FFFFFF"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#FF0000" title="#FF0000"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#00FF00" title="#00FF00"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#0000FF" title="#0000FF"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#FFFF00" title="#FFFF00"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#00FFFF" title="#00FFFF"><img src="spacer.gif" width="12" height="12"></td>
-    <td bgcolor="#FF00FF" title="#FF00FF"><img src="spacer.gif" width="12" height="12"></td>
-</tr>
-<tr class="colorChooserLabel"><td colspan="12">Web Safe</td></tr>
-<tr>
-<script language=JavaScript>
+    // Handle hover and click events
+    document.addEventListener('mouseover', (event) => {
+      const target = event.target;
+      if (target.tagName === 'TD' && target.title) {
+        document.getElementById('display').style.backgroundColor = target.title;
+      }
+    });
 
-				d = new Array();
-				d[1] = "00";
-				d[2] = "33";
-				d[3] = "66";
-				d[4] = "99";
-				d[5] = "CC";
-				d[6] = "FF";				
-				
-								
-				for (c=1;c<=6;c++){
-										
-					for (a=1;a<=3;a++){					
-							
-						for (b=1;b<=6;b++){							
-							
-							colour = d[a] + d[b] + d[c];
-							
-							 document.write("<td bgcolor=\"#"+colour+"\" title=\"#"+colour+"\"><img src=\"images\\spacer.gif\" width=12 height=12></td>\n");
-						    if (a==3 && b==6){
-							document.write("</tr>\n<tr>\n");
-							}
-					
-						}
-					}
-				}				
-					for (c=1;c<=6;c++){
-										
-					for (a=4;a<=6;a++){					
-							
-						for (b=1;b<=6;b++){							
-							
-							colour = d[a] + d[b] + d[c];
-							
-							 document.write("<td bgcolor=\"#"+colour+"\" title=\"#"+colour+"\"><img src=\"images\\spacer.gif\" width=12 height=12></td>\n");
-						    if (a==6 && b==6){
-							document.write("</tr>\n<tr>\n");
-							}
-					
-						}
-					}
-				}
-					
-				</script>
-			
-				
-</tr>
-<tr><td colspan="18" class="colorNone" title="None" align="right">None</td></tr>
-</table>
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (target.tagName === 'TD' && target.title) {
+        alert(`Selected Color: ${target.title}`);
+      } else if (target.classList.contains('colorNone')) {
+        alert('No color selected');
+      }
+    });
+  </script>
 </body>
 </html>

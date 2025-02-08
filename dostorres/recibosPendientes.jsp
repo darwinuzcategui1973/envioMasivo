@@ -83,9 +83,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   
 %>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
 <title><%=rb.getString("principal.title")%></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <jsp:include page="meta.jsp" />
 <link href="estilo/estilo.css" rel="stylesheet" type="text/css">
 
@@ -193,11 +195,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         }
     }
 
-    function showCharge(userName,charge,nosecuencial) {
-    	charge = charge.replace(/\[/gi,"-").replace(/\]/gi,"-");
-    	charge = charge.replace(/\(/gi,"-").replace(/\)/gi,"-");
-        window.open("showCharge.jsp?userName="+userName+"&nosecuencial="+nosecuencial+"&charge="+charge, "WebDocuments", "resizable=no,scrollbars=yes,statusbar=yes,width=300,height=200,left=410,top=250");
-    }
+
 
     function ordenar(orderBy) {
 

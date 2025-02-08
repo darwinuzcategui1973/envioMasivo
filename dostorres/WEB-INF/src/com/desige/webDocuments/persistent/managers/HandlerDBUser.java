@@ -159,8 +159,8 @@ public class HandlerDBUser extends HandlerBD {
 	public static synchronized boolean isValidSessionUser(String userName, HttpSession session) {
 		if (userConnect != null && !ToolsHTML.isEmptyOrNull(userName)) {
 			if (userConnect.containsKey(userName.trim())) {
-				////System.out.println(session.getId());
-				////System.out.println(userConnectSession.get(userName));
+				System.out.println(session.getId());
+				System.out.println(userConnectSession.get(userName));
 				if(session.getId().equals(userConnectSession.get(userName))) {
 					return true;
 				}

@@ -85,10 +85,10 @@ public class VerifySecurityServlet extends HttpServlet {
 	            usuario.setUser(DesigeConf.getProperty("application.userAdmon"));
 	            Hashtable tree = ToolsHTML.checkTree(null,usuario);
 	            Hashtable prefijos = new Hashtable();
-	            ArrayList<Integer> result = HandlerDocuments.getAllDocNearExpiration(tree,prefijos,false);
+	           // ArrayList<Integer> result = HandlerDocuments.getAllDocNearExpiration(tree,prefijos,false);
 	            
-	            HandlerParameters.DOCUMENTOS_POR_VENCER.removeAll(HandlerParameters.DOCUMENTOS_POR_VENCER);
-	            HandlerParameters.DOCUMENTOS_POR_VENCER.addAll(result);
+	            //   HandlerParameters.DOCUMENTOS_POR_VENCER.removeAll(HandlerParameters.DOCUMENTOS_POR_VENCER);
+	            // HandlerParameters.DOCUMENTOS_POR_VENCER.addAll(result);
 	            System.out.println("Documentos por vencer : "+HandlerParameters.DOCUMENTOS_POR_VENCER.size());
 			} catch(Exception e) {
 				e.printStackTrace();
@@ -96,7 +96,7 @@ public class VerifySecurityServlet extends HttpServlet {
             
 
 			// asignamos el valor del parametro
-			Constants.PRINTER_PDF = "1".equals(String.valueOf(HandlerParameters.PARAMETROS.getOpenoffice()));
+			// Constants.PRINTER_PDF = "1".equals(String.valueOf(HandlerParameters.PARAMETROS.getOpenoffice()));
 			
 			if(Constants.JDBC_CONNECTION) {
 			
@@ -114,12 +114,12 @@ public class VerifySecurityServlet extends HttpServlet {
 	
 				//System.out.println("vamos a actualizar el nuevo campo de nombre de documento en versiondoc");
 				log.info("--- Iniciando actualizacion del campo de nombre de documento");
-				actualizarNameDocumentToVersionDoc();
+				//actualizarNameDocumentToVersionDoc();
 				log.info("--- Fianlizando actualizacion del campo de nombre de documento");
 				
 				//System.out.println("vamos a actualizar el nuevo campo de propietario de documento en versiondoc");
 				log.info("--- Iniciando actualizacion del campo propietario de documento");
-				actualizarOwnerToVersionDoc();
+				//actualizarOwnerToVersionDoc();
 				log.info("--- Iniciando actualizacion del campo propietario de documento");
 				
 				// iniciamos el hilo que eliminara los archivos de cache cada viernes (No ejecutamos por que el cache se maneja de otra forma)
@@ -135,7 +135,7 @@ public class VerifySecurityServlet extends HttpServlet {
 				RegisterClassDAO.recargarRegisterClass();
 				
 				// cargamos la tabla de normas para facilitar la consulta posterior
-				HandlerNorms.loadMasterNorms();
+				// HandlerNorms.loadMasterNorms();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

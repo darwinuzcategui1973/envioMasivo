@@ -59,7 +59,6 @@ width: 100%;
     -ms-linear-gradient(to right, rgba(130, 202, 253, 1), rgba(255, 255, 255, 0)),
     linear-gradient(to right, rgba(130, 202, 253, 1), rgba(255, 255, 255, 0));
 }
-
 </style>
 <script type="text/javascript">
     //esta funcion se ejecutara cuando el elemento superior "superior.jsp"
@@ -147,19 +146,15 @@ width: 100%;
     
     function moduloActivo(nameModule,target) {
     	window.parent.document.getElementById(target).src=nameModule;
-    }
-    
-
+    }  
 </script>
-
 </head>
 <body class="superior3">
 <span class="preload1"></span>
 <span class="preload2"></span>
     <div class="posMenu" style="width:100%">
          <table cellSpacing=0 cellPadding=0 align=center border="0" width="100%">
-            <tr>
-                
+            <tr>          
                 <td width="44%" class="titleLeft">
                 	<img src="icons/user.png" border="2">
                     <%=session.getAttribute("usuario")%>
