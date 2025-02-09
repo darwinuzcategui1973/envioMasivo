@@ -56,6 +56,7 @@
     int wfPrintCanceledSize = (session.getAttribute("wfPrintCanceled")!=null?((Collection)session.getAttribute("wfPrintCanceled")).size():0);
     int docVersionApprovedSize = (session.getAttribute("docVersionApproved")!=null?((Collection)session.getAttribute("docVersionApproved")).size():0);
 %>
+<! DOCTYPE html>
 <html>
 <head>
 <title><%=rb.getString("principal.title")%></title>

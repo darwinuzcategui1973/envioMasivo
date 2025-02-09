@@ -53,6 +53,7 @@
         pagesInit = "loadPerfil.do";
     }
 %>
+<! DOCTYPE html>
 <html>
 <head>
 <title><%=rb.getString("principal.title")%> versi&oacute;n <%=rb.getString("lic.version")%> - <%=modulo.getEdicionFull()%> - <%=modulo.getEmpresa()%></title>
